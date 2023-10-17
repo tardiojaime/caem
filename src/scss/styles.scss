@@ -1,0 +1,16 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import "./colores.sass";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+.alert{
+ margin:0;
+ background: $orange;
+}
+.navbar{
+  background: $fondo;
+}
