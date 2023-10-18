@@ -26,7 +26,7 @@ region2.addEventListener("change", function (e) {
 window.addEventListener("scroll", function () {
   const posicion = elemento.getBoundingClientRect();
   heigth = window.innerWidth;
-  if (posicion.top < 0) {
+  if (posicion.top == 0) {
     btn_enlace.classList.remove("d-none");
   } else {
     btn_enlace.classList.add("d-none");
