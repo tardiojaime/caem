@@ -1,19 +1,22 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 @import "./colores.sass";
-@import './seccion1.scss';
-@import './header.scss';
-@import './detalles.scss';
-@import './certificados.scss';
-@import './aprendisaje.scss';
-@import './plan.scss';
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,200;8..144,500;8..144,700;8..144,900&display=swap');
-
-*{
+@import "./seccion1.scss";
+@import "./header.scss";
+@import "./detalles.scss";
+@import "./certificados.scss";
+@import "./aprendisaje.scss";
+@import "./plan.scss";
+@import "./media";
+@font-face {
+  font-family: "hregular";
+  src: url("../fonts/HurmeGeometricSans4-Regular.ttf") format("truetype");
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: 'Roboto','Courier New', Courier, monospace;
+body {
+  font-family: "Times New Roman", Times, serif;
 }

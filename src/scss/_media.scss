@@ -1,0 +1,109 @@
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) {
+}
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) {
+  .seccion1 {
+    height: 500px;
+  }
+  .sec1_contenedor {
+    display: block;
+  }
+  .sec1_contenedor .text {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .sec1_contenedor .form {
+    display: none;
+  }
+  .form-mobile {
+    display: block;
+    padding: 15px 0;
+  }
+  // detalles despues del formulario
+  .detalles {
+    position: static;
+    display: block;
+    padding: 20px 20px;
+  }
+  .detalles .d_uno {
+    justify-content: start;
+    padding: 20px 10px;
+  }
+  .d_uno:not(:last-child) {
+    border-right: none;
+  }
+  .d_uno:nth-child(-n + 3) {
+    border-bottom: 2px solid white;
+  }
+  //certificados despues de diseña experiencias
+  .certificados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  //plan de estudios
+  .p_uno {
+    display: block;
+  }
+  .enlace_invitar_b {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
+  .viaje .v_uno {
+    display: block;
+  }
+  .v_icon {
+    margin-top: 10px;
+  }
+  .v_icon:nth-child(-n + 2) {
+    border-right: none;
+    border-bottom: 2px solid $color2;
+  }
+  //opiniones de los egresados
+  .o_opinion {
+    display: block;
+    width: 95%;
+  }
+  .o_img {
+    display: flex;
+    justify-content: center;
+  }
+  .o_texto {
+    text-align: center;
+  }
+  .o_texto p {
+    margin-top: 10px;
+  }
+  //certificado
+  .certificacion .container-xl {
+    padding: 25px;
+    display: block;
+  }
+  .ce_certificado {
+    text-align: center;
+  }
+  .ce_texto {
+    text-align: center;
+  }
+  .texto1 {
+    display: block;
+  }
+  .texto2 {
+    display: none;
+  }
+  .enlace_invitar3 {
+    display: none;
+  }
+  //alertas
+  .alert {
+    padding: 10px 2px 10px 2px;
+  }
+  .enlace_invitar_inicio {
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .alerta div {
+    width: 50%;
+  }
+}

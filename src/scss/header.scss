@@ -1,26 +1,27 @@
-@import './colores.sass';
-.alert{
- margin:0;
- background: $orange;
+@import "./colores.sass";
+.alert {
+  margin: 0;
+  background: $orange;
+  border-radius: 0px;
+  border: none;
 }
-.navbar{
-
+.navbar {
 }
 .alert-dismissible .btn-close {
   top: 10px;
   right: 30px;
   color: white;
 }
-.alerta{
+.alerta {
   justify-content: space-between;
   align-items: center;
 }
-.ocultar{
+.ocultar {
   border: none;
   background: transparent;
   color: white;
 }
-.enlace_invitar{
+.enlace_invitar {
   padding: 10px 40px;
   text-decoration: none;
   font-weight: bold;
@@ -28,8 +29,11 @@
   background: white;
   margin-right: 20px;
 }
-.enlace_invitar:hover{
+.enlace_invitar:hover {
   outline: 2px solid white;
   background: transparent;
   color: white;
+}
+.form-mobile {
+  display: none;
 }

@@ -1,68 +1,195 @@
 <!DOCTYPE html>
 <html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .opiniones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: rgb(218, 104, 104);
+  }
+
+  .opiniones>div {}
+
+  .o_opinion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .o_img img {
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  .o_texto {
+    padding: 0 20px;
+  }
+
+  .slider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .slides {
+    margin: 0;
+    padding: 0;
+    width: 200%;
+    height: 100%;
+    display: flex;
+  }
+
+  .slides input {
+    display: none;
+  }
+
+  .slide {
+    width: 50%;
+    transition: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .o_opinion {
+    width: 70%;
+  }
+
+  .navegacion_manual {
+    position: absolute;
+    width: 100%;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .manual_btn {
+    border: 2px solid purple;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .manual_btn:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .manual_btn:hover {
+    background: purple;
+  }
+
+  #radio1:checked~.first {
+    margin-left: 0;
+  }
+
+  #radio2:checked~.first {
+    margin-left: -50%;
+  }
+
+  .navegacion_auto {
+    position: absolute;
+    width: 100%;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navegacion_auto div {
+    border: 2px solid purple;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+
+  #radio1:checked~.navegacion_auto .auto_btn1 {
+    background: purple;
+  }
+
+  #radio2:checked~.navegacion_auto .auto_btn2 {
+    background: purple;
+  }
+
+  .navegacion_auto div:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+
+  }
+</style>
 
 <body>
-
-  <div id="miElemento" style="border:1px solid black;width:200px;height:200px;overflow:auto">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate illo necessitatibus ea repellendus
-      sunt sapiente natus voluptatibus, aperiam ipsum in voluptatum rem dolore temporibus et tenetur optio eaque
-      reiciendis nisi officia, excepturi tempora esse voluptas inventore? Magnam, quisquam quis fuga laboriosam ullam
-      expedita perferendis omnis, eum, assumenda sequi explicabo incidunt autem ratione obcaecati? Officiis
-      consequuntur, consequatur est doloremque et quisquam ea? Magnam eius aut ea ducimus molestias soluta eum dolor
-      sunt veniam. Ipsum natus error adipisci optio similique, quam animi eum libero labore numquam deserunt
-      reprehenderit? Asperiores, vel cum. Nesciunt, corporis dignissimos? Consectetur in veniam adipisci consequuntur.
-      Magnam quod nemo, totam quae beatae placeat quam a labore esse delectus inventore non quas, excepturi praesentium
-      rem eaque, nisi similique modi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate illo necessitatibus ea repellendus
-      sunt sapiente natus voluptatibus, aperiam ipsum in voluptatum rem dolore temporibus et tenetur optio eaque
-      reiciendis nisi officia, excepturi tempora esse voluptas inventore? Magnam, quisquam quis fuga laboriosam ullam
-      expedita perferendis omnis, eum, assumenda sequi explicabo incidunt autem ratione obcaecati? Officiis
-      consequuntur, consequatur est doloremque et quisquam ea? Magnam eius aut ea ducimus molestias soluta eum dolor
-      sunt veniam. Ipsum natus error adipisci optio similique, quam animi eum libero labore numquam deserunt
-      reprehenderit? Asperiores, vel cum. Nesciunt, corporis dignissimos? Consectetur in veniam adipisci consequuntur.
-      Magnam quod nemo, totam quae beatae placeat quam a labore esse delectus inventore non quas, excepturi praesentium
-      rem eaque, nisi similique modi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate illo necessitatibus ea repellendus
-      sunt sapiente natus voluptatibus, aperiam ipsum in voluptatum rem dolore temporibus et tenetur optio eaque
-      reiciendis nisi officia, excepturi tempora esse voluptas inventore? Magnam, quisquam quis fuga laboriosam ullam
-      expedita perferendis omnis, eum, assumenda sequi explicabo incidunt autem ratione obcaecati? Officiis
-      consequuntur, consequatur est doloremque et quisquam ea? Magnam eius aut ea ducimus molestias soluta eum dolor
-      sunt veniam. Ipsum natus error adipisci optio similique, quam animi eum libero labore numquam deserunt
-      reprehenderit? Asperiores, vel cum. Nesciunt, corporis dignissimos? Consectetur in veniam adipisci consequuntur.
-      Magnam quod nemo, totam quae beatae placeat quam a labore esse delectus inventore non quas, excepturi praesentium
-      rem eaque, nisi similique modi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate illo necessitatibus ea repellendus
-      sunt sapiente natus voluptatibus, aperiam ipsum in voluptatum rem dolore temporibus et tenetur optio eaque
-      reiciendis nisi officia, excepturi tempora esse voluptas inventore? Magnam, quisquam quis fuga laboriosam ullam
-      expedita perferendis omnis, eum, assumenda sequi explicabo incidunt autem ratione obcaecati? Officiis
-      consequuntur, consequatur est doloremque et quisquam ea? Magnam eius aut ea ducimus molestias soluta eum dolor
-      sunt veniam. Ipsum natus error adipisci optio similique, quam animi eum libero labore numquam deserunt
-      reprehenderit? Asperiores, vel cum. Nesciunt, corporis dignissimos? Consectetur in veniam adipisci consequuntur.
-      Magnam quod nemo, totam quae beatae placeat quam a labore esse delectus inventore non quas, excepturi praesentium
-      rem eaque, nisi similique modi!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cupiditate illo necessitatibus ea repellendus
-      sunt sapiente natus voluptatibus, aperiam ipsum in voluptatum rem dolore temporibus et tenetur optio eaque
-      reiciendis nisi officia, excepturi tempora esse voluptas inventore? Magnam, quisquam quis fuga laboriosam ullam
-      expedita perferendis omnis, eum, assumenda sequi explicabo incidunt autem ratione obcaecati? Officiis
-      consequuntur, consequatur est doloremque et quisquam ea? Magnam eius aut ea ducimus molestias soluta eum dolor
-      sunt veniam. Ipsum natus error adipisci optio similique, quam animi eum libero labore numquam deserunt
-      reprehenderit? Asperiores, vel cum. Nesciunt, corporis dignissimos? Consectetur in veniam adipisci consequuntur.
-      Magnam quod nemo, totam quae beatae placeat quam a labore esse delectus inventore non quas, excepturi praesentium
-      rem eaque, nisi similique modi!</p>
-  </div>
-
-  <script>
-    // Obtén el elemento sobre el cual quieres detectar el evento de desplazamiento
-    var elemento = document.getElementById('miElemento');
-
-    // Agrega el evento de desplazamiento al elemento
-    elemento.addEventListener('scroll', function () {
-      console.log('El elemento está siendo desplazado!');
-    });
-
-    // Desplaza el elemento a una posición específica para activar el evento de desplazamiento
-    elemento.scrollTop = 50;
-  </script>
+  <section class="opiniones">
+    <div class="">
+      <h3 class="text-center mb-3">Nuestros Egresados Oopinan</h3>
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <div class="slide first">
+            <div class="o_opinion">
+              <div class="o_img">
+                <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="200px" height="200px">
+              </div>
+              <div class="o_texto">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatibus molestias fuga aut quidem,
+                  dolorum
+                  optio soluta natus quis, ad numquam non ullam ex eveniet sunt ipsam harum molestiae. Hic fugit facere
+                  ex
+                  veniam debitis doloribus, illo aperiam totam nihil? Ex accusamus deleniti incidunt saepe, explicabo
+                  alias
+                  magnam dignissimos dolor? In esse delectus temporibus quo assumenda cupiditate nisi porro quae! Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipisicing elit. Et, accusamus.</p>
+                <b>- Nombre Completo</b>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="o_opinion">
+              <div class="o_img">
+                <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="170px" height="170px">
+              </div>
+              <div class="o_texto">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatibus molestias fuga aut quidem,
+                  dolorum
+                  optio soluta natus quis, ad numquam non ullam ex eveniet sunt ipsam harum molestiae. Hic fugit facere
+                  ex
+                  veniam debitis doloribus, illo aperiam totam nihil? Ex accusamus deleniti incidunt saepe, explicabo
+                  alias
+                  magnam dignissimos dolor? In esse delectus temporibus quo assumenda cupiditate nisi porro quae! Lorem
+                  ipsum
+                  dolor sit amet, consectetur adipisicing elit. Et, accusamus.</p>
+                <b>- Nombre Completo</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navegacion_auto">
+          <div class="auto_btn1"></div>
+          <div class="auto_btn2"></div>
+        </div>
+        <div class="navegacion_manual">
+          <label for="radio1" class="manual_btn"></label>
+          <label for="radio2" class="manual_btn"></label>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 

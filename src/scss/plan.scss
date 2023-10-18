@@ -1,20 +1,20 @@
-@import './colores.sass';
+@import "./colores.sass";
 
-.p_uno{
+.p_uno {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   grid-auto-flow: dense;
 }
-.p_fases p:not(:first-child) {
+/* .p_fases p:not(:first-child) {
   color: blue;
-}
+} */
 //-n significa que la selección comienza desde el primer elemento (n=1) y se extiende a través de todos los elementos en el conjunto. La parte negativa (-n) selecciona todos los elementos,
 //desde el primer elemento hasta el último.
-.p_fases:nth-child(-n+3){
+.p_fases:nth-child(-n + 3) {
   grid-column: 1;
 }
-.p_fases{
+.p_fases {
   grid-column: 2;
 }
 .enlace_invitar2 {
@@ -25,102 +25,193 @@
   background: white;
   outline: 2px solid $orange;
 }
-.enlace_invitar2:hover{
+.enlace_invitar2:hover {
   background: $orange;
-  color:white;
+  color: white;
 }
 //plan de actividades
-.viaje{
-  background: $color2
+.viaje {
+  background: $color2;
+  padding: 15px 0;
 }
-.v_uno{
+.v_uno {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.v_uno > .v_icon{
+.v_uno > .v_icon {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.v_uno .v_icon{
-  flex: 1;
-  height: 100px;
-  padding: 15px;
+.v_uno .v_icon div .v_img {
+  display: flex;
+  justify-content: center;
   font-size: 35px;
 }
-.v_icon:nth-child(-n+2){
-  border-right: 2px solid rgba(0, 0, 0, 0.616);
+.v_uno .v_icon {
+  flex: 1;
+}
+.v_icon:nth-child(-n + 2) {
+  border-right: 2px solid $color2;
 }
 //profesor
-.profesor{
+.profesor {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 25px;
 }
-.p_contenedor{
+.p_contenedor {
   max-width: 400px;
   position: relative;
   border: 2px solid $color2;
   text-align: center;
   padding: 10px;
 }
-.p_titulo{
+.p_titulo {
   margin-top: 75px;
 }
-.p_imagen{
+.p_imagen {
   position: absolute;
   top: -50px;
   left: 35%;
   border-radius: 100%;
 }
-.p_enlace{
+.p_enlace {
   font-weight: 600;
-  color: $orange
+  color: $orange;
 }
-.p_enlace:hover{
+.p_enlace:hover {
   text-decoration: none;
 }
 //Opinienos
-.opiniones{
-  background: $color2
+.opiniones {
+  width: 100%;
+  background: $color2;
 }
-.o_opinion{
+.o_opinion {
+  width: 80%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: 2s;
 }
-.o_img img{
+.o_img img {
   border-radius: 100%;
   object-fit: cover;
 }
-.o_texto{
+.o_texto {
   padding: 0 20px;
 }
-//certificacion ultima parte
-.certificacion{
-
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
-.certificacion .container{
+.slides {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  padding: 0 20px 20px 20px;
+}
+.slides input {
+  display: none;
+}
+.slide {
+  width: 50%;
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//navegacion
+
+.navegacion_manual {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.manual_btn {
+  border: 2px solid purple;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 100%;
+}
+.manual_btn:not(:last-child) {
+  margin-right: 20px;
+}
+.manual_btn:hover {
+  background: purple;
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -50%;
+}
+.navegacion_auto {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+.navegacion_auto div {
+  border: 2px solid purple;
+  padding: 5px;
+  transition: 1s;
+  border-radius: 100%;
+}
+
+#radio1:checked ~ .navegacion_auto .auto_btn_1 {
+  background: purple;
+}
+#radio2:checked ~ .navegacion_auto .auto_btn_2 {
+  background: purple;
+}
+.navegacion_auto div:not(:last-child) {
+  margin-right: 20px;
+}
+//certificacion ultima parte
+.certificacion {
+}
+.certificacion .container-xl {
   padding: 25px;
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: space-between;
 }
-.ce_certificado img{
+.texto1 {
+  display: none;
+}
+.ce_certificado {
+  padding: 10px;
+}
+.ce_texto {
+  padding: 10px;
+}
+.ce_certificado img {
   object-fit: cover;
   object-position: center;
 }
 //footer
-footer{
+footer {
   background: rgb(190, 64, 18);
   padding: 20px auto;
 }
-footer .container{
+footer .container {
   text-align: center;
   color: white;
 }
-.conocemas{
+.conocemas {
   color: white;
   font-weight: bold;
 }

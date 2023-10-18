@@ -1,5 +1,32 @@
-@import './colores.sass';
-.aprendisaje{
+@import "./colores.sass";
+.aprendisaje {
   background: $color2;
-
+}
+.sticky_bottom {
+  background: $detalles;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  bottom: 0;
+}
+.sticky_bottom .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.enlace_invitar_b {
+  display: none;
+}
+.enlace_invitar_bb {
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: $orange;
+  background: white;
+  outline: 2px solid $orange;
+}
+.enlace_invitar_bb:hover {
+  background: $orange;
+  color: white;
 }
