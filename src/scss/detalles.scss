@@ -1,0 +1,46 @@
+@import './colores.sass';
+
+.detalles{
+  position: sticky;
+  top: 0;
+  background: blue;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+.detalles > .d_uno{
+  flex: 1;
+}
+.d_uno{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.d_icon{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 35px;
+  color: white;
+  justify-content: center;
+}
+.d_text{
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+
+}
+.d_uno{
+  border-right: 2px solid white;
+}
+//detalles 2
+.detalles2{
+  background: $color2;
+  padding: 25px;
+}
+.detalles2 p{
+  padding: 0 25px;
+  font-size: 110%;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+@import './colores.sass';
+.seccion1{
+  background: url(../img/pexels-antoni-shkraba-4348404.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.sec1_contenedor{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec1_contenedor div{
+  width: 100%;
+  margin: auto;
+
+}
+.sec1_contenedor .text{
+  color: white;
+  font-weight: bold;
+
+}
+//form
+
+.form{
+  display: flex;
+  justify-content: center;
+}
+//card-form
+.card-body{
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  max-width: 350px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
+}
+.form-control{
+  background: white;
+  padding-left: 10px;
+}
+.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}
+.form-control:focus +label {
+  transition: 0.5s;
+  transform: translateY(-15px);
+}
+.form-control:not(:placeholder-shown){
+  border-color: none;
+}
+.form-control:not(:placeholder-shown) + label{
+  transform: translateY(-15px);
+}
+
+// boton sumbit
+.btn_enviar{
+  width: 80%;
+  padding: 4px 0;
+  background: $orange;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid $orange;
+  font-weight: bold;
+}
+.btn_enviar:hover{
+  color: $orange;
+  background: $background;
+}
+.group{
+  position: relative;
+}
+label{
+  position: absolute;
+  font-weight: 400;
+  top: 2px;
+  left: 5px;
+  color: gray;
+  background: white;
+  border-radius: 5px;
+  padding: 0px 10px;
+}

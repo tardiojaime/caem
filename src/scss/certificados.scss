@@ -1,0 +1,17 @@
+@import './colores.sass';
+
+.certificados{
+  display: flex;
+}
+.certificados>* {
+  flex: 1;
+}
+.c_icon{
+  font-size: 35px;
+  text-align: center;
+}
+.c_text{
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+}

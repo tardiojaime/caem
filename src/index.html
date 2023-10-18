@@ -4,30 +4,294 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap w/ Vite</title>
+  <title>Bol</title>
   <script type="module" src="./js/main.js"></script>
 </head>
 
 <body>
   <header>
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    <nav class="navbar">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="img/LOGO CAEM_negro 2021.png" alt="Bootstrap" width="70" height="64">
-        </a>
+      <div class="container d-flex alerta">
+        <div class="my-auto">
+          <p class="text-white">
+            Invita a tus colegas y ahorra <strong>US$160</strong>
+          </p>
+        </div>
+        <div>
+          <a href="#" class="enlace_invitar">Enlace</a>
+          <button type="button" class="ocultar" data-bs-dismiss="alert" aria-label="Close"><i
+              class="fa-solid fa-x"></i></button>
+        </div>
       </div>
-    </nav>
+    </div>
   </header>
-
-  <div class="container py-4 px-3 mx-auto">
-    <h1>Hello, Bootstrap and Vite!</h1>
-    <button class="btn btn-primary">Primary button</button>
-    <i class="fa-brands fa-envira"></i>
-  </div>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./img/LOGO CAEM_negro 2021.png" alt="Bootstrap" width="70" height="64">
+      </a>
+    </div>
+  </nav>
+  <section class="seccion1" id="form_conte">
+    <div class="container sec1_contenedor">
+      <div class="text">
+        <div class="texto">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci harum quaerat dolores autem deserunt, alias
+          sapiente rem quis officiis doloremque voluptas ipsum, soluta temporibus fuga rerum architecto dolore id
+          explicabo!
+        </div>
+      </div>
+      <div class="form">
+        <div class="card-body">
+          <div class="text-center mb-3">
+            <img src="./img/LOGO CAEM_negro 2021.png" alt="img" width="80px" height="50px">
+          </div>
+          <form id="registration-form" method="post">
+            <div class="group mb-4">
+              <input class="form-control form-control-sm" type="text" name="nombre" id="nombre" required
+                placeholder=" ">
+              <label for="nombre">Nombre</label>
+            </div>
+            <div class="group mb-4">
+              <input class="form-control form-control-sm" type="text" name="ciudad" id="ciudad" required
+                placeholder=" ">
+              <label for="ciudad">Ciudad</label>
+            </div>
+            <div class="group mb-4">
+              <input type="text" name="telefono" id="telefono" required class="form-control form-control-sm"
+                placeholder=" ">
+              <label for="telefono">Telefono</label>
+            </div>
+            <div class="group mb-4">
+              <input type="email" name="correo" id="correo" required class="form-control form-control-sm"
+                placeholder=" ">
+              <label for="correo">Correo</label>
+            </div>
+            <div class="group mb-4">
+              <select class="form-control form-control-sm" id="curso" name="curso" required>
+                <option value="Diseño grafico publicitario">Diseño Grafico Publicitario</option>
+                <option value="Auxiliar Contable">Auxiliar Contable</option>
+                <option value="Electronica y Reparacion">Electronica y Reparacion</option>
+                <option value="Ofimatica">Ofimatica</option>
+                <option value="Diseño y Programacion de Videojuegos">Diseño y Programacion de Videojuegos</option>
+              </select>
+              <label for="curso">Curso</label>
+            </div>
+            <div class="text-center">
+              <button id="btn_submit" type="submit" class="btn_enviar">Enviar
+              </button>
+              <div id="espera" class="d-none spinner-grow text-primary" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <i id="listo" class="d-none fas fa-check-double" style="color: blue;"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="detalles" class="detalles">
+    <div class="d_uno">
+      <div class="d_icon">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      </div>
+      <div class="d_text">
+        <p><strong>title</strong></p>
+        <p>describe</p>
+        <p>details</p>
+      </div>
+    </div>
+    <div class="d_uno">
+      <div class="d_icon"><i class="fa-regular fa-clock"></i></div>
+      <div class="d_text">
+        <p><strong>title</strong></p>
+        <p>describe</p>
+        <p>details</p>
+      </div>
+    </div>
+    <div class="d_uno">
+      <div class="d_icon"><i class="fa-solid fa-dollar-sign"></i></div>
+      <div class="d_text">
+        <p><strong>title</strong></p>
+        <p>describe</p>
+        <p>details</p>
+      </div>
+    </div>
+    <div class="d_uno">
+      <div class="d_icon"><i class="fa-solid fa-people-group"></i></div>
+      <div class="d_text">
+        <p><strong>title</strong></p>
+        <p>describe</p>
+        <p>details</p>
+      </div>
+    </div>
+    <div class="d_uno d-none" id="btn_ocultar">
+      <a href="#form_conte" class="enlace_invitar2">Descargar</a>
+    </div>
+  </section>
+  <section class="detalles2">
+    <h2 class="text-center py-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, quidem!</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae quam sit perspiciatis hic
+      exercitationem deleniti autem quia et. Sint ipsam dicta necessitatibus error distinctio veniam deleniti, provident
+      minus aperiam officia! Tempore eum veritatis deserunt aliquam quibusdam laboriosam excepturi inventore nemo,
+      architecto odit laudantium labore quam eligendi. Facilis necessitatibus, laudantium earum at exercitationem,
+      reprehenderit voluptates voluptas quas consectetur aut neque?</p>
+  </section>
+  <section class="p-4">
+    <h3 class="text-center py-4">Este Certificado es para ti</h3>
+    <div class="certificados">
+      <div class="c_uno">
+        <div class="c_icon">
+          <i class="fa-brands fa-sketch"></i>
+        </div>
+        <div class="c_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+      </div>
+      <div class="c_uno">
+        <div class="c_icon"><i class="fa-brands fa-sketch"></i></div>
+        <div class="c_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo.</div>
+      </div>
+      <div class="c_uno">
+        <div class="c_icon"><i class="fa-brands fa-sketch"></i></div>
+        <div class="c_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem.</div>
+      </div>
+      <div class="c_uno">
+        <div class="c_icon">
+          <i class="fa-brands fa-sketch"></i>
+        </div>
+        <div class="c_text">Lorem ipsum dolor sit amet.
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="p-4 aprendisaje">
+    <h3 class="text-center">Apredisaje Clave</h3>
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolores consequuntur rem eius delectus,
+        necessitatibus nulla voluptates doloremque nostrum atque distinctio laudantium, incidunt sequi aperiam, ex
+        laborum nobis sed amet.</p>
+      <ul>
+        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+      </ul>
+    </div>
+  </section>
+  <section class="p-4 plan">
+    <div class="container">
+      <h3 class="text-center py4">Plan de Estudios</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, enim provident. Veniam eligendi quidem magni
+        quasi magnam, repellendus qui pariatur nobis vitae fugit vero, repudiandae aspernatur aliquam atque alias.
+        Nihil.
+      </p>
+    </div>
+    <div class="container">
+      <div class="p_uno">
+        <div class=" p_fases">
+          <p><b>Fase 1 - Observar/Empatizar:</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
+            distinctio animi error quidem voluptate!</p>
+        </div>
+        <div class="p_fases">
+          <p><b>Fase 2 - Observar/Empatizar:</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
+            distinctio animi error quidem voluptate!</p>
+        </div>
+        <div class="p_fases">
+          <p><b>Fase 3 - Observar/Empatizar:</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
+            distinctio animi error quidem voluptate!</p>
+        </div>
+        <div class="p_fases">
+          <p><b>Fase 4 - Observar/Empatizar:</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
+            distinctio animi error quidem voluptate!</p>
+        </div>
+        <div class="p_fases">
+          <p><b>Fase 5 - Observar/Empatizar:</b></p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
+            distinctio animi error quidem voluptate!</p>
+        </div>
+      </div>
+      <div class="text-center my-4">
+        <a href="#form_conte" class="enlace_invitar2">Descargar</a>
+      </div>
+    </div>
+  </section>
+  <section class="viaje">
+    <div class="container">
+      <h3 class="text-center">
+        Tu viaje de aprendisaje
+        <div class="v_uno">
+          <div class="v_icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+          <div class="v_icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+          <div class="v_icon"><i class="fa-solid fa-hands-asl-interpreting"></i></div>
+        </div>
+      </h3>
+    </div>
+  </section>
+  <section class="container p-4">
+    <h3 class="text-center mb-3">Profesor</h3>
+    <br>
+    <div class="profesor">
+      <div class="p_contenedor">
+        <img class="p_imagen" src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="130px" height="130px">
+        <p class="p_titulo"><b>Profesor nombre</b></p>
+        <p class="p_descripcion mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt impedit unde
+          facilis
+          nobis
+          iste omnis ipsa distinctio eius aut, provident, nesciunt quisquam blanditiis! Vero nobis illum voluptas
+          accusamus iste maxime.</p>
+        <a class="p_enlace" href="#">Mas info</a>
+        <br><br>
+      </div>
+    </div>
+  </section>
+  <section class="p-4 opiniones">
+    <div class="container p-4">
+      <h3 class="text-center mb-3">Nuestros Egresados Oopinan</h3>
+      <div class="o_opinion">
+        <div class="o_img">
+          <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="200px" height="200px">
+        </div>
+        <div class="o_texto">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatibus molestias fuga aut quidem,
+            dolorum
+            optio soluta natus quis, ad numquam non ullam ex eveniet sunt ipsam harum molestiae. Hic fugit facere ex
+            veniam debitis doloribus, illo aperiam totam nihil? Ex accusamus deleniti incidunt saepe, explicabo alias
+            magnam dignissimos dolor? In esse delectus temporibus quo assumenda cupiditate nisi porro quae! Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit. Et, accusamus.</p>
+          <b>- Nombre Completo</b>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="certificacion">
+    <div class="container">
+      <div class="ce_texto">
+        <h3 class="mb-3"><b>Certificado</b></h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem veniam numquam ipsum possimus dicta accusamus
+          itaque unde odit. Amet fuga, dolorem minima quas animi accusamus aut error sit tempora vero.</p>
+        <a href="#form_conte" class="enlace_invitar2">Descargar</a>
+      </div>
+      <div class="ce_certificado">
+        <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="350px" height="250px">
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <br>
+      <p><a href="#form_conte" class="enlace_invitar2">Descargar</a></p>
+      <p style="margin-bottom: 0;">Registrate lo antes posible. El cupo es Limitado</p>
+      <p>Opciones de pago flexible: <a href="#" class="conocemas"><b>Conoce Mas</b></a></p>
+    </div>
+    <p class="text-center" style="margin-bottom: 0;">
+      © 2023 Itec - Instituto Tecnico
+    </p>
+  </footer>
 </body>
 
 </html>

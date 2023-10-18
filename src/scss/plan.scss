@@ -1,0 +1,126 @@
+@import './colores.sass';
+
+.p_uno{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+.p_fases p:not(:first-child) {
+  color: blue;
+}
+//-n significa que la selección comienza desde el primer elemento (n=1) y se extiende a través de todos los elementos en el conjunto. La parte negativa (-n) selecciona todos los elementos,
+//desde el primer elemento hasta el último.
+.p_fases:nth-child(-n+3){
+  grid-column: 1;
+}
+.p_fases{
+  grid-column: 2;
+}
+.enlace_invitar2 {
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: $orange;
+  background: white;
+  outline: 2px solid $orange;
+}
+.enlace_invitar2:hover{
+  background: $orange;
+  color:white;
+}
+//plan de actividades
+.viaje{
+  background: $color2
+}
+.v_uno{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.v_uno > .v_icon{
+  flex: 1;
+}
+.v_uno .v_icon{
+  flex: 1;
+  height: 100px;
+  padding: 15px;
+  font-size: 35px;
+}
+.v_icon:nth-child(-n+2){
+  border-right: 2px solid rgba(0, 0, 0, 0.616);
+}
+//profesor
+.profesor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+.p_contenedor{
+  max-width: 400px;
+  position: relative;
+  border: 2px solid $color2;
+  text-align: center;
+  padding: 10px;
+}
+.p_titulo{
+  margin-top: 75px;
+}
+.p_imagen{
+  position: absolute;
+  top: -50px;
+  left: 35%;
+  border-radius: 100%;
+}
+.p_enlace{
+  font-weight: 600;
+  color: $orange
+}
+.p_enlace:hover{
+  text-decoration: none;
+}
+//Opinienos
+.opiniones{
+  background: $color2
+}
+.o_opinion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.o_img img{
+  border-radius: 100%;
+  object-fit: cover;
+}
+.o_texto{
+  padding: 0 20px;
+}
+//certificacion ultima parte
+.certificacion{
+
+}
+.certificacion .container{
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ce_certificado img{
+  object-fit: cover;
+  object-position: center;
+}
+//footer
+footer{
+  background: rgb(190, 64, 18);
+  padding: 20px auto;
+}
+footer .container{
+  text-align: center;
+  color: white;
+}
+.conocemas{
+  color: white;
+  font-weight: bold;
+}
