@@ -11697,7 +11697,7 @@ label.label_form {
   flex: 1;
 }
 .v_icon:nth-child(-n + 2) {
-  border-right: 2px solid #f3f3f3;
+  border-right: 4px solid white;
 }
 .profesor {
   display: flex;
@@ -11896,7 +11896,7 @@ footer .container {
   }
   .v_icon:nth-child(-n + 2) {
     border-right: none;
-    border-bottom: 2px solid #f3f3f3;
+    border-bottom: 4px solid white;
   }
   .o_opinion {
     display: block;
@@ -11938,9 +11938,19 @@ footer .container {
     width: 50%;
   }
 }
+@media (max-width: 576px) {
+  .navbar > .container {
+    justify-content: center;
+  }
+  .form-mobile > .form > .card-body {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: 80%;
+  }
+}
 @font-face {
   font-family: hregular;
-  src: url(./HurmeGeometricSans4-Regular-50da2d1d.ttf) format("truetype");
+  src: url(./assets/HurmeGeometricSans4-Regular-50da2d1d.ttf) format("truetype");
 }
 * {
   margin: 0;

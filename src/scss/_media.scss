@@ -58,7 +58,7 @@
   }
   .v_icon:nth-child(-n + 2) {
     border-right: none;
-    border-bottom: 2px solid $color2;
+    border-bottom: 4px solid white;
   }
   //opiniones de los egresados
   .o_opinion {
@@ -105,5 +105,16 @@
   }
   .alerta div {
     width: 50%;
+  }
+}
+/* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
+@media (max-width: 576px) {
+  .navbar > .container {
+    justify-content: center;
+  }
+  .form-mobile > .form > .card-body {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: 80%;
   }
 }
