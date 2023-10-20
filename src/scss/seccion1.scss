@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
 }
-.sec1_contenedor div {
+.sec1_contenedor > div {
   width: 100%;
   margin: auto;
 }
@@ -38,21 +38,26 @@
 }
 .form-control {
   background: white;
+  border: 1px solid rgb(110, 108, 108);
   padding-left: 10px;
 }
 .form-control:focus {
-  border-color: none;
-  box-shadow: none;
+  box-shadow: 3px 3px 5px rgb(248, 173, 61);
 }
 .form-control:focus + label {
   transition: 0.5s;
   transform: translateY(-15px);
+  letter-spacing: 2px;
+  font-size: 80%;
 }
 .form-control:not(:placeholder-shown) {
-  border-color: none;
+  border: 1px solid rgb(169, 169, 228);
 }
 .form-control:not(:placeholder-shown) + label {
   transform: translateY(-15px);
+  letter-spacing: 2px;
+  font-size: 80%;
+  color: rgb(169, 169, 228);
 }
 .terminos {
   color: rgb(87, 83, 83);
@@ -60,31 +65,12 @@
 .terminos p {
   font-size: small;
 }
-
-// boton sumbit
-.btn_enviar {
-  width: 100%;
-  padding: 4px 0;
-  background: $orange;
-  color: white;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border: 2px solid $orange;
-  font-weight: bold;
-}
-.btn_enviar:hover {
-  color: $orange;
-  background: $background;
-}
-.group {
-  position: relative;
-}
 label.label_form {
   position: absolute;
   font-weight: 400;
-  top: 4px;
+  top: 5px;
   left: 5px;
-  color: gray;
+  color: rgb(85, 80, 80);
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,
@@ -97,6 +83,83 @@ label.label_form {
   border-radius: 5px;
   padding: 0px 10px;
   z-index: 2;
+}
+.contenedor_enviar {
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+#espera {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  bottom: 2px;
+  color: white;
+}
+#espera_m {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  bottom: 2px;
+  color: white;
+}
+.spinner-grow {
+  --bs-spinner-width: 10px;
+  --bs-spinner-height: 10px;
+}
+.spinner-grow:nth-child(1),
+.spinner-grow:nth-child(3) {
+  --bs-spinner-width: 8px;
+  --bs-spinner-height: 8px;
+}
+
+// boton sumbit
+.btn_enviar {
+  width: 100%;
+  padding: 4px 0;
+  background: $orange;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid $orange;
+  font-weight: bold;
+  transition: 1s;
+}
+.btn_enviar:hover {
+  color: $orange;
+  background: $background;
+}
+
+.btn_enviar:hover ~ div#espera {
+  color: $orange;
+}
+.btn_enviar:hover ~ div#espera_m {
+  color: $orange;
+}
+
+.btn_enviar_correcto {
+  width: 100%;
+  padding: 4px 0;
+  background: rgb(7, 187, 7);
+  border: 2px solid rgb(7, 187, 7);
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-weight: bold;
+  transition: 1s;
+}
+.btn_enviar_correcto:hover {
+  color: rgb(7, 187, 7);
+  background: $background;
+}
+.group {
+  position: relative;
 }
 /* label.label_form:after {
   content: "";

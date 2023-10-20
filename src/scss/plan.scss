@@ -57,11 +57,14 @@
   border-right: 4px solid white;
 }
 //profesor
+.pprofesor {
+  width: 100%;
+}
 .profesor {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 55px 20px 20px 20px;
 }
 .p_contenedor {
   max-width: 400px;
@@ -76,7 +79,7 @@
 .p_imagen {
   position: absolute;
   top: -50px;
-  left: 35%;
+  left: 33%;
   border-radius: 100%;
 }
 .p_enlace {
@@ -92,11 +95,12 @@
   background: $color2;
 }
 .o_opinion {
-  width: 80%;
+  width: 70%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0 10px 0;
   transition: 2s;
 }
 .o_img img {
@@ -156,6 +160,12 @@
 #radio2:checked ~ .first {
   margin-left: -50%;
 }
+#radio_p1:checked ~ .first {
+  margin-left: 0;
+}
+#radio_p2:checked ~ .first {
+  margin-left: -50%;
+}
 .navegacion_auto {
   position: absolute;
   width: 100%;
@@ -174,6 +184,12 @@
   background: purple;
 }
 #radio2:checked ~ .navegacion_auto .auto_btn_2 {
+  background: purple;
+}
+#radio_p1:checked ~ .navegacion_auto .auto_btn_1 {
+  background: purple;
+}
+#radio_p2:checked ~ .navegacion_auto .auto_btn_2 {
   background: purple;
 }
 .navegacion_auto div:not(:last-child) {

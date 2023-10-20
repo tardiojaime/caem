@@ -38,8 +38,8 @@
     <div class="container-fluid container-xl sec1_contenedor py-2">
       <div class="text">
         <div class="texto">
-          <h3>INNOVACIÓN Y AGILIDAD</h3>
-          <p>Herramientas para...</p>
+          <h1 class="fw-bolder">INNOVACIÓN Y AGILIDAD</h1>
+          <p>Scrum y herramientas para transformar tu organización</p>
         </div>
       </div>
       <div class="form">
@@ -54,12 +54,12 @@
               <label class="label_form" for="nombre">Nombre(s):</label>
             </div>
             <div class="group mb-4">
-              <input class="form-control form-control-md" type="text" name="apellido" id="apellido" required
+              <input class="form-control form-control-md" type="text" name="apellidos" id="apellido" required
                 placeholder=" ">
               <label class="label_form" for="apellido">Apellido(s):</label>
             </div>
             <div class="group mb-3">
-              <input type="email" name="correo" id="correo" required class="form-control form-control-md"
+              <input type="email" name="email" id="correo" required class="form-control form-control-md"
                 placeholder=" ">
               <label class="label_form" for="correo">Email:</label>
             </div>
@@ -68,18 +68,33 @@
                 placeholder=" ">
               <label class="label_form" for="telefono">Número de celular:</label>
             </div>
-            <label for="">Preguntando por:</label>
-            <div class="mb-1">
-              <input class="form-check-input" type="radio" name="radio_" id="radio_1" checked>
-              <label class="form-check-label" for="radio_1">
-                Mí mismo
-              </label>
-            </div>
-            <div class="mb-3">
-              <input class="form-check-input" type="radio" name="radio_" id="radio_2">
-              <label class="form-check-label" for="radio_2">
-                Equipo/Grupo
-              </label>
+            <div class="row">
+              <div class="col">
+                <label for="">Preguntando por:</label>
+                <div class="mb-1">
+                  <input class="form-check-input" type="radio" name="tipo" id="radio_1" checked value="Mí mismo">
+                  <label class="form-check-label" for="radio_1">
+                    Mí mismo
+                  </label>
+                </div>
+                <div class="mb-3">
+                  <input class="form-check-input" type="radio" name="tipo" id="radio_2" value="Equipo/Grupo">
+                  <label class="form-check-label" for="radio_2">
+                    Equipo/Grupo
+                  </label>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center">
+                <div id="participantes" class="group col d-none">
+                  <select class="form-control form-control-md" name="participantes" required>
+                    <option value=".">Selecione...</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6+">6+</option>
+                  </select>
+                  <label class="label_form" for="participantes">Participantes</label>
+                </div>
+              </div>
             </div>
             <div class="group mb-4">
               <select class="form-control form-control-md" id="area_experiencia" name="area_experiencia" required>
@@ -130,7 +145,8 @@
               <label class="label_form" for="region">País:</label>
             </div>
             <div id="departamento" class="group mb-2">
-              <select class="form-control form-control-md" name="departamento" required>
+              <select id="select_departamento" class="form-control form-control-md" name="departamento" required>
+                <option value=".">Seleccione...</option>
                 <option value="Beni">Beni</option>
                 <option value="Chuquisaca">Chuquisaca</option>
                 <option value="Cochabamba">Cochabamba</option>
@@ -148,13 +164,20 @@
                 programas relevantes, vía
                 email/WhatsApp. <a href="#">Política de privacidad</a></p>
             </div>
-            <div class="text-center">
+            <div class="text-cente contenedor_enviar">
               <button id="btn_submit" type="submit" class="btn_enviar">Enviar
               </button>
-              <div id="espera" class="d-none spinner-grow text-primary" role="status">
-                <span class="visually-hidden"></span>
+              <div id="espera" class="d-none">
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
               </div>
-              <i id="listo" class="d-none fas fa-check-double" style="color: blue;"></i>
             </div>
           </form>
         </div>
@@ -167,18 +190,18 @@
         <div class="text-center mb-3">
           <h3>Obtén la infografía</h3>
         </div>
-        <form id="registration-form" method="post">
+        <form id="registration-form-m" method="post">
           <div class="group mb-4">
             <input class="form-control form-control-md" type="text" name="nombre" id="nombre" required placeholder=" ">
             <label class="label_form" for="nombre">Nombre(s):</label>
           </div>
           <div class="group mb-4">
-            <input class="form-control form-control-md" type="text" name="apellido" id="apellido" required
+            <input class="form-control form-control-md" type="text" name="apellidos" id="apellido" required
               placeholder=" ">
             <label class="label_form" for="apellido">Apellido(s):</label>
           </div>
           <div class="group mb-3">
-            <input type="email" name="correo" id="correo" required class="form-control form-control-md" placeholder=" ">
+            <input type="email" name="email" id="correo" required class="form-control form-control-md" placeholder=" ">
             <label class="label_form" for="correo">Email:</label>
           </div>
           <div class="group mb-2">
@@ -186,18 +209,33 @@
               placeholder=" ">
             <label class="label_form" for="telefono">Número de celular:</label>
           </div>
-          <label for="">Preguntando por:</label>
-          <div class="mb-1">
-            <input class="form-check-input" type="radio" name="radio_" id="radio_1" checked>
-            <label class="form-check-label" for="radio_1">
-              Mí mismo
-            </label>
-          </div>
-          <div class="mb-3">
-            <input class="form-check-input" type="radio" name="radio_" id="radio_2">
-            <label class="form-check-label" for="radio_2">
-              Equipo/Grupo
-            </label>
+          <div class="row">
+            <div class="col">
+              <label for="">Preguntando por:</label>
+              <div class="mb-1">
+                <input class="form-check-input" type="radio" name="tipo" id="radio_3" checked value="Mí mismo">
+                <label class="form-check-label" for="radio_3">
+                  Mí mismo
+                </label>
+              </div>
+              <div class="mb-3">
+                <input class="form-check-input" type="radio" name="tipo" id="radio_4" value="Equipo/Grupo">
+                <label class="form-check-label" for="radio_4">
+                  Equipo/Grupo
+                </label>
+              </div>
+            </div>
+            <div class="col d-flex align-items-center">
+              <div id="participantes_m" class="group col d-none">
+                <select class="form-control form-control-md" name="participantes" required>
+                  <option value=".">Selecione...</option>
+                  <option value="1-2">1-2</option>
+                  <option value="3-5">3-5</option>
+                  <option value="6+">6+</option>
+                </select>
+                <label class="label_form" for="participantes_m">Participantes</label>
+              </div>
+            </div>
           </div>
           <div class="group mb-4">
             <select class="form-control form-control-md" id="area_experiencia" name="area_experiencia" required>
@@ -219,7 +257,7 @@
             <label class="label_form" for="area_experiencia">Área de Experiencia Profesional:</label>
           </div>
           <div class="group mb-4">
-            <select class="form-control form-control-md" id="region2" name="region" required>
+            <select class="form-control form-control-md" id="region_m" name="region" required>
               <option value="Argentina">Argentina</option>
               <option value="Bolivia" selected>Bolivia</option>
               <option value="Brasil">Brasil</option>
@@ -245,10 +283,11 @@
               <option value="Uruguay ">Uruguay </option>
               <option value="Venezuela">Venezuela</option>
             </select>
-            <label class="label_form" for="region2">País:</label>
+            <label class="label_form" for="region">País:</label>
           </div>
-          <div id="departamento2" class="group mb-2">
-            <select class="form-control form-control-md" name="departamento" required>
+          <div id="departamento_m" class="group mb-2">
+            <select id="select_departamento_m" class="form-control form-control-md" name="departamento" required>
+              <option value=".">Seleccione...</option>
               <option value="Beni">Beni</option>
               <option value="Chuquisaca">Chuquisaca</option>
               <option value="Cochabamba">Cochabamba</option>
@@ -259,20 +298,27 @@
               <option value="Santa Cruz">Santa Cruz</option>
               <option value="Tarija">Tarija</option>
             </select>
-            <label class="label_form" for="departamento2">Departamento</label>
+            <label class="label_form" for="select_departamento_m">Departamento</label>
           </div>
           <div class="mb-1 text-wrap fs-6 terminos">
             <p>Al hacer clic en el botón de abajo, aceptas recibir información de CAEM sobre este y otros
               programas relevantes, vía
               email/WhatsApp. <a href="#">Política de privacidad</a></p>
           </div>
-          <div class="text-center">
-            <button id="btn_submit" type="submit" class="btn_enviar">Enviar
+          <div class="text-cente contenedor_enviar">
+            <button id="btn_submit_m" type="submit" class="btn_enviar">Enviar
             </button>
-            <div id="espera" class="d-none spinner-grow text-primary" role="status">
-              <span class="visually-hidden"></span>
+            <div id="espera_m" class="d-none">
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden"></span>
+              </div>
+              <div class="spinner-grow" role="status">
+                <span class="visually-hidden"></span>
+              </div>
             </div>
-            <i id="listo" class="d-none fas fa-check-double" style="color: blue;"></i>
           </div>
         </form>
       </div>
@@ -377,89 +423,172 @@
     </div>
   </section>
   <section class="detalles2">
-    <h2 class="text-center py-4">Diseña servicios y experiencias memorables</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae quam sit perspiciatis hic
-      exercitationem deleniti autem quia et. Sint ipsam dicta necessitatibus error distinctio veniam deleniti, provident
-      minus aperiam officia! Tempore eum veritatis deserunt aliquam quibusdam laboriosam excepturi inventore nemo,
-      architecto odit laudantium labore quam eligendi. Facilis necessitatibus, laudantium earum at exercitationem,
-      reprehenderit voluptates voluptas quas consectetur aut neque?</p>
+    <h2 class="text-center py-4 fw-bolder">Diseña productos y experiencias memorables</h2>
+    <p>En un entorno de negocios cada vez más competitivo, Scrum permite a cualquier organización adoptar y adaptar
+      prácticas
+      acorde a las necesidades específicas de cada equipo y proyecto para mayor flexibilidad y por lo tanto, continua
+      mejora.</p>
   </section>
   <section class="p-4">
-    <h3 class="text-center py-4">Este Certificado es para ti</h3>
+    <h2 class="text-center py-4 fw-bolder">Este Certificado es para ti</h2>
     <div class="certificados">
       <div class="c_uno">
         <div class="c_icon">
-          <i class="fa-brands fa-sketch"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+            <title>ICONO</title>
+            <g id="Capa_5" data-name="Capa 5">
+              <path d="M60,115a55,55,0,1,1,55-55A55.1,55.1,0,0,1,60,115ZM60,10a50,50,0,1,0,50,50A50,50,0,0,0,60,10Z"
+                style="fill:#333" />
+              <path
+                d="M60.5,17.5a2.1,2.1,0,0,1,.9,2.1V24a2.5,2.5,0,0,1-.2,1.2c-.2.6-.7.8-1.4.8a1.3,1.3,0,0,1-1.2-1.3c0-2,0-3.9.1-5.9,0-.4.5-.9.8-1.3Z"
+                style="fill:#333" />
+              <path
+                d="M52.9,79.8v1.1c0,1.2.5,1.8,1.7,1.8h5.2a1.4,1.4,0,1,1,0,2.8H54.1A1.2,1.2,0,0,0,53,86.9a1.1,1.1,0,0,0,.9,1.3h5.8c1.1,0,1.7.5,1.7,1.4s-.6,1.4-1.7,1.4H54.5c-1.2,0-1.9,1-1.4,1.9a2.3,2.3,0,0,0,1.2.9c1,.3,1.5.8,1.4,1.7s-.9,1.2-1.9,1.1a4.2,4.2,0,0,1-2.7-7,4.4,4.4,0,0,1,.1-5.7A5.6,5.6,0,0,1,50,80c.1-.2-.2-.5-.4-.6a4.4,4.4,0,0,1-2.4-4.1V72.8A4.5,4.5,0,0,0,45.6,69a24.3,24.3,0,0,1-4.7-5.4,22,22,0,0,1-3.4-14.3A22,22,0,0,1,47.8,32.4a21.6,21.6,0,0,1,20-2.1A22.3,22.3,0,0,1,82.1,46.6,21.5,21.5,0,0,1,78.8,64a27.1,27.1,0,0,1-4.2,4.7,5.3,5.3,0,0,0-1.8,4.2v2.5a4.5,4.5,0,0,1-2.4,4,1,1,0,0,0-.4.8,5.7,5.7,0,0,1-1.2,3.9,4.2,4.2,0,0,1,0,5.7,4.2,4.2,0,0,1-1.3,6.6,1.8,1.8,0,0,0-.7.8A7,7,0,0,1,55,100.4c-.7-.7-.9-1.5-.3-2.1s1.4-.6,2.2.1c2.6,2.1,5.9,1.5,7-1.5H58.8c-1,0-1.6-.5-1.6-1.3s.6-1.5,1.7-1.5H66c.7-.1,1-.6,1.1-1.4a1.5,1.5,0,0,0-1.3-1.3H64.4a1.6,1.6,0,0,1-1.6-1.5,1.5,1.5,0,0,1,1.6-1.3h1.5a1.5,1.5,0,0,0,1.2-1.4,1.4,1.4,0,0,0-1.3-1.3H64.4c-1-.1-1.6-.6-1.6-1.4s.6-1.3,1.6-1.4h.4c2,0,2.6-.7,2.2-2.9a26.2,26.2,0,0,1-2.8,0,1.4,1.4,0,0,1-1.4-1.4A1.7,1.7,0,0,1,64.2,77H68c1.4,0,1.9-.5,1.9-1.9V72.7a7.5,7.5,0,0,1,2.7-5.9,19,19,0,0,0,5-6.2c3.4-6.9,3-13.7-1.3-20.1a18.8,18.8,0,0,0-15.1-8.7,18.9,18.9,0,0,0-15.3,5.9,18.7,18.7,0,0,0-5.6,15.5,18,18,0,0,0,6,12.5c2.8,2.4,4.2,5.2,3.8,8.9v.5c0,1.4.5,1.9,1.8,1.9H60a1.4,1.4,0,0,1,1.4,1.4,1.4,1.4,0,0,1-1.5,1.4c-1.8.1-3.6,0-5.4,0Z"
+                style="fill:#333" />
+              <path
+                d="M55.7,57.2H52.9a5.6,5.6,0,0,1-5.3-3.9A5.5,5.5,0,0,1,49.5,47a5.6,5.6,0,0,1,5.7-.7A5.4,5.4,0,0,1,58.5,51c.1,1,0,2.2,0,3.3h3c0-1.1-.1-2.2,0-3.4a5.6,5.6,0,0,1,5.4-5,5.5,5.5,0,0,1,5.7,4.7A5.6,5.6,0,0,1,67,57.2H64.3V72.3q-.1,1.8-1.5,1.8c-.9,0-1.4-.6-1.4-1.8V57.2H58.6V72.5c-.1,1.1-.6,1.6-1.4,1.6s-1.4-.6-1.5-1.6V57.2Zm0-2.9a28,28,0,0,0,0-2.9A2.7,2.7,0,0,0,53,48.7a2.8,2.8,0,0,0-.5,5.6C53.5,54.4,54.6,54.3,55.7,54.3Zm8.6.1c1.3-.1,2.5,0,3.6-.2a2.7,2.7,0,0,0,2-3.1A2.8,2.8,0,0,0,67,48.7a2.7,2.7,0,0,0-2.7,2.5C64.2,52.2,64.3,53.2,64.3,54.4Z"
+                style="fill:#333" />
+              <path
+                d="M77.7,23.4a9.4,9.4,0,0,0-.3.9c-.9,1.4-1.7,2.8-2.5,4.3s-1.4,1.2-2.1.8-.9-1.3-.4-2.2L75,22.7c.4-.6.9-1,1.6-.8A1.5,1.5,0,0,1,77.7,23.4Z"
+                style="fill:#333" />
+              <path
+                d="M31.5,33.7l1.2.4,4.4,2.6c1,.5,1.2,1.3.8,2s-1.2,1-2.2.4l-4.5-2.6a1.3,1.3,0,0,1-.7-1.7A5.2,5.2,0,0,1,31.5,33.7Z"
+                style="fill:#333" />
+              <path
+                d="M44,21.9a3.1,3.1,0,0,1,1,.8l2.7,4.7a1.5,1.5,0,0,1-.4,2,1.4,1.4,0,0,1-2-.6l-2.8-4.7A1.5,1.5,0,0,1,44,21.9Z"
+                style="fill:#333" />
+              <path
+                d="M89.6,35.5a3.1,3.1,0,0,1-.8,1L84,39.2a1.4,1.4,0,0,1-1.9-.4,1.3,1.3,0,0,1,.5-1.9l5-2.9C88.6,33.5,89.6,34.2,89.6,35.5Z"
+                style="fill:#333" />
+              <path
+                d="M38.1,65.3c-.2.2-.4.7-.8.9s-3.2,1.9-4.8,2.8a1.3,1.3,0,0,1-1.9-.5,1.4,1.4,0,0,1,.5-1.9A47.6,47.6,0,0,1,36,63.8C37,63.2,38.1,63.9,38.1,65.3Z"
+                style="fill:#333" />
+              <path
+                d="M88,69.2l-.8-.4-4.3-2.4c-1-.6-1.3-1.4-.8-2.2a1.5,1.5,0,0,1,2.2-.3l4.5,2.6a1.4,1.4,0,0,1,.7,1.8C89.3,68.9,88.9,69.2,88,69.2Z"
+                style="fill:#333" />
+              <path
+                d="M30.2,52.9H27.5A1.4,1.4,0,0,1,26,51.5a1.3,1.3,0,0,1,1.3-1.4h5.8a1.4,1.4,0,0,1,1.4,1.5A1.4,1.4,0,0,1,33,52.9Z"
+                style="fill:#333" />
+              <path
+                d="M89.7,52.9H87a1.4,1.4,0,0,1-1.5-1.3A1.4,1.4,0,0,1,87,50.1a50.5,50.5,0,0,1,5.5,0A1.5,1.5,0,0,1,94,51.6c0,.7-.6,1.3-1.6,1.3Z"
+                style="fill:#333" />
+            </g>
+          </svg>
         </div>
-        <div class="c_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="c_text">
+          Quieres crear valor que destaque para tus clientes.
         </div>
-      </div>
-      <div class="c_uno">
-        <div class="c_icon"><i class="fa-brands fa-sketch"></i></div>
-        <div class="c_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo.</div>
-      </div>
-      <div class="c_uno">
-        <div class="c_icon"><i class="fa-brands fa-sketch"></i></div>
-        <div class="c_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, exercitationem.</div>
       </div>
       <div class="c_uno">
         <div class="c_icon">
-          <i class="fa-brands fa-sketch"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+            <title>ICONO</title>
+            <g id="Capa_5_copia" data-name="Capa 5 copia">
+              <path d="M60,115a55,55,0,1,1,55-55A55.1,55.1,0,0,1,60,115ZM60,10a50,50,0,1,0,50,50A50,50,0,0,0,60,10Z"
+                style="fill:#333" />
+              <path
+                d="M94.7,60.7A8.3,8.3,0,0,0,94,62a3.6,3.6,0,0,1-3.1,1.5H87.8c-.7-.1-1.1.2-1.4.9l-1.1,2.7a1.4,1.4,0,0,0,.3,1.7L87.8,71a3.5,3.5,0,0,1,0,5.3l-4.6,4.6a3.6,3.6,0,0,1-5.2,0l-3.4-3.5a1.1,1.1,0,0,1-.2-1.8c.5-.5,1.2-.4,1.8.2l3.3,3.3a1.3,1.3,0,0,0,2.2,0l4.4-4.4c.8-.8.8-1.3,0-2.1l-2.2-2.2a3.5,3.5,0,0,1-.8-4.1l1.2-2.8a3.3,3.3,0,0,1,3.3-2.3h3.3c1,0,1.4-.4,1.4-1.5s.1-4.1,0-6.2-.4-1.5-1.5-1.5H87.7a3.4,3.4,0,0,1-3.4-2.3l-1.2-2.9a3.5,3.5,0,0,1,.7-4c.8-.8,1.6-1.5,2.3-2.3s.8-1.3,0-2l-4.5-4.5c-.7-.8-1.3-.8-2,0l-2.3,2.2a3.4,3.4,0,0,1-4,.8l-2.8-1.2a3.3,3.3,0,0,1-2.4-3.4V29.1c0-1-.4-1.4-1.4-1.4H60.3c-1,0-1.4.4-1.4,1.4s0,2.1-.1,3.1a3.5,3.5,0,0,1-2.4,3.6l-2.8,1.1a3.4,3.4,0,0,1-3.9-.7l-2.4-2.3c-.7-.8-1.3-.8-2,0l-4.5,4.5a1.2,1.2,0,0,0,0,2l3.3,3.3.4.5a1.1,1.1,0,0,1-.1,1.4,1.1,1.1,0,0,1-1.4.2l-.5-.4L39.1,42a3.6,3.6,0,0,1,0-5.2l4.6-4.6a3.5,3.5,0,0,1,5.3,0l2.1,2.2c.7.6,1,.7,1.8.3l2.6-1.1a1.2,1.2,0,0,0,1-1.5v-3a3.6,3.6,0,0,1,2.7-3.6.1.1,0,0,1,.1-.1h8.3c2.1.6,3,2.2,2.8,4.4v2.5a1.4,1.4,0,0,0,.9,1.3,23.6,23.6,0,0,1,2.8,1.2,1.5,1.5,0,0,0,1.7-.4L78,32.2a3.4,3.4,0,0,1,5.2,0l4.6,4.6a3.4,3.4,0,0,1,0,5.2l-2.2,2.2a1.4,1.4,0,0,0-.3,1.7c.4.9.7,1.8,1.1,2.8a1.4,1.4,0,0,0,1.4.9H91a3.3,3.3,0,0,1,3,1.5c.3.4.4.9.7,1.3Z"
+                style="fill:#333" />
+              <path
+                d="M29.3,83.8l.9-2.1.6-.7c1.1-1.1,1.2-2,.2-3.2a1.6,1.6,0,0,0-1-.5H28.7A3.5,3.5,0,0,1,25.4,74a40.1,40.1,0,0,1,0-4.9,3.3,3.3,0,0,1,3.3-3.3h.4c1.8-.1,1.9-.1,2.5-1.8a1.2,1.2,0,0,0-.3-1.4l-1-1.1a3.3,3.3,0,0,1,0-4.4c1.2-1.3,2.4-2.5,3.7-3.7a3.4,3.4,0,0,1,4.5,0c.1.2.3.3.5.5s2,1.2,3.2.2a3.1,3.1,0,0,0,.5-1,5.7,5.7,0,0,0,0-1.3A3.3,3.3,0,0,1,46,48.5a41.7,41.7,0,0,1,5,0,3.2,3.2,0,0,1,3.2,3.2v.5c0,1.7.1,1.8,1.7,2.5a1.6,1.6,0,0,0,1.6-.3,5.7,5.7,0,0,1,1.1-1.1,3.3,3.3,0,0,1,4.3.1,45.4,45.4,0,0,1,3.8,3.8,3.3,3.3,0,0,1,0,4.2l-1.1,1.2a1.1,1.1,0,0,0-.3,1.3l.4.9a1.3,1.3,0,0,0,1.4,1H69A3.2,3.2,0,0,1,71.5,69a41.7,41.7,0,0,1,0,5,3.4,3.4,0,0,1-3.2,3.3h-.5c-1.8,0-2.2.3-2.5,2a1.7,1.7,0,0,0,.3,1.2c.2.4.7.7,1,1a3.4,3.4,0,0,1,0,4.5,33.2,33.2,0,0,1-3.8,3.7,3.2,3.2,0,0,1-4.3,0l-1.1-1a1.2,1.2,0,0,0-1.4-.3l-.7.3a1.4,1.4,0,0,0-1.1,1.6,10.3,10.3,0,0,1-.1,1.7,3.2,3.2,0,0,1-3.2,2.6,40.1,40.1,0,0,1-4.9,0,3.4,3.4,0,0,1-3.3-3.2v-.5c0-1.8-.1-1.8-1.7-2.5a1.4,1.4,0,0,0-1.6.3l-1,1a3.3,3.3,0,0,1-4.4,0L30.3,86A7.4,7.4,0,0,1,29.3,83.8ZM65.2,59.3a7.3,7.3,0,0,0-.5-.9l-3.1-3.1a1.2,1.2,0,0,0-1.8,0,9.4,9.4,0,0,1-1,1,3.5,3.5,0,0,1-3.4.6l-1.2-.5A3.6,3.6,0,0,1,51.9,53v-.9c0-.9-.4-1.3-1.3-1.3H47.4c-2.3,0-2.4,0-2.4,2.3a3.2,3.2,0,0,1-2.1,3.2l-1.4.6a3.3,3.3,0,0,1-3.4-.7l-1.1-1a1.1,1.1,0,0,0-1.6,0l-3.2,3.3a1,1,0,0,0,0,1.6l.8.9c2.3,2.1.2,6.5-2,6.9l-1.9.2c-1,0-1.4.4-1.4,1.4v4.1c0,1,.4,1.4,1.4,1.4h1.7c2,.3,3,2.4,3.2,4.4s-.7,2.3-1.6,3.2-.8,1.4,0,2.1L35,87.5c1,.9,1.5,1,2.4-.1A3.7,3.7,0,0,1,40.6,86a6.1,6.1,0,0,1,3.3,1.4A3.4,3.4,0,0,1,45,89.8v1.1c0,1,.4,1.4,1.4,1.4h3.4c1.9,0,2.1-.1,2.1-2.1a3.6,3.6,0,0,1,2.4-3.6l.8-.3a3.4,3.4,0,0,1,4,.8l.6.6a1.3,1.3,0,0,0,2,0l2.9-3c.7-.6.7-1.2,0-1.9a4.6,4.6,0,0,0-.7-.7c-2.3-2.1-.2-6.6,2.1-7h2c.8,0,1.2-.5,1.2-1.3a32.3,32.3,0,0,0,0-4.4A1.1,1.1,0,0,0,68,68.1h-.8a4.6,4.6,0,0,1-4.3-5.2,4.7,4.7,0,0,1,1.5-2.4A4.2,4.2,0,0,0,65.2,59.3Z"
+                style="fill:#333" />
+              <path
+                d="M63.5,41.5A15,15,0,0,1,78.2,53.8a14.8,14.8,0,0,1-4,13.2,1.2,1.2,0,0,1-1.7.2,1.3,1.3,0,0,1,0-1.8A11.8,11.8,0,0,0,76,58.6,12.6,12.6,0,0,0,55,47.1a1.8,1.8,0,0,1-.7.5,1.1,1.1,0,0,1-1.4-1.7A21.1,21.1,0,0,1,55.2,44,15.3,15.3,0,0,1,63.5,41.5Z"
+                style="fill:#333" />
+              <path
+                d="M48.5,61.2A10.2,10.2,0,0,1,58.8,71.6c-.1,6.5-4.8,10.2-10.4,10.3a10.4,10.4,0,1,1,.1-20.7Zm8,10.3a7.9,7.9,0,0,0-8.1-8,8.1,8.1,0,1,0,8.1,8Z"
+                style="fill:#333" />
+            </g>
+          </svg>
         </div>
-        <div class="c_text">Lorem ipsum dolor sit amet.
+        <div class="c_text">
+          Estás interesado en incorporar innovación en tus procesos.
+        </div>
+      </div>
+      <div class="c_uno">
+        <div class="c_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+            <title>ICONO</title>
+            <g id="Capa_7" data-name="Capa 7">
+              <path
+                d="M41.8,96.5a1.8,1.8,0,0,1-1-2V88.9c0-1.2.5-1.7,1.7-1.7h2.3c-.4-1.7-.7-3.5-1-5.2-1.5-8.2-2.9-16.5-4.4-24.8a1.3,1.3,0,0,1-.1-.6v-12c0-1.4.5-1.8,1.9-1.8h2.4l-6-5.8-2.9,2.1a1.5,1.5,0,0,1-2.2-.2,1.4,1.4,0,0,1,.5-2.1l9.6-7.1c.4-.3.6-.5.4-1A4.2,4.2,0,0,1,45.3,24a4.2,4.2,0,0,1,5.4,6.1,4,4,0,0,1-4.9,1.7,1.5,1.5,0,0,0-1.7.3l-3.7,2.8h-.2l.4.5c2.3,2.3,4.5,4.6,6.8,6.8a1.2,1.2,0,0,0,1,.4h3.1V38.7a1.4,1.4,0,0,1,1.6-1.6H66.9c1.1,0,1.6.5,1.7,1.6v4.1H72l.5-.3c2.4-2.4,4.8-4.8,7.1-7.3.1,0,.1-.1.2-.2l-4.6-3.3c-.1-.1-.5,0-.7.1a4.4,4.4,0,0,1-5.7-2.5,4.3,4.3,0,0,1,2.6-5.5,4,4,0,0,1,4.3.8A4.2,4.2,0,0,1,77,28.7a.8.8,0,0,0,.4,1l9.2,6.8.6.4a1.4,1.4,0,0,1,.3,2,1.4,1.4,0,0,1-2,.3l-3-2.2h-.2l-6.1,5.9H79c1.1,0,1.7.5,1.7,1.6,0,4.1.1,8.2-.1,12.3a33.1,33.1,0,0,1-.8,5.5l-.3,1.4a1.4,1.4,0,1,1-2.8-.5c.3-1.5.5-3,.8-4.6H71.4v3.8c0,1.3-.5,1.8-1.8,1.8H50.4c-1.3,0-1.8-.5-1.8-1.7V58.5H42.5c1.4,7.7,2.7,15.3,4.1,23H60a1.5,1.5,0,0,1,1.4,1.4A1.5,1.5,0,0,1,60,84.4H47.2l.5,2.8H72.4c.4-2.5.8-4.9,1.3-7.4s.4-2.4.7-3.7.8-1.5,1.6-1.4a1.4,1.4,0,0,1,1.1,1.9L75.3,87.2h2.3a1.4,1.4,0,0,1,1.6,1.6c0,1.9,0,3.8.1,5.7a2,2,0,0,1-1.1,2Zm36-50.8H42.2v9.8h6.4V51.7c0-1.3.5-1.8,1.8-1.8H69.7c1.2,0,1.7.5,1.7,1.6v4h6.4ZM43.6,93.6H76.4V90.1H43.6Zm7.9-32.4h17V52.8h-17Zm2.9-21.3v2.8H65.6V39.9ZM48.6,27.8a1.4,1.4,0,1,0-2.8,0,1.4,1.4,0,0,0,1.3,1.4A1.4,1.4,0,0,0,48.6,27.8Zm24.2-1.4a1.4,1.4,0,0,0-1.4,1.4,1.4,1.4,0,1,0,1.4-1.4Z"
+                style="fill:#333" />
+              <path
+                d="M78.4,69.8a1.5,1.5,0,0,1-1.5,1.4,1.4,1.4,0,0,1-1.4-1.4A1.5,1.5,0,0,1,77,68.4,1.4,1.4,0,0,1,78.4,69.8Z"
+                style="fill:#333" />
+              <path d="M60,58.4H56c-1,0-1.7-.5-1.7-1.4s.6-1.4,1.7-1.4h8.1a1.4,1.4,0,1,1,0,2.8Z" style="fill:#333" />
+              <path d="M60,115a55,55,0,1,1,55-55A55.1,55.1,0,0,1,60,115ZM60,10a50,50,0,1,0,50,50A50,50,0,0,0,60,10Z"
+                style="fill:#333" />
+            </g>
+          </svg>
+        </div>
+        <div class="c_text">
+          Necesitas dar soluciones actualizadas a tu organización.
+        </div>
+      </div>
+      <div class="c_uno">
+        <div class="c_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+            <title>ICONO</title>
+            <g id="Capa_8" data-name="Capa 8">
+              <path d="M60,115a55,55,0,1,1,55-55A55.1,55.1,0,0,1,60,115ZM60,10a50,50,0,1,0,50,50A50,50,0,0,0,60,10Z"
+                style="fill:#333" />
+              <path
+                d="M82.8,34.8a16.2,16.2,0,0,1,1.7-1.9,1.8,1.8,0,0,1,2.7-.2,1.9,1.9,0,0,1-.1,2.8l-1.8,1.7,2.5,1.3c2.8,1.4,3.2,4.2,1,6.4l-.9.7a31,31,0,0,1-4.1,34.8,1.1,1.1,0,0,0-.1,1.5l3.6,6.4c.7,1.2.5,2.3-.5,2.9a2,2,0,0,1-2.7-1L80.6,84C66.9,94,53.3,94,39.5,84l-.4.6c-1.1,1.9-2.1,3.8-3.2,5.6a1.9,1.9,0,0,1-2.7,1,1.9,1.9,0,0,1-.5-2.8c1.3-2.4,2.7-4.8,4-7-1.5-2.3-3.2-4.4-4.4-6.7A31.4,31.4,0,0,1,53.9,29.1a30.8,30.8,0,0,1,19.6,2.6,1,1,0,0,0,1.4-.3,4.5,4.5,0,0,1,2.5-1.6,3.7,3.7,0,0,1,3.9,2Zm-11.3,0a27.9,27.9,0,1,0,5.9,47.1C88.7,72.7,89.9,58,85.3,48.8a15.4,15.4,0,0,1-3.4,1.7,21.3,21.3,0,0,1-3.7.3,20.4,20.4,0,1,1-36.5.2,19.8,19.8,0,0,1,9.1-9.2,20.1,20.1,0,0,1,18.5.1C69.1,39.2,69.1,36.6,71.5,34.8Zm-3.8,20a9.4,9.4,0,0,1-2,12.5A9.3,9.3,0,0,1,52.2,54.9a9.3,9.3,0,0,1,13-2.6c1.3-1.4,2.6-2.6,3.8-4s.3-2-.3-2.4c-10.2-6.6-24.2.3-25.3,12.5A16.7,16.7,0,0,0,63,76.3c11.5-2,17.4-15.3,11.2-24.9a1.8,1.8,0,0,0-2.5-.5Zm-5.2.2a5.8,5.8,0,0,0-7.2,1.8,5.7,5.7,0,0,0,8.2,7.6,5.4,5.4,0,0,0,1.4-6.8L61.6,61a3.7,3.7,0,0,1-1.2.7,1.6,1.6,0,0,1-2-.8,1.8,1.8,0,0,1,.3-2.2ZM78.1,33.6l-4.7,4.5a1.5,1.5,0,0,0-.4.8v5.3h.2l6.5-6.4a1.1,1.1,0,0,0,0-.8Zm8.3,8.3-3.1-1.6a.9.9,0,0,0-1.2.2c-1.4,1.5-2.9,2.9-4.4,4.4L75.6,47H81a1.2,1.2,0,0,0,.8-.4Z"
+                style="fill:#333" />
+            </g>
+          </svg>
+        </div>
+        <div class="c_text">
+          Te interesa crear ventajas competitivas para posicionarte.
         </div>
       </div>
     </div>
   </section>
   <section class="p-4 aprendisaje">
-    <h3 class="text-center">Apredisaje Clave</h3>
+    <h2 class="text-center fw-bolder py-4">Aprendizajes clave:</h2>
     <div class="container">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolores consequuntur rem eius delectus,
-        necessitatibus nulla voluptates doloremque nostrum atque distinctio laudantium, incidunt sequi aperiam, ex
-        laborum nobis sed amet.</p>
       <ul>
-        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
-        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
-        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
-        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
-        <li class="fw-bolder mb-1">Elaborar y validar el mapa del viaje de la experiencia del cliente</li>
+        <li class="fw-bolder mb-1">Aplicar los 4 valores de la agilidad en sus equipos de trabajo</li>
+        <li class="fw-bolder mb-1">Generar foco en la entrega y flujo de valor</li>
+        <li class="fw-bolder mb-1">Generar espacios de innovación y experimentación</li>
+        <li class="fw-bolder mb-1">Entender los principios y valores de SCRUM</li>
+        <li class="fw-bolder mb-1">Comprender los Roles, Eventos y Artefactos de SCRUM</li>
+        <li class="fw-bolder mb-1">Aprender SCRUM a través de dinámicas que permitan anclar los conceptos</li>
       </ul>
     </div>
   </section>
   <section class="p-4 plan">
     <div class="container">
-      <h3 class="text-center">Plan de Estudios</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, enim provident. Veniam eligendi quidem magni
-        quasi magnam, repellendus qui pariatur nobis vitae fugit vero, repudiandae aspernatur aliquam atque alias.
-        Nihil.
-      </p>
+      <h2 class="text-center fw-bolder py-4">Plan de Estudios:</h2>
     </div>
     <div class="container">
-      <div class="p_uno">
-        <div class=" p_fases">
-          <p><b>Fase 1 - Observar/Empatizar:</b></p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
-            distinctio animi error quidem voluptate!</p>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <ul style="margin-bottom: 0;">
+            <li>Mentalidad ágil</li>
+            <li>Contexto de la Agilidad</li>
+            <li>Valores y principios de la Agilidad</li>
+            <li>¿Sirve la agilidad para todo?</li>
+            <li>Hacia dónde va la Agilidad</li>
+            <li>Herramientas y rituales ágiles</li>
+            <li>Mentalidad de Innovación</li>
+            <li>Pensamiento Lean Startup</li>
+            <li>Producto mínimo viable</li>
+            <li>Ciclo Crear-Medir-Aprender</li>
+          </ul>
         </div>
-        <div class="p_fases">
-          <p><b>Fase 2 - Observar/Empatizar:</b></p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
-            distinctio animi error quidem voluptate!</p>
-        </div>
-        <div class="p_fases">
-          <p><b>Fase 3 - Observar/Empatizar:</b></p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
-            distinctio animi error quidem voluptate!</p>
-        </div>
-        <div class="p_fases">
-          <p><b>Fase 4 - Observar/Empatizar:</b></p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
-            distinctio animi error quidem voluptate!</p>
-        </div>
-        <div class="p_fases">
-          <p><b>Fase 5 - Observar/Empatizar:</b></p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt debitis culpa ea quae provident officiis
-            distinctio animi error quidem voluptate!</p>
+        <div class="col-xs-12 col-md-6">
+          <ul>
+            <li>Cuadrantes de innovación</li>
+            <li>SCRUM</li>
+            <li>Introducción</li>
+            <li>Los 3 Roles de SCRUM</li>
+            <li>Los 5 Eventos de SCRUM</li>
+            <li>Los 3 Artefactos de SCRUM</li>
+            <li>Experiencias y formas de adopción del marco de trabajo para las empresas</li>
+            <li>Dinámicas y prácticas</li>
+          </ul>
         </div>
       </div>
       <div class="text-center my-4">
@@ -469,9 +598,9 @@
   </section>
   <section class="viaje">
     <div class="container-fluid container-md">
-      <h3 class="text-center">
+      <h2 class="text-center fw-bolder py-4">
         Tu viaje de aprendisaje
-      </h3>
+      </h2>
       <br>
       <div class="v_uno">
         <div class="v_icon">
@@ -479,9 +608,7 @@
             <div class="v_img">
               <i class="fa-solid fa-hands-asl-interpreting d-block"></i>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officia, laboriosam dignissimos
-              natus ex veritatis rem ut voluptas deserunt voluptatibus obcaecati nemo. Rerum debitis aliquid voluptate
-              nulla ab. Nulla, quam.</p>
+            <p>Asesoría personalizada, desarrollo de talleres grupales y feedback de tareas domiciliarias</p>
           </div>
         </div>
         <div class="v_icon">
@@ -489,9 +616,7 @@
             <div class="v_img">
               <i class="fa-solid fa-hands-asl-interpreting d-block"></i>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officia, laboriosam dignissimos
-              natus ex veritatis rem ut voluptas deserunt voluptatibus obcaecati nemo. Rerum debitis aliquid voluptate
-              nulla ab. Nulla, quam.</p>
+            <p>Simulador de exámenes y acceso a nuestra comunidad</p>
           </div>
         </div>
         <div class="v_icon">
@@ -499,34 +624,64 @@
             <div class="v_img">
               <i class="fa-solid fa-hands-asl-interpreting d-block"></i>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium officia, laboriosam dignissimos
-              natus ex veritatis rem ut voluptas deserunt voluptatibus obcaecati nemo. Rerum debitis aliquid voluptate
-              nulla ab. Nulla, quam.</p>
+            <p>Contenidos y recursos en español: manuales, cursos a cargo de expertos y herramientas prácticas para
+              contextos de innovación</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="container p-4">
-    <h3 class="text-center mb-3">Profesor</h3>
-    <br>
-    <div class="profesor">
-      <div class="p_contenedor">
-        <img class="p_imagen" src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="130px" height="130px">
-        <p class="p_titulo"><b>Profesor nombre</b></p>
-        <p class="p_descripcion mb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt impedit unde
-          facilis
-          nobis
-          iste omnis ipsa distinctio eius aut, provident, nesciunt quisquam blanditiis! Vero nobis illum voluptas
-          accusamus iste maxime.</p>
-        <a class="p_enlace" href="#">Mas info</a>
-        <br><br>
+  <section class="pprofesor">
+    <h2 class="text-center fw-bolder" style="padding-top: 1.5rem;">Docentes</h2>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn_p1" checked id="radio_p1">
+        <input type="radio" name="radio-btn_p1" id="radio_p2">
+        <div class="slide first">
+          <div class="profesor">
+            <div class="p_contenedor">
+              <img class="p_imagen" src="./img/ICONO2_Orlando.png" alt="" width="130px" height="130px">
+              <p class="p_titulo"><b>Orlando Mendieta Enríquez</b></p>
+              <p class="p_descripcion mb-3">
+                Licenciado en Ingeniería de Sistemas Informáticos, especializado en Redes y Telecomunicación, Management
+                3.0, docente de
+                postgrado y Director ejecutivo de Totem Organizacional. Más de 14 años en proyectos de Tecnología de la
+                Información y en
+                transformación organizacional hacia culturas de trabajo coherentes, generativas y ágiles.
+              </p>
+              <a class="p_enlace" href="#">Mas info</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="profesor">
+            <div class="p_contenedor">
+              <img class="p_imagen" src="./img/ICONO2_Marco.png" alt="" width="130px" height="130px">
+              <p class="p_titulo"><b>Marco Avendaño</b></p>
+              <p class="p_descripcion mb-3">
+                Licenciado en Ingeniería de Sistemas Informáticos, entrenador de Scrum, docente universitario, impulsor
+                de la comunidad
+                de prácticas ágiles en Bolivia y experto en procesos de transformación ágil de organizaciones.
+              </p>
+              <a class="p_enlace" href="#">Mas info</a>
+              <br><br>
+            </div>
+          </div>
+        </div>
+        <div class="navegacion_auto">
+          <div class="auto_btn_1"></div>
+          <div class="auto_btn_2"></div>
+        </div>
+        <div class="navegacion_manual">
+          <label for="radio_p1" class="manual_btn"></label>
+          <label for="radio_p2" class="manual_btn"></label>
+        </div>
       </div>
     </div>
   </section>
   <section class="opiniones">
-    <br>
-    <h3 class="text-center">Nuestros Egresados Oopinan</h3>
+    <h3 class="text-center fw-bolder" style="padding-top: 1.5rem;">Nuestros egresados opinan</h3>
     <div class="slider">
       <div class="slides">
         <input type="radio" name="radio-btn" checked id="radio1">
@@ -534,38 +689,38 @@
         <div class="slide first">
           <div class="o_opinion">
             <div class="o_img">
-              <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="200px" height="200px">
+              <img src="./img/maria.jpg" alt="" width="200px" height="200px">
             </div>
             <div class="o_texto">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatibus molestias fuga aut quidem,
-                dolorum
-                optio soluta natus quis, ad numquam non ullam ex eveniet sunt ipsam harum molestiae. Hic fugit facere
-                ex
-                veniam debitis doloribus, illo aperiam totam nihil? Ex accusamus deleniti incidunt saepe, explicabo
-                alias
-                magnam dignissimos dolor? In esse delectus temporibus quo assumenda cupiditate nisi porro quae! Lorem
-                ipsum
-                dolor sit amet, consectetur adipisicing elit. Et, accusamus.</p>
-              <b>- Nombre Completo</b>
+              <p>
+                “Esta es mi cuarta certificación en CAEM. En mi experiencia el contenido es sencillo y fácil de
+                entender, pero la
+                certificación requiere disciplina, por eso la mentoría ha sido clave: la asesoría personalizada y el
+                simulador de los
+                exámenes me han preparado con un plus, al aclarar todas mis dudas con personas de Bolivia con la
+                experiencia en cada
+                certificación."
+              </p>
+              <b>— María René Tellez Ortega, La Paz Bolivia</b>
             </div>
           </div>
         </div>
-        <div class="slide py-4">
+        <div class="slide">
           <div class="o_opinion">
             <div class="o_img">
-              <img src="./img/pexels-antoni-shkraba-4348404.jpg" alt="" width="170px" height="170px">
+              <img src="./img/filomon.jpg" alt="" width="170px" height="170px">
             </div>
             <div class="o_texto">
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id voluptatibus molestias fuga aut quidem,
-                dolorum
-                optio soluta natus quis, ad numquam non ullam ex eveniet sunt ipsam harum molestiae. Hic fugit facere
-                ex
-                veniam debitis doloribus, illo aperiam totam nihil? Ex accusamus deleniti incidunt saepe, explicabo
-                alias
-                magnam dignissimos dolor? In esse delectus temporibus quo assumenda cupiditate nisi porro quae! Lorem
-                ipsum
-                dolor sit amet, consectetur adipisicing elit. Et, accusamus.</p>
-              <b>- Nombre Completo</b>
+              <p>
+                “Para la certificación es importante el espacio y el tiempo necesarios y exclusivos para concentrarse en
+                la preparación.
+                Por eso han sido de mucho valor los test del simulador que ofrece CAEM, pues me llevaron a un contexto
+                cabal de lo que
+                tenía que estudiar. Mi motivación por adquirir nuevos conocimientos y oportunidades en mi campo laboral
+                con marcos
+                ágiles, me ha ayudado a organizar mejor mis actividades diarias también.”
+              </p>
+              <b>— Filomón Fernández Rodríguez, La Paz Bolivia</b>
             </div>
           </div>
         </div>
@@ -606,7 +761,7 @@
       © 2023 Itec - Instituto Tecnico
     </p>
   </footer>
-  <section id="sticky_bottom" class="d-none sticky_bottom enlace_invitar_b">
+  <section id="sticky_bottom" class="sticky_bottom enlace_invitar_b">
     <div class="container">
       <a href="#form_conte" class="enlace_invitar_bb">Descargar</a>
     </div>

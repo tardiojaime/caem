@@ -1,16 +1,23 @@
-@import './colores.sass';
+@import "./colores.sass";
 
-.certificados{
+.certificados {
   display: flex;
 }
-.certificados>* {
+.certificados > * {
   flex: 1;
 }
-.c_icon{
+.c_uno {
+  padding: 20px;
+}
+.c_icon {
   font-size: 35px;
   text-align: center;
 }
-.c_text{
+.c_icon svg {
+  width: 110px;
+  height: 110px;
+}
+.c_text {
   font-weight: 500;
   padding: 10px;
   text-align: center;
