@@ -1,6 +1,6 @@
 @import "./colores.sass";
 .seccion1 {
-  background: url(../img/pexels-antoni-shkraba-4348404.jpg);
+  background: url(../img/logo/fondo.png);
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -9,12 +9,9 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .sec1_contenedor > div {
   width: 100%;
-  margin: auto;
 }
 .sec1_contenedor .text {
   color: white;

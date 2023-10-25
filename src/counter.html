@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #container {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      position: relative;
+    }
+
+    #counter {
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    main {
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <main>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, totam quidem excepturi voluptate nobis,
+    repellendus asperiores ratione rem impedit ea veniam qui voluptatibus vel sit. Dolores id tempora illum excepturi!
+  </main>
+  <div id="container">
+    <div>+<span id="counter">0</span> </div>
+  </div>
+  <main>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, neque?
+  </main>
+  <label for="appt">Select a time:</label>
+  <input type="time" id="appt" name="appt">
+  <script>
+    let count = 0;
+    let isVisible = false;
+    const container = document.getElementById("container");
+    const counter = document.getElementById("counter");
+
+    const increaseNumber = () => {
+      if (count <= 30 && isVisible) {
+        counter.innerText = count;
+        count++;
+        setTimeout(increaseNumber, 500 - (count * 30));
+        //requestAnimationFrame(increaseNumber);
+      } else {
+        count = 0;
+      }
+    };
+
+    const containerObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        isVisible = true;
+        increaseNumber();
+      } else {
+        isVisible = false;
+      }
+    });
+
+    containerObserver.observe(container);
+  </script>
+</body>
+
+</html>

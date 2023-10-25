@@ -130,6 +130,84 @@
     padding: 0;
 
   }
+
+  /*texto o parrafos*/
+
+  .word {
+    animation: changeColor 4s infinite;
+  }
+
+
+  p#myParagraph {
+    transition: 2s;
+    font-size: 50px;
+  }
+
+  p#myParagraph2 {
+    transition: 2s;
+    font-size: 50px;
+    position: relative;
+  }
+
+  .word2 {
+    position: absolute;
+    margin-left: 25px;
+    animation: rotarletras 4s infinite;
+    color: white;
+  }
+
+  @keyframes rotarletras {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    15% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+
+    85% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes changeColor {
+    0% {
+      color: red;
+      opacity: 0;
+    }
+
+    25% {
+      color: green;
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 1;
+
+    }
+
+    100% {
+      color: red;
+      opacity: 0;
+    }
+  }
+
+  .fondo {
+    background: #001f5b;
+    width: 250px;
+    height: 84px;
+    display: inline-block;
+    margin-bottom: -25px;
+    border-radius: 10px;
+  }
 </style>
 
 <body>
@@ -191,6 +269,74 @@
     </div>
   </section>
 
+  <!-- carrusel de boostraop  -->
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/pexels-antoni-shkraba-4348404.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/pexels-antoni-shkraba-4348404.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/pexels-antoni-shkraba-4348404.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  <article>
+    <p id="myParagraph">Esta es una
+      <span class="word">palabra</span>
+      que
+      <span class="word">cambia</span>
+      de
+      <span class="word">color</span>.
+    </p>
+  </article>
+  <article>
+    <p id="myParagraph2">Esta es una palabra que cambia
+      <span class="fondo">
+        <span class="word2">primera</span>
+      </span>
+      demas
+    </p>
+  </article>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script>
+    var myCarousel = document.querySelector('#myCarousel');
+    //var carousel = new bootstrap.Carousel(myCarousel, {
+    /*   interval: 2000,
+      wrap: false
+    }); */
+    var words = ["primera", "segunda", "tercera"];
+    var wordIndex = 0;
+
+    setInterval(function () {
+      var wordSpans = document.getElementsByClassName("word");
+      for (var i = 0; i < wordSpans.length; i++) {
+        wordSpans[i].textContent = words[wordIndex];
+      }
+      wordIndex = (wordIndex + 1) % words.length;
+    }, 20000); // Ajusta el intervalo de tiempo aquí
+    var wordIndexs = 0;
+    setInterval(function () {
+      var wordSpans = document.getElementsByClassName("word2");
+      wordSpans[0].textContent = words[wordIndexs];
+      console.log(wordIndexs);
+      wordIndexs = (wordIndexs + 1) % words.length;
+      console.log(wordIndexs);
+    }, 4000)
+  </script>
 </body>
 
 </html>

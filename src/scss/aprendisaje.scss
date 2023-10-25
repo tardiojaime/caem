@@ -8,15 +8,13 @@
   height: 100px;
   position: sticky;
   bottom: 0;
+  z-index: 999;
 }
 .sticky_bottom .container {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.enlace_invitar_b {
-  display: none;
 }
 .enlace_invitar_bb {
   padding: 10px 40px;
@@ -29,4 +27,8 @@
 .enlace_invitar_bb:hover {
   background: $orange;
   color: white;
+}
+div.container > .row > .col-xs-12.col-md-6 {
+  display: flex;
+  justify-content: end;
 }

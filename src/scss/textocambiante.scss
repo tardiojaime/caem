@@ -1,0 +1,81 @@
+@import "./colores.sass";
+.certmind {
+  background: $color2;
+}
+.cer_titulo {
+  width: 100%;
+  text-align: center;
+  img {
+    width: 50%;
+  }
+}
+.cer_estadisticas > div {
+  text-align: center;
+  padding: 30px;
+}
+.cer_descripcion > .cer_p {
+  text-align: center;
+}
+.fa-regular,
+.fa-star {
+  font-size: 3rem;
+}
+.cer_estadisticas > div > div {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.cer_estadisticas > div:nth-child(-n + 2) {
+  background: white;
+}
+.cer_estadisticas > div:nth-last-child(-n + 2) {
+  background: $detalles;
+  color: white;
+}
+
+.fondo_camb {
+  background: #001f5b;
+  width: 240px;
+  height: 50px;
+  display: inline-block;
+  margin-bottom: -10px;
+}
+.word_ {
+  position: absolute;
+  margin-left: -80px;
+  color: white;
+}
+.texto_movil {
+  display: none;
+}
+.cer_descripcion p {
+  margin: 0;
+}
+.cer_certmind_img {
+  text-align: center;
+  width: 100%;
+}
+.cer_certmind_img img {
+  width: 80%;
+}
+
+@keyframes rotarletras {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  40% {
+    transform: translateY(5px);
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}

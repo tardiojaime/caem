@@ -49,10 +49,18 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     const posicion = elemento.getBoundingClientRect();
     height = window.innerWidth;
+    const existeclase = bottom_sticky.classList.contains("d-none");
+    //console.log(existeclase ? "si existe la clase d-none" : "no existe");
     const enlacevisible = posicion.top === 0;
     btn_enlace.classList.toggle("d-none", !enlacevisible);
     const sticky = height < media && posicion.top < 0;
-    bottom_sticky.style.display = sticky ? "block" : "none";
+    bottom_sticky.style.display =
+      sticky && existeclase
+        ? bottom_sticky.classList.remove("d-none")
+        : !sticky
+        ? bottom_sticky.classList.add("d-none")
+        : null;
+    //bottom_sticky.style.display = sticky ? "block" : "none";
   });
 
   var btn_submit = document.getElementById("btn_submit");

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row img {
+  width: 90%;
+  height: 90%;
+}
+.sec_img img {
+  width: 80%;
+  height: 80%;
+}

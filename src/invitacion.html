@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#f2920e">
+  <link rel="shortcut icon" href="./img/logo/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invita</title>
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <main class="main">
+    <nav class="navbar bg-white seccion_nav1 mb-4">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo/caemlogo.png" alt="caem" width="100" height="60">
+        </a>
+      </div>
+    </nav>
+    <article class="formulario mb-4">
+      <div class="container">
+        <div class="contenedor_formulario">
+          <h2 class="text-center">
+            Recomienda Innovación y Agilidad, Scrum y herramientas para transformar tu organización
+          </h2>
+          <p class="text-center">Amplifica tu impacto y obtén un descuento por grupo <br>
+            Cómo hacer una referencia
+          </p>
+          <hr>
+          <form id="formemail" method="post" action="" class="mb-2">
+            <input type="hidden" name="formId" value="email">
+            <input type="hidden" name="hora" value="hora">
+            <label for="email" class="mb-2">Ingrese su correo electrónico <br> para empezar a compartir</label>
+            <input type="email" name="email" id="" placeholder="email" class="form-control mb-2">
+            <div class="text-cente contenedor_enviar">
+              <button id="btn_submit_1" type="submit" class="btn_enviar email_boton">Enviar
+              </button>
+              <div id="espera_1" class="d-none" style="position: absolute;left: 40%;">
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+              </div>
+            </div>
+          </form>
+          <h3><b>Respuestas a preguntas frecuentes</b></h3>
+          <div class="accordion" id="">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#pregunta1" aria-expanded="false" aria-controls="pregunta1">
+                  ¿Por qué referir?
+                </button>
+              </h2>
+              <div id="pregunta1" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Sabemos que muchos de nuestros participantes han amplificado el impacto en sus organizaciones y
+                  proyectos cuando cursan
+                  el programa junto a sus colegas. Al capacitarse en grupo pueden compartir conocimientos y entablar
+                  mejores
+                  conversaciones acerca de cómo los recursos del programa se aplican en sus roles de trabajo.
+                  Tanto tú como tus colegas recibirán un descuento en el costo total para que su transformación
+                  profesional alcance su
+                  máximo potencial.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#pregunta2" aria-expanded="false" aria-controls="pregunta2">
+                  ¿Quién puede invitar?
+                </button>
+              </h2>
+              <div id="pregunta2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Cualquier persona puede invitar a otra a cursar un programa, aún cuando aún no haya decidido
+                  inscribirse. Hay muchas
+                  razones por las que nuestros participantes deciden invitar a sus colegas:
+                  Los candidatos que aún no se han inscrito al programa deciden invitar a otros amigos para poder
+                  ahorrar en el monto al
+                  momento de realizar su inscripción al programa, y además podrían contar durante el programa con un
+                  compañero con quién
+                  debatir los conceptos o la aplicación práctica de lo desarrollado.
+                  Los alumnos que culminaron un programa, con frecuencia lo recomiendan a otros colegas para compartir
+                  el impacto positivo
+                  que sintieron o por el gusto de difundir el don del conocimiento.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#pregunta3" aria-expanded="false" aria-controls="pregunta3">
+                  ¿Si ya completé un programa, aún puedo invitar a alguien?
+                </button>
+              </h2>
+              <div id="pregunta3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Lo más común es que nuestros participantes recomienden un programa justo después de haberlo concluido
+                  por la convicción
+                  de los conocimientos de valor adquiridos. Si invitas a un colega y este se inscribe, podrás aplicar tu
+                  crédito a futuro
+                  en algún otro programa que decidas cursar.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#pregunta4" aria-expanded="false" aria-controls="pregunta4">
+                  ¿Cómo referir?
+                </button>
+              </h2>
+              <div id="pregunta4" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <ol>
+                    <li>Envíanos tu email como indica en la sección anterior.</li>
+                    <li><span id="ruta_copy">www.itec.com.bo/caem</span> <a type="button" class="" id="btn_copy"
+                        title="copiar">Copiar &nbsp;<i class="fa-solid fa-copy" style="color: #ffffff;"></i></a> envía
+                      por mensaje a tus colegas este
+                      link.</li>
+                    <li>Tu colega deberá inscribirse con el código que recibas en tu email para que ambos reciban el
+                      descuento correspondiente.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#pregunta5" aria-expanded="false" aria-controls="pregunta5">
+                  ¿Cómo recibiré mi descuento?
+                </button>
+              </h2>
+              <div id="pregunta5" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <ol>
+                    <li>Para los candidatos que aún no se inscriben a un programa, después de que tu colega se inscriba
+                      y concluya su programa,
+                      recibirás los créditos correspondientes que podrás aplicar.</li>
+                    <li>Para los estudiantes que se encuentran inscritos a un programa de momento, los créditos
+                      correspondientes se sumarán a tu
+                      cuenta para el siguiente programa que curses.</li>
+                    <li>Para estudiantes que ya hayan concluido un programa, recibirás los créditos correspondientes
+                      para cubrir parte del costo
+                      de tu siguiente programa.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <div class="px-3">
+                  ¿Qué pasa si aún no estoy seguro de tomar el programa? <br>Contáctanos (botton Enlace walink)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="seccion_inv">
+      <nav class="navbar bg-white seccion_nav">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo/caemlogo.png" alt="caem" width="70" height="55">
+          </a>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="sec_texto">
+          <p class="text_principal"><i class="fa-solid fa-quote-left"></i> Ha sido realmente
+            productivo
+            para nuestro equipo
+            incorporar juntos nuevos
+            roles y dinámicas de trabajo <i class="fa-solid fa-quote-left fa-rotate-180"></i></p>
+          <div class="sec_img">
+            <img src="./img/LOGO CAEM_negro 2021.png" alt="">
+          </div>
+          <p>Yblin <br>
+            Scrum Master <br>
+            (Certificada)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      var btn_copy = document.getElementById("btn_copy");
+      var ruta_copy = document.getElementById("ruta_copy");
+      btn_copy.addEventListener('click', function (e) {
+        e.preventDefault();
+        let rango = document.createRange();
+        rango.selectNode(ruta_copy);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(rango);
+        try {
+          document.execCommand('copy');
+          btn_copy.innerHTML = 'Copiado &nbsp;<i class="fa-solid fa-check" style="color: #ffffff;"></i>';
+          btn_copy.style.background = 'rgb(47, 175, 47)';
+
+        } catch (error) {
+          console.log('error al copiar la ruta' + err);
+        }
+        window.getSelection().removeAllRanges();
+      });
+      const campoHora = document.querySelectorAll('input[name="hora"]');
+
+      // Obtén la fecha y hora actual
+      campoHora.forEach(ele => {
+        const fechaActual = new Date();
+        let horaFormateada = fechaActual + "";
+        horaFormateada = horaFormateada.substr(3, 22);
+        ele.value = horaFormateada;
+      });
+      var btn_submit = document.getElementById("btn_submit_1");
+      var form = document.getElementById("formemail");
+      var espera = document.getElementById("espera_1");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        btn_submit.disabled = true;
+        btn_submit.textContent = "Enviando";
+        espera.classList.remove("d-none");
+        const formData = new FormData(this);
+        const url =
+          "https://script.google.com/macros/s/AKfycbz9E4lk5GOKqYAd2FyXBBPW39Gon0kryJ-o2BCovN8XBKRqByKKDaXdegpyE8I5MU3bQw/exec";
+        fetch(url, { method: "POST", body: formData })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("La solicitud no fue exitosa");
+            }
+            return response.json();
+          })
+          .then((res) => {
+            btn_submit.classList.remove("btn_enviar");
+            btn_submit.classList.add("btn_enviar_correcto");
+            btn_submit.textContent = "Enviado";
+            espera.classList.add("d-none");
+          })
+          .catch((error) => console.log(" Error: " + error.message));
+      });
+    })
+  </script>
+</body>
+
+</html>

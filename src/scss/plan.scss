@@ -18,12 +18,15 @@
   grid-column: 2;
 }
 .enlace_invitar2 {
-  padding: 10px 40px;
+  padding: 10px 3px;
   text-decoration: none;
   font-weight: bold;
   color: $orange;
   background: white;
   outline: 2px solid $orange;
+}
+.inv {
+  padding: 10px 20px;
 }
 .enlace_invitar2:hover {
   background: $orange;
@@ -50,6 +53,10 @@
   justify-content: center;
   font-size: 35px;
 }
+.v_img > img {
+  width: 50%;
+  height: 50%;
+}
 .v_uno .v_icon {
   flex: 1;
 }
@@ -60,6 +67,12 @@
 .pprofesor {
   width: 100%;
 }
+section.pprofesor .container .carousel {
+  min-height: 430px;
+}
+section.opiniones .container .carousel {
+  min-height: 250px;
+}
 .profesor {
   display: flex;
   align-items: center;
@@ -69,7 +82,7 @@
 .p_contenedor {
   max-width: 400px;
   position: relative;
-  border: 2px solid $color2;
+  border: 3px solid $color2;
   text-align: center;
   padding: 10px;
 }
@@ -95,7 +108,6 @@
   background: $color2;
 }
 .o_opinion {
-  width: 70%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -105,96 +117,14 @@
 }
 .o_img img {
   border-radius: 100%;
+  border: 5px solid white;
   object-fit: cover;
 }
 .o_texto {
   padding: 0 20px;
 }
-.slider {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.slides {
-  width: 200%;
-  height: 100%;
-  display: flex;
-  padding: 0 20px 20px 20px;
-}
-.slides input {
-  display: none;
-}
-.slide {
-  width: 50%;
-  transition: 1s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 //navegacion
 
-.navegacion_manual {
-  position: absolute;
-  width: 100%;
-  bottom: 15px;
-  display: flex;
-  justify-content: center;
-}
-.manual_btn {
-  border: 2px solid purple;
-  padding: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  border-radius: 100%;
-}
-.manual_btn:not(:last-child) {
-  margin-right: 20px;
-}
-.manual_btn:hover {
-  background: purple;
-}
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-#radio2:checked ~ .first {
-  margin-left: -50%;
-}
-#radio_p1:checked ~ .first {
-  margin-left: 0;
-}
-#radio_p2:checked ~ .first {
-  margin-left: -50%;
-}
-.navegacion_auto {
-  position: absolute;
-  width: 100%;
-  bottom: 15px;
-  display: flex;
-  justify-content: center;
-}
-.navegacion_auto div {
-  border: 2px solid purple;
-  padding: 5px;
-  transition: 1s;
-  border-radius: 100%;
-}
-
-#radio1:checked ~ .navegacion_auto .auto_btn_1 {
-  background: purple;
-}
-#radio2:checked ~ .navegacion_auto .auto_btn_2 {
-  background: purple;
-}
-#radio_p1:checked ~ .navegacion_auto .auto_btn_1 {
-  background: purple;
-}
-#radio_p2:checked ~ .navegacion_auto .auto_btn_2 {
-  background: purple;
-}
-.navegacion_auto div:not(:last-child) {
-  margin-right: 20px;
-}
 //certificacion ultima parte
 .certificacion {
 }
@@ -218,16 +148,71 @@
   object-fit: cover;
   object-position: center;
 }
+.carousel-indicators [data-bs-target] {
+  background-color: #ed9514 !important;
+}
 //footer
 footer {
-  background: rgb(190, 64, 18);
+  background: $detalles;
   padding: 20px auto;
 }
 footer .container {
   text-align: center;
   color: white;
 }
+footer a {
+  font-style: italic;
+}
+footer .container .row {
+  display: flex;
+  justify-content: center;
+}
+footer .container .row a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+footer .container .row a:hover {
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+footer .container .row a:hover img {
+  scale: 120%;
+}
+footer .container .row img {
+  width: 25px;
+  height: 25px;
+}
+footer .container .row ul {
+  margin: 0;
+  padding: 0;
+}
+footer .container .row ul li {
+  list-style: none;
+}
+footer .container .row ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .container .row ul li a:hover {
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+footer .container .row ul li a:hover img {
+  scale: 120%;
+}
 .conocemas {
   color: white;
   font-weight: bold;
+}
+.googlemaps {
+  display: flex;
+  justify-content: center;
+}
+.googlemaps img {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.google_rutas {
+  text-align: left;
 }

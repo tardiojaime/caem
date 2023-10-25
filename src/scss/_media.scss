@@ -44,6 +44,9 @@
   .p_uno {
     display: block;
   }
+  .c_uno:not(:last-child) {
+    border-right: none;
+  }
 }
 @media (max-width: 768px) {
   /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
@@ -60,7 +63,9 @@
   //opiniones de los egresados
   .o_opinion {
     display: block;
-    width: 95%;
+  }
+  section.opiniones .container .carousel {
+    min-height: 450px;
   }
   .o_img {
     display: flex;
@@ -103,6 +108,14 @@
   .alerta div {
     width: 50%;
   }
+  div.container > .row > .col-xs-12.col-md-6 {
+    justify-content: start;
+  }
+  /*tu viaje de aprendisaje*/
+  .v_img > img {
+    width: 30%;
+    height: 30%;
+  }
 }
 /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
 @media (max-width: 576px) {
@@ -113,5 +126,40 @@
     border-bottom-left-radius: 0;
     border-top-right-radius: 0;
     max-width: 80%;
+  }
+  section.opiniones .container .carousel {
+    min-height: 480px;
+  }
+  .texto_movil {
+    display: block;
+  }
+  .texto_escritorio {
+    display: none;
+  }
+  .c_uno {
+    padding: 5px;
+  }
+  .c_uno > div > svg {
+    width: 80px;
+    height: 80px;
+  }
+  .c_uno > .c_text {
+    padding: 2px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar > .container {
+    justify-content: center;
+  }
+  .form-mobile > .form > .card-body {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    max-width: 95%;
+  }
+  .form-control:not(:placeholder-shown) + label.mobile {
+    letter-spacing: 1px;
+  }
+  section.opiniones .container .carousel {
+    min-height: 500px;
   }
 }

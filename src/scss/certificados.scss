@@ -9,8 +9,10 @@
 .c_uno {
   padding: 20px;
 }
+.c_uno:not(:last-child) {
+  border-right: 2px solid $gris;
+}
 .c_icon {
-  font-size: 35px;
   text-align: center;
 }
 .c_icon svg {
