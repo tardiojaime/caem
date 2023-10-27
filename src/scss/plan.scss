@@ -191,7 +191,9 @@ footer .container ul li a {
   text-decoration: none;
   color: white;
 }
-
+footer .container ul li img:hover {
+  scale: 120%;
+}
 footer .container ul li a:hover img {
   scale: 120%;
 }

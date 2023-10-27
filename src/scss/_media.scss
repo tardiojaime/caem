@@ -209,6 +209,7 @@
   }
   .texto_escritorio {
     line-height: 40px;
+    margin-bottom: 0 !important;
   }
   .c_uno {
     padding: 5px;
@@ -259,6 +260,14 @@
   }
   .ocultar_grupo {
     display: none;
+  }
+}
+@media (max-width: 410px) {
+  section.opiniones .container .carousel {
+    height: 470px !important;
+  }
+  #formemail input {
+    width: 100% !important;
   }
 }
 @media (max-width: 380px) {

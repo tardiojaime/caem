@@ -11933,6 +11933,9 @@ footer .container ul li a {
   text-decoration: none;
   color: #fff;
 }
+footer .container ul li img:hover {
+  scale: 120%;
+}
 footer .container ul li a:hover img {
   scale: 120%;
 }
@@ -12129,6 +12132,7 @@ footer .container ul li a:hover img {
   }
   .texto_escritorio {
     line-height: 40px;
+    margin-bottom: 0 !important;
   }
   .c_uno {
     padding: 5px;
@@ -12172,6 +12176,14 @@ footer .container ul li a:hover img {
   }
   .ocultar_grupo {
     display: none;
+  }
+}
+@media (max-width: 410px) {
+  section.opiniones .container .carousel {
+    height: 470px !important;
+  }
+  #formemail input {
+    width: 100% !important;
   }
 }
 @media (max-width: 380px) {
@@ -12283,35 +12295,29 @@ article.formulario .container .h4 {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
   justify-content: center;
 }
 .sec_texto p:first-child {
+  margin-top: -4rem;
   font-size: 2rem;
-  text-align: center;
-  text-wrap: balance;
+  text-align: left;
   font-weight: 500;
   font-style: italic;
 }
-.sec_texto p {
+.sec_texto p:last-child {
   font-size: 1.2rem;
-  text-align: center;
+  text-align: right;
   text-wrap: balance;
   font-weight: 100;
   font-style: italic;
 }
 .fa-quote-left:first-child {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 .fa-quote-left:last-child {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: -20px;
-}
-.text_principal {
-  font-weight: 500;
-  font-style: italic;
-  text-align: left;
 }
 .accordion-body {
   font-weight: 300;
@@ -12368,6 +12374,19 @@ article.formulario .container .h4 {
 .referencia_ > .ref_img > svg {
   width: 70%;
 }
+@media (max-width: 1170px) {
+  .sec_texto p:first-child {
+    font-size: 1.6rem;
+  }
+}
+@media (max-height: 550px) {
+  .sec_texto p:first-child {
+    font-size: 1rem;
+  }
+  .sec_texto p:last-child {
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 575.98px) {
   .referencia_ {
     display: flex;
@@ -12381,6 +12400,14 @@ article.formulario .container .h4 {
   .referencia_ .ref_img svg {
     width: 80%;
   }
+  .sec_texto p:first-child {
+    font-size: 1.4rem !important;
+    margin-top: 0;
+  }
+  .sec_texto p:last-child {
+    font-size: 1rem !important;
+    margin-top: 0;
+  }
 }
 @media (max-width: 767.98px) {
   main {
@@ -12388,10 +12415,18 @@ article.formulario .container .h4 {
   }
   section.seccion_inv {
     position: static;
-    height: 50vh;
+    height: fit-content;
   }
   .sec_texto {
     width: 100%;
+  }
+  .sec_texto p:first-child {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .sec_texto p:last-child {
+    font-size: 1.5rem;
+    margin-top: 0;
   }
   article.formulario {
     position: static;
@@ -12455,6 +12490,9 @@ article.formulario .container .h4 {
 .cer_estadisticas > div:nth-last-child(-n + 2) {
   background: #001f5b;
   color: #fff;
+}
+.texto_escritorio {
+  margin-bottom: 0.9rem;
 }
 .fondo_camb {
   background: #001f5b;
