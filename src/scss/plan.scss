@@ -161,10 +161,15 @@ footer {
   background: $gris;
   padding: 20px auto;
 }
-footer .container {
+footer > .container {
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
+.footer_center {
+  width: fit-content;
+}
 footer .container a:hover img {
   scale: 120%;
 }

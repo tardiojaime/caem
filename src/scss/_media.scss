@@ -1,3 +1,13 @@
+@media (min-width: 1280px) {
+  .seccion1 {
+    background: url(../img/logo/CAEM_BANNER_0.webp) !important;
+    width: 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+  }
+}
+
 /* X-Large devices (large desktops, 1200px and up)*/
 @media (max-width: 1200px) {
   /*texto cambiante*/
@@ -177,7 +187,7 @@
     max-width: 80%;
   }
   .contenedor_banner {
-    background: url(../img/logo/CAEM_BANNER_788x415.jpg);
+    background: url(../img/logo/CAEM_BANNER_788x415.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -238,7 +248,7 @@
     font-size: 1.7rem !important;
   }
   .cer_certmind_img img {
-    width: 95% !important;
+    width: 55% !important;
   }
   /*texto laber area de trabajo*/
   .form-control:not(:placeholder-shown) + .label_n_par {
@@ -287,7 +297,7 @@
     left: 25%;
   }
   .cer_certmind_img img {
-    width: 100% !important;
+    width: 70% !important;
   }
 }
 @media (max-width: 300px) {

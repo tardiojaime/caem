@@ -31,7 +31,7 @@
   <nav class="navbar">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="./img/logo/caemlogo.png" alt="caem" width="140" height="94" />
+        <img src="./img/logo/caemlogo.png" alt="caem" width="120" height="94" />
       </a>
     </div>
   </nav>
@@ -871,37 +871,39 @@
   <footer>
     <br />
     <div class="container">
-      <h6>CONTACTOS</h6>
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/CaemSucre" target="_blank">
-            <img src="./img/footer/facebook.webp" alt="facebook" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank">
-            <img src="./img/footer/instagram.webp" alt="instagram" />
-          </a>
-        </li>
-        <li>
-          <a href="https://wa.link/2ohy4i" target="_blank">
-            <img src="./img/footer/whatsapp.png" alt="whatsapp" />
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="./img/footer/gmail.png" alt="gmail" />
-          </a>
-        </li>
-      </ul>
-      <div class="googlemaps py-2">
-        <img src="./img/footer/map.png" alt="" srcset="" />
-        <div class="google_rutas">
-          <a href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu"
-            target="_blank">
-            Sucre - Aniceto Arce 289 Centro
-          </a>
-          <a href="#"> Tarija - General Trigo 942 (3er piso) </a>
+      <div class="footer_center">
+        <h6>CONTACTOS</h6>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/CaemSucre" target="_blank">
+              <img src="./img/footer/facebook.webp" alt="facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="./img/footer/instagram.webp" alt="instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.link/2ohy4i" target="_blank">
+              <img src="./img/footer/whatsapp.png" alt="whatsapp" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/footer/gmail.png" alt="gmail" />
+            </a>
+          </li>
+        </ul>
+        <div class="googlemaps py-2">
+          <img src="./img/footer/map.png" alt="" srcset="" />
+          <div class="google_rutas">
+            <a href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu"
+              target="_blank">
+              Sucre - Aniceto Arce 289 Centro
+            </a>
+            <a href="#"> Tarija - General Trigo 942 (3er piso) </a>
+          </div>
         </div>
       </div>
     </div>
@@ -916,7 +918,6 @@
       var textos = [" garantizamos ", " certificamos ", " creemos en "];
       var contenedor_texto = document.getElementsByClassName("word_");
       contenedor_texto[0].style.animation = "rotarletras 4s infinite";
-      contenedor_texto[1].style.animation = "rotarletras 4s infinite";
       var posicion = 0;
       setInterval(function () {
         contenedor_texto[0].textContent = textos[posicion];
