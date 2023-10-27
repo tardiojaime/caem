@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="theme-color" content="#f2920e" />
-  <link rel="shortcut icon" href="/assets/icon-55a72a30.png" />
+  <link rel="shortcut icon" href="./assets/icon-55a72a30.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Caem</title>
 
-  <script type="module" crossorigin src="./assets/index-3716efd8.js"></script>
-  <link rel="stylesheet" href="./assets/index-40f58a1e.css">
+  <script type="module" crossorigin src="./assets/index-0a9eb583.js"></script>
+  <link rel="stylesheet" href="./assets/index-2cdb823a.css">
 </head>
 
 <body>
@@ -33,20 +33,18 @@
   <nav class="navbar">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="./assets/caemlogo-25df101e.png" alt="caem" width="70" height="64" />
+        <img src="./assets/caemlogo-25df101e.png" alt="caem" width="140" height="94" />
       </a>
     </div>
   </nav>
   <section class="seccion1" id="form_conte">
-    <div class="container-fluid container-xl sec1_contenedor py-2">
-      <div class="text">
-        <div class="texto" style="
-              width: 100%;
-              background: rgba(0, 0, 0, 0.6);
-              padding: 20px 30px;
-            ">
-          <h1 class="fw-bolder">INNOVACIÓN Y AGILIDAD</h1>
-          <p>Scrum y herramientas para transformar tu organización</p>
+    <div class="sec1_contenedor pb-2">
+      <div class="text mb-2">
+        <div class="texto container">
+          <h3 class=""><b>
+              INNOVACIÓN Y AGILIDAD: Scrum y herramientas para transformar tu
+              organización</b>
+          </h3>
         </div>
       </div>
       <div class="form">
@@ -55,8 +53,8 @@
             <h3>Regístrate para la webinar gratuita y recibe infografía:</h3>
           </div>
           <form id="registration-form" method="post">
-            <input type="hidden" name="formId" value="registro">
-            <input type="hidden" name="hora" value="hora">
+            <input type="hidden" name="formId" value="registro" />
+            <input type="hidden" name="hora" value="hora" />
             <div class="group mb-4">
               <input class="form-control form-control-md" type="text" name="nombre" id="nombre" required
                 placeholder=" " />
@@ -176,7 +174,7 @@
               <p>
                 Al hacer clic en el botón de abajo, aceptas recibir
                 información de CAEM sobre este y otros temas relevantes vía
-                email/WhatsApp.<a href="#">Política de privacidad</a>
+                email/WhatsApp.
               </p>
             </div>
             <div class="text-cente contenedor_enviar">
@@ -199,160 +197,160 @@
         </div>
       </div>
     </div>
-  </section>
-  <section class="form-mobile">
-    <div class="form">
-      <div class="card-body">
-        <div class="text-center mb-3">
-          <h3>Regístrate para la webinar gratuita y recibe infografía:</h3>
+    <section class="form-mobile">
+      <div class="form">
+        <div class="card-body">
+          <div class="text-center mb-3">
+            <h3>Regístrate para la webinar gratuita y recibe infografía:</h3>
+          </div>
+          <form id="registration-form-m" method="post">
+            <input type="hidden" name="formId" value="registro" />
+            <input type="hidden" name="hora" value="hora" />
+            <div class="group mb-4">
+              <input class="form-control form-control-md" type="text" name="nombre" id="nombre1" required
+                placeholder=" " />
+              <label class="label_form" for="nombre1">Nombre(s):</label>
+            </div>
+            <div class="group mb-4">
+              <input class="form-control form-control-md" type="text" name="apellidos" id="apellido1" required
+                placeholder=" " />
+              <label class="label_form" for="apellido1">Apellido(s):</label>
+            </div>
+            <div class="group mb-3">
+              <input type="email" name="email" id="correo1" required class="form-control form-control-md"
+                placeholder=" " />
+              <label class="label_form" for="correo1">Email:</label>
+            </div>
+            <div class="group mb-2">
+              <input type="text" name="telefono" id="telefono1" required class="form-control form-control-md"
+                placeholder=" " />
+              <label class="label_form" for="telefono1">Número de celular:</label>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label>Preguntando por:</label>
+                <div class="mb-1">
+                  <input class="form-check-input" type="radio" name="tipo" id="radio_3" checked value="Mí mismo" />
+                  <label class="form-check-label" for="radio_3">
+                    Mí mismo
+                  </label>
+                </div>
+                <div class="mb-3">
+                  <input class="form-check-input" type="radio" name="tipo" id="radio_4" value="Equipo/Grupo" />
+                  <label class="form-check-label" for="radio_4">
+                    Equipo/Grupo
+                  </label>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center">
+                <div id="participantes_m" class="group col d-none">
+                  <select class="form-control form-control-md" name="participantes" id="participante_m" required>
+                    <option value=".">Selecione...</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-5">3-5</option>
+                    <option value="6+">6+</option>
+                  </select>
+                  <label class="label_form" for="participante_m">Participantes</label>
+                </div>
+              </div>
+            </div>
+            <div class="group mb-4">
+              <select class="form-control form-control-md" id="area_experiencia1" name="area_experiencia" required>
+                <option value="Hotelería">Hotelería</option>
+                <option value="Minería">Minería</option>
+                <option value="Educación">Educación</option>
+                <option value="Salud">Salud</option>
+                <option value="Farmacia">Farmacia</option>
+                <option value="Agroindustrial">Agroindustrial</option>
+                <option value="Banco">Banco</option>
+                <option value="Institución del gobierno">
+                  Institución del gobierno
+                </option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Arquitectura">Arquitectura</option>
+                <option value="Construcción">Construcción</option>
+                <option value="Industria fabril">Industria fabril</option>
+                <option value="Comercio ">Comercio</option>
+                <option value="Otra ">Otra</option>
+              </select>
+              <label class="label_form mobile" for="area_experiencia1">Área de Experiencia Profesional:</label>
+            </div>
+            <div class="group mb-4">
+              <select class="form-control form-control-md" id="region_m" name="region" required>
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia" selected>Bolivia</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="República de Costa Rica">
+                  República de Costa Rica
+                </option>
+                <option value="Cuba">Cuba</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Haití">Haití</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="México">México</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Perú">Perú</option>
+                <option value="Puerto">Puerto</option>
+                <option value="Rico">Rico</option>
+                <option value="República">República</option>
+                <option value="Dominicana">Dominicana</option>
+                <option value="Uruguay ">Uruguay</option>
+                <option value="Venezuela">Venezuela</option>
+              </select>
+              <label class="label_form" for="region">País:</label>
+            </div>
+            <div id="departamento_m" class="group mb-2">
+              <select id="select_departamento_m" class="form-control form-control-md" name="departamento" required>
+                <option value=".">Seleccione...</option>
+                <option value="Beni">Beni</option>
+                <option value="Chuquisaca">Chuquisaca</option>
+                <option value="Cochabamba">Cochabamba</option>
+                <option value="La Paz">La Paz</option>
+                <option value="Oruro">Oruro</option>
+                <option value="Pando">Pando</option>
+                <option value="Potosí">Potosí</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Tarija">Tarija</option>
+              </select>
+              <label class="label_form" for="select_departamento_m">Departamento</label>
+            </div>
+            <div class="mb-1 text-wrap fs-6 terminos">
+              <p>
+                Al hacer clic en el botón de abajo, aceptas recibir información
+                de CAEM sobre este y otros programas relevantes, vía
+                email/WhatsApp.
+              </p>
+            </div>
+            <div class="text-cente contenedor_enviar">
+              <button id="btn_submit_m" type="submit" class="btn_enviar">
+                Enviar
+              </button>
+              <div id="espera_m" class="d-none">
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+                <div class="spinner-grow" role="status">
+                  <span class="visually-hidden"></span>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <form id="registration-form-m" method="post">
-          <input type="hidden" name="formId" value="registro">
-          <input type="hidden" name="hora" value="hora">
-          <div class="group mb-4">
-            <input class="form-control form-control-md" type="text" name="nombre" id="nombre1" required
-              placeholder=" " />
-            <label class="label_form" for="nombre1">Nombre(s):</label>
-          </div>
-          <div class="group mb-4">
-            <input class="form-control form-control-md" type="text" name="apellidos" id="apellido1" required
-              placeholder=" " />
-            <label class="label_form" for="apellido1">Apellido(s):</label>
-          </div>
-          <div class="group mb-3">
-            <input type="email" name="email" id="correo1" required class="form-control form-control-md"
-              placeholder=" " />
-            <label class="label_form" for="correo1">Email:</label>
-          </div>
-          <div class="group mb-2">
-            <input type="text" name="telefono" id="telefono1" required class="form-control form-control-md"
-              placeholder=" " />
-            <label class="label_form" for="telefono1">Número de celular:</label>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label>Preguntando por:</label>
-              <div class="mb-1">
-                <input class="form-check-input" type="radio" name="tipo" id="radio_3" checked value="Mí mismo" />
-                <label class="form-check-label" for="radio_3">
-                  Mí mismo
-                </label>
-              </div>
-              <div class="mb-3">
-                <input class="form-check-input" type="radio" name="tipo" id="radio_4" value="Equipo/Grupo" />
-                <label class="form-check-label" for="radio_4">
-                  Equipo/Grupo
-                </label>
-              </div>
-            </div>
-            <div class="col d-flex align-items-center">
-              <div id="participantes_m" class="group col d-none">
-                <select class="form-control form-control-md" name="participantes" id="participante_m" required>
-                  <option value=".">Selecione...</option>
-                  <option value="1-2">1-2</option>
-                  <option value="3-5">3-5</option>
-                  <option value="6+">6+</option>
-                </select>
-                <label class="label_form" for="participante_m">Participantes</label>
-              </div>
-            </div>
-          </div>
-          <div class="group mb-4">
-            <select class="form-control form-control-md" id="area_experiencia1" name="area_experiencia" required>
-              <option value="Hotelería">Hotelería</option>
-              <option value="Minería">Minería</option>
-              <option value="Educación">Educación</option>
-              <option value="Salud">Salud</option>
-              <option value="Farmacia">Farmacia</option>
-              <option value="Agroindustrial">Agroindustrial</option>
-              <option value="Banco">Banco</option>
-              <option value="Institución del gobierno">
-                Institución del gobierno
-              </option>
-              <option value="Tecnología">Tecnología</option>
-              <option value="Arquitectura">Arquitectura</option>
-              <option value="Construcción">Construcción</option>
-              <option value="Industria fabril">Industria fabril</option>
-              <option value="Comercio ">Comercio</option>
-              <option value="Otra ">Otra</option>
-            </select>
-            <label class="label_form mobile" for="area_experiencia1">Área de Experiencia Profesional:</label>
-          </div>
-          <div class="group mb-4">
-            <select class="form-control form-control-md" id="region_m" name="region" required>
-              <option value="Argentina">Argentina</option>
-              <option value="Bolivia" selected>Bolivia</option>
-              <option value="Brasil">Brasil</option>
-              <option value="Chile">Chile</option>
-              <option value="Colombia">Colombia</option>
-              <option value="República de Costa Rica">
-                República de Costa Rica
-              </option>
-              <option value="Cuba">Cuba</option>
-              <option value="Ecuador">Ecuador</option>
-              <option value="El Salvador">El Salvador</option>
-              <option value="Guatemala">Guatemala</option>
-              <option value="Haití">Haití</option>
-              <option value="Honduras">Honduras</option>
-              <option value="Jamaica">Jamaica</option>
-              <option value="México">México</option>
-              <option value="Nicaragua">Nicaragua</option>
-              <option value="Panamá">Panamá</option>
-              <option value="Paraguay">Paraguay</option>
-              <option value="Perú">Perú</option>
-              <option value="Puerto">Puerto</option>
-              <option value="Rico">Rico</option>
-              <option value="República">República</option>
-              <option value="Dominicana">Dominicana</option>
-              <option value="Uruguay ">Uruguay</option>
-              <option value="Venezuela">Venezuela</option>
-            </select>
-            <label class="label_form" for="region">País:</label>
-          </div>
-          <div id="departamento_m" class="group mb-2">
-            <select id="select_departamento_m" class="form-control form-control-md" name="departamento" required>
-              <option value=".">Seleccione...</option>
-              <option value="Beni">Beni</option>
-              <option value="Chuquisaca">Chuquisaca</option>
-              <option value="Cochabamba">Cochabamba</option>
-              <option value="La Paz">La Paz</option>
-              <option value="Oruro">Oruro</option>
-              <option value="Pando">Pando</option>
-              <option value="Potosí">Potosí</option>
-              <option value="Santa Cruz">Santa Cruz</option>
-              <option value="Tarija">Tarija</option>
-            </select>
-            <label class="label_form" for="select_departamento_m">Departamento</label>
-          </div>
-          <div class="mb-1 text-wrap fs-6 terminos">
-            <p>
-              Al hacer clic en el botón de abajo, aceptas recibir información
-              de CAEM sobre este y otros programas relevantes, vía
-              email/WhatsApp. <a href="#">Política de privacidad</a>
-            </p>
-          </div>
-          <div class="text-cente contenedor_enviar">
-            <button id="btn_submit_m" type="submit" class="btn_enviar">
-              Enviar
-            </button>
-            <div id="espera_m" class="d-none">
-              <div class="spinner-grow" role="status">
-                <span class="visually-hidden"></span>
-              </div>
-              <div class="spinner-grow" role="status">
-                <span class="visually-hidden"></span>
-              </div>
-              <div class="spinner-grow" role="status">
-                <span class="visually-hidden"></span>
-              </div>
-            </div>
-          </div>
-        </form>
       </div>
-    </div>
+    </section>
   </section>
   <section id="detalles" class="detalles">
-    <div class="d_uno">
+    <div class="d_uno d_inicio">
       <div class="d_icon">
         <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
           <title>ICONO</title>
@@ -367,11 +365,11 @@
         </svg>
       </div>
       <div class="d_text">
-        <strong>INICIA EL </strong>
-        <p>20 de octubre del 2023</p>
+        <strong>PRÓXIMO CURSO INICIA</strong>
+        <p>13 de noviembre de 2023</p>
       </div>
     </div>
-    <div class="d_uno">
+    <div class="d_uno d_duracion">
       <div class="d_icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
           <title>ICONO</title>
@@ -391,7 +389,7 @@
         <p>8 horas</p>
       </div>
     </div>
-    <div class="d_uno">
+    <div class="d_uno d_costo">
       <div class="d_icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
           <title>ICONO</title>
@@ -421,7 +419,7 @@
         <p>300bs</p>
       </div>
     </div>
-    <div class="d_uno">
+    <div class="d_uno d_equipo">
       <div class="d_icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
           <title>ICONO</title>
@@ -445,15 +443,17 @@
         <p class="text-wrap">
           Inscribe a tu equipo y aprende <br />
           con tus compañeros
+          <br />
+          <a href="./invitacion.html">Aprende más</a>
         </p>
       </div>
     </div>
-    <div class="d_uno d-none" id="btn_ocultar">
-      <a href="#form_conte" class="enlace_invitar2">DESCARGA INFOGRAFÍA</a>
+    <div class="d_uno d_ocultar d-none" id="btn_ocultar">
+      <a href="#form_conte" class="enlace_invitar2">DESCARGA</a>
     </div>
   </section>
   <section class="detalles2">
-    <h2 class="text-center py-4 fw-bolder">
+    <h2 class="text-center py-2 fw-bolder">
       Diseña productos y experiencias memorables
     </h2>
     <p>
@@ -463,7 +463,7 @@
       flexibilidad y por lo tanto, continua mejora.
     </p>
   </section>
-  <section class="p-4">
+  <section class="px-4 pb-4">
     <h2 class="text-center py-4 fw-bolder">Este curso es para ti si:</h2>
     <div class="certificados">
       <div class="c_uno">
@@ -580,21 +580,17 @@
     </div>
   </section>
   <section class="p-4 aprendisaje">
-    <h2 class="text-center fw-bolder py-4">Aprendizajes clave:</h2>
+    <h2 class="text-center fw-bolder py-2">Aprendizajes clave:</h2>
     <div class="container">
       <ul>
-        <li class=" mb-1">
+        <li class="mb-1">
           Aplicar los 4 valores de la agilidad en sus equipos de trabajo.
         </li>
-        <li class="mb-1">
-          Generar foco en la entrega y flujo de valor.
-        </li>
+        <li class="mb-1">Generar foco en la entrega y flujo de valor.</li>
         <li class="mb-1">
           Generar espacios de innovación y experimentación.
         </li>
-        <li class="mb-1">
-          Entender los principios y valores de SCRUM.
-        </li>
+        <li class="mb-1">Entender los principios y valores de SCRUM.</li>
         <li class="mb-1">
           Comprender los Roles, Eventos y Artefactos de SCRUM.
         </li>
@@ -605,14 +601,14 @@
       </ul>
     </div>
   </section>
-  <section class="p-4 plan">
+  <section class="p-4 plan" data-aos="fade-left">
     <div class="container">
-      <h2 class="text-center fw-bolder py-4">Plan de Estudios:</h2>
+      <h2 class="text-center fw-bolder py-2">Plan de Estudios:</h2>
     </div>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <ul style="margin-bottom: 0">
+          <ol style="margin-bottom: 0">
             <li>Mentalidad ágil</li>
             <li>Contexto de la Agilidad</li>
             <li>Valores y principios de la Agilidad</li>
@@ -622,23 +618,20 @@
             <li>Mentalidad de Innovación</li>
             <li>Pensamiento Lean Startup</li>
             <li>Producto mínimo viable</li>
-            <li>Ciclo Crear-Medir-Aprender</li>
-          </ul>
+          </ol>
         </div>
         <div class="col-xs-12 col-md-6">
-          <ul>
+          <ol start="10">
+            <li>Ciclo Crear-Medir-Aprender</li>
             <li>Cuadrantes de innovación</li>
             <li>SCRUM</li>
             <li>Introducción</li>
             <li>Los 3 Roles de SCRUM</li>
             <li>Los 5 Eventos de SCRUM</li>
             <li>Los 3 Artefactos de SCRUM</li>
-            <li>
-              Experiencias y formas de adopción del marco de trabajo para las
-              empresas
-            </li>
+            <li>Experiencias y formas de adopción para las empresas</li>
             <li>Dinámicas y prácticas</li>
-          </ul>
+          </ol>
         </div>
       </div>
       <div class="text-center my-4">
@@ -648,15 +641,14 @@
   </section>
   <section class="viaje">
     <div class="container-fluid container-md">
-      <h2 class="text-center fw-bolder py-4">Tu viaje de aprendisaje</h2>
-      <br />
+      <h2 class="text-center fw-bolder pt-4 pb-2">Tu viaje de aprendizaje</h2>
       <div class="v_uno">
         <div class="v_icon">
           <div class="px-4">
             <div class="v_img">
               <img src="./assets/ICONO_aprendizaje1-8354542f.webp" alt="" />
             </div>
-            <p class="text-center">
+            <p class="text-center pt-2">
               Asesoría personalizada, desarrollo de talleres grupales y
               feedback de tareas domiciliarias
             </p>
@@ -667,7 +659,7 @@
             <div class="v_img">
               <img src="./assets/ICONO_aprendizaje2-217c5ce5.webp" alt="" />
             </div>
-            <p class="text-center">
+            <p class="text-center pt-2">
               Simulador de exámenes y acceso a nuestra comunidad
             </p>
           </div>
@@ -677,7 +669,7 @@
             <div class="v_img">
               <img src="./assets/ICONO_aprendizaje3-0bf040be.webp" alt="" />
             </div>
-            <p class="text-center">
+            <p class="text-center pt-2">
               Contenidos y recursos en español: manuales, cursos a cargo de
               expertos y herramientas prácticas para contextos de innovación
             </p>
@@ -711,7 +703,9 @@
                   la Información y en transformación organizacional hacia
                   culturas de trabajo coherentes, generativas y ágiles.
                 </p>
-                <a class="p_enlace" href="#">Mas info</a>
+                <a class="p_enlace"
+                  href="https://www.linkedin.com/in/orlandomendietae?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Mas
+                  info</a>
                 <br />
               </div>
             </div>
@@ -727,7 +721,7 @@
                   comunidad de prácticas ágiles en Bolivia y experto en
                   procesos de transformación ágil de organizaciones.
                 </p>
-                <a class="p_enlace" href="#">Mas info</a>
+                <a class="p_enlace" href="https://www.linkedin.com/in/marcoviaweb">Mas info</a>
                 <br /><br />
               </div>
             </div>
@@ -738,11 +732,11 @@
   </section>
   <section class="opiniones">
     <h3 class="text-center fw-bolder" style="padding-top: 1.5rem">
-      Nuestros egresados opinan
+      Nuestros certificados opinan
     </h3>
     <div class="container">
       <div id="carouselopiniones" class="carousel slide">
-        <div class="carousel-indicators">
+        <div class="carousel-indicators cambiar">
           <button type="button" data-bs-target="#carouselopiniones" data-bs-slide-to="0" class="active"
             aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselopiniones" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -796,44 +790,45 @@
     <h2 class="text-center texto1"><b>Certificado</b></h2>
     <div class="container-fluid container-xl">
       <div class="ce_certificado">
-        <img src="./assets/certificado-28e2c756.webp" alt="" width="250px" height="150px" />
+        <img src="./assets/CAEM_certificado-0c38fb2f.webp" alt="" width="300px" height="200px" />
       </div>
       <div class="ce_texto">
         <h2 class="texto2"><b>Certificado</b></h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem veniam
-          numquam ipsum possimus dicta accusamus itaque unde odit. Amet fuga,
-          dolorem minima quas animi accusamus aut error sit tempora vero.
+          Todos los participantes que concluyen satisfactoriamente el programa
+          tienen la opción aparte de certificarse internacionalmente a través
+          de Certmind.org.
         </p>
         <a href="#form_conte" class="enlace_invitar2 enlace_invitar3 inv">Descargar</a>
       </div>
     </div>
   </section>
-  <article class="certmind py-4 my-4">
+  <article class="certmind py-4">
     <div class="container">
       <div class="cer_titulo">
-        <img src="./assets/certmind-96705e3f.png" alt="" />
+        <img src="./assets/certmind-0b48f52a.png" alt="" />
       </div>
-      <div class="cer_estadisticas row pb-4" id="container">
-        <div class="col-xs-6 col-md-6 col-xl-3">
-          <i class="fa-regular fa-star"></i>
+      <div class="cer_estadisticas px-4 pb-4 row" id="container">
+        <div class="col-xs-3 col-md-3 col-xl-3">
+          <img src="./assets/CAEM_PARTNERS_EN_TODO_EL_MUNDO-8f31c00f.png" alt="">
           <div>+<span class="counter" data-max="30">0</span></div>
-          PARTNERS EN TODO EL MUNDO
+          <p class="est_texto">PARTNERS EN TODO EL MUNDO</p>
+
         </div>
-        <div class="col-xs-6 col-md-6 col-xl-3">
-          <i class="fa-regular fa-star"></i>
+        <div class="col-xs-3 col-md-3 col-xl-3">
+          <img src="./assets/CAEM_PROFESIONALES_CERTIFICADOS-0717a935.png" alt="">
           <div>+<span class="counter" data-max="15000">0</span></div>
-          PROFESIONALES CERTIFICADOS
+          <p class="est_texto">PROFESIONALES CERTIFICADOS</p>
         </div>
-        <div class="col-xs-6 col-md-6 col-xl-3">
-          <i class="fa-regular fa-star"></i>
+        <div class="col-xs-3 col-md-3 col-xl-3">
+          <img src="./assets/CAEM_CLIENTES_FELICES-e3fab3ed.png" alt="">
           <div>+<span class="counter" data-max="5000">0</span></div>
-          CLIENTES FELICES
+          <p class="est_texto">CLIENTES FELICES</p>
         </div>
-        <div class="col-xs-6 col-md-6 col-xl-3">
-          <i class="fa-regular fa-star"></i>
+        <div class="col-xs-3 col-md-3 col-xl-3">
+          <img src="./assets/CAEM_ANOS_DE_EXPERIENCIA-87b9b3b0.png" alt="">
           <div>+<span class="counter" data-max="5">0</span></div>
-          AÑOS DE EXPERIENCIA
+          <p class="est_texto">AÑOS DE EXPERIENCIA</p>
         </div>
       </div>
       <div class="cer_descripcion">
@@ -848,7 +843,7 @@
       </div>
     </div>
   </article>
-  <article class="container text_slide py-4 my-4">
+  <article class="container text_slide p-4">
     <div class="section cer_slide">
       <h2 class="text-center texto_escritorio">
         Nosotros
@@ -867,65 +862,55 @@
       </h2>
     </div>
     <div class="cer_descripcion">
-      <p>
+      <p class="text-justify mb-2">
         Como Partner oficial de Certmind, proveedor de formación ejecutiva en
         línea, brindamos un portafolio educativo de alto impacto acorde a
         nuestra calidad académica con la posibilidad de expandir fronteras
         mediante validación de alcance internacional.
       </p>
       <div class="cer_certmind_img">
-        <img src="./assets/certified_profesional-5fb47d99.webp" alt="" />
+        <img src="./assets/certified_profesional.png" alt="" />
       </div>
     </div>
   </article>
   <footer>
     <br />
     <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-6 mb-4">
-          <h6 class="text-center">CONTACTOS</h6>
-          <div class="googlemaps">
-            <img src="./assets/maps-e89446e2.png" alt="" srcset="" />
-            <div class="google_rutas">
-              <a
-                href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu">
-                Sucre - Aniceto Arce 289 Centro </a>
-              <a href="#"> Tarija - General Trigo 942 (3er piso) </a>
-            </div>
-          </div>
-          <a href="#">
+      <h6>CONTACTOS</h6>
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/CaemSucre">
             <img
-              src="data:image/webp;base64,UklGRkwEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSFsBAAABkHPb1rFXZ6RyKqdyStt2Ktu2bTupvir1V6e0bVvvTznJve/7nOd7vuvbRMQEwH/Gqb1j+caa0s8eaI7gYbwvIeJjombynxFR2reg7aKsNKOJEQllz0lxkhxKq7a8HFcllH9Pp7Qi43Eqn9RjZGymNLLg8wCPgWdkraTUM+HlghXFeuESmaspA2yI+2FsIbtIrKdEUfC2naX9GqmplEISvqp15XTVr0geoCTSELcDvgvYRo6FAuB1MUD1JfLMFwHPh6auUYRkPvwLf1r5lESG7Il7PvetxSJUQu4xj+NcqBehFMBl/Zxyvu4CUCkIgOqe7V4FIBKU37NcloJg4LGqtOgEwoHu/P1313M6oAUA1c+Ij7mgrIFkLhByvOkEWgMm+iBEIiciS+GvQrJWpYtVSfFZVyoW4D6BAmO7CtX8WhUe1UDPbC4vLy8t7/TjF6Pq7GxvbR0oh3+bAQBWUDggygIAAPAQAJ0BKjwAPAA+kUCdSyWjoqGmFVnYsBIJbADFwEJIQ4H8GZQ/0OcqvaX2wH8A9AH7LelB6m/QA/s39y62b0E/Lh9jH9vP2m9m7MII+Pbgi49JVXwSuBOZZbxW1DnsrWFZgZCk369T3A+1LBLKHWhBe1pL10OyVDPnTYq5jEjoCjlHH6f5j/DsxKksQUXdQAD++Sc//27H/9uQ//9sVm1iIfU0mY+SF9fjTscOqy2ar6+fhf83bi1D/+CfbiRwgwnUnOH2eBSqiwWlaZX/9VHjIx+qEEIwlVzJZrkvJO9OXZNXowD04XXCUSeRMtYIsopr1K2G31d/9EVXjzDDgBTNWNCCsAVz9hxW5y7BvnHUVt9tDgsi/j/rP/rwSVXu44Tu0ONzuDitBEnRKsTzRMefrM8QykXw8Cpr5gu6ZHgnFCa5544nU4hMmnPD458vYF30ajhJqffDyO1UKY7+2bo0N6WSA3fgjiFPd8Rf996NrgK433Huaa0qHMO+1knezEZJg4L9+YIOXv/c4UBOTdqelA3P8ekMte0dP7Yvsv4WNPJTFJRgOtLht5LaGJlWD66OMkHOtBmoD2lWuffjB1G1CL65Q1/xRXIH3vFivHmpctOFaop9k38ic30odQL6SGJF1qe5rwosAh+gCJG6V1ilaxmnxhR0AdalTH4k+8W0ZPv58bU5LL57N9WHGqfg+DPxcDSqt/gsduzYWqi1ay4BRsLb2g5NvNki+gUksgRGl7/iWR+zuYTBQWe/evbGpjPy3/mhn97BIQbuxz/UnlI5MH6udT2c/ozp/gjBeDVktuufyIB1otdPAxXnxW2X5zTWZD8gDSgwP/bW//9mv//ZKn//ZVZCoVk+h8HJGKGuzL1xOJZ5acv5rUD5ZVMInPD/96i5yBuHzNRDIi/Gilc8zJfzeB9bewdSCoVQGepj0XsrfrXFwGAAAA=="
-              alt="gmail" />
-            caem.consultores@gmail.com
+              src="data:image/webp;base64,UklGRjQEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSBwBAAABkHNb27FHT2y7tG0nXxvbtm0bPyKdbavNSm/bTmaqmbzV/X5vnjtoI2ICyO9eUosXEBUfy2lMXEJ4EE9Xnjuboqntv/8Y7j/+v+0vl/G40ZxmKF3lcRD7zNCbz1cyQ3U7H44M5T7s1mi7kGLjyVBfxkJkkL4tUcj8ir4PIyiJQegMVWDwg6oxxEO1GHKhRlRNGPKhZgwFqIqgJlSN31YTquYfWcu31fpttWAoRlWAqhhqw1AGtWIoguoxlEJNGIqhNlQtGIqgZgwlUD2GdKgSQyCUjsEDcrxHYA5JL9B3JAWRKPo6CEvRLdr+qLAhXrRlEfZNdHURfutp6hTgiwRt0HKbQriUDujd/bzj0UgNwrGATsn6J48YiJNfPVZQOCDyAgAAkBEAnQEqPAA8AD6RQJtKpaOiIaQYDJCwEglsALcBQX7B0xeJ+r/eHmiTMddM538X+iB0wPMB5O/6we4D0AP7N1G3oS9KL+5/7Ve0y0YpoKAD3WvZirUpf1IJQ9FXGoTKvz1h8hCFFlZ21EuNw+A0HkforoBhYQkVxUVU75tLH1mzhOuYk4l389c3eTjVaWRX1TbkVewA/v6HrGWEBwszT8L/aRyUSzYDDkOawRWTbbj4ETNCvNuiIZRPa4sI198IGWzmlhr/h8Sc2YUt4zPYXkPBwu48n9UiQyXqAeUKIwuWhQqPuVHx0QfSH5HvoVgHdHqJ65pJRr8aoTLP/m6ZALCKFXQGrges+iiDNnhbFb2Qq3Z//ST98v/xvr3INZVlqHdk07v/KX7fxPC8/hruCch/5jIj+B0bRtSk6ODJnuKVKIj1xXBiLyYhQzoj1XgtW5yJO+up+s22Z/jfZJRPx6yTLSgi3ghD2TF/bk8PIf7tQ3685oT+vgI/m8CcHB20UC2marmlbvv164y4HPo2aF4e7D6D5GBkkCFxq3gFEk43as3jldNklaqm1EepXMq+LnbxNBcU+SvJDWjsO+/PKPBKH3F7V0US29jOnAsVjTj0dbnmXFX846JGUUgkC1zobf5jyv+p+HQeu13vNsq6Lxr1gj+0V93rJgySzVxBd8VxwQc+eX6tK//LpFP4mTwDX+3jhz9GqreGMcvsUkD6UanSW8yY+wRV71T8apV3B/sLHUu00y2z0XQVyAm92iubSbhc9kOSrhztjLSRD5oqnTLcjHdF3QzPkIs20yMUuwDj+f5u8iSDCx1YzSOEDDAtHjwxW/V4jQltFi9+X+4i5HutVJ8avukfeVjtSag8HrPl8oRru3AsH3/gFY3+g68NkrrP3YoQpj8XxoIjceH0oGENUln+05ynyxRwR5N0ghjCTY2p91BFcL1gyXT/UdGI5SGwNc5CbaPjiIU2NFkrxU5beR9D//MZYb85adg1y4kAAA=="
+              alt="facebook" />
           </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/">
+            <img
+              src="data:image/webp;base64,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"
+              alt="instagram" />
+          </a>
+        </li>
+        <li>
           <a href="https://wa.link/2ohy4i">
-            <img
-              src="data:image/webp;base64,UklGRhIEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSOcAAAABgCNtewIl5Va4V5l/cgCGE3AEhpIjONVWuDuVZ/4ad2fd69RrR0n75cepImIC1D/K3uH5Xctsmdkys2Vme2StPbJHuzOjfUEmc3Uftl6IwiJPdR++/tICSniZOcxeVUh1G9FU9VLLGjDs5c4DrgSdAGKCngApQTFARlDqQ2UAKUGpLysBSAiKAWK/VG9fVuxDvX3LYl/W25cV+2TeBL0AngTdAO4EnQEOBB0A+p0YNwRQJTEZhRx0QtwAREWdCDelwONOgBtW8I7lnAviCus9KmhDlyZDmgxpbUhrIq3JkCZDXQ3qTxYAVlA4IAQDAAAwEgCdASo8ADwAPpFCnEqlo6KhqBv4ALASCWwAy1+vw6+q8pPk93VAB/TfU1tgPMt+xHUA9AD+n9Ql6AHli+x9+2PpaasZCnKiYFaSBmbnZvXqjo+YA9qXvYmy4ClAGyOz5JZKz5Cq50K0QpsBbG7kL1N8237N7DrNsHFv5QE/xFViapJk4T4MIn5mHv2LvQ292YK/q/cUMpbgAP7/uRav/rkCKOgPmyc6TZTOMQ89JSHgOK/7r7VpS//3gdD5wx0f/F5Ehz863lBwHsLHMuG+qKYNRRhU6mZ247k8e+TXbOefJinmCXO7MWvkbnXjoLr+Xqfqd4ayphRTtYHfE7KWaQgWrxOcxCpGzHmwT5qnbtFCplqMsafOFFXNJ9lrPKNZJMeMQw/cLOrNlyaF4YLKAqN68v+ohI5hkcVLKjZXB5tugGk7UO1xfSYBk7hVZGqKkPzJKUU9/0KOcf3z8qKX1zsFbcsNM+6ORVr9i7zttZSyben0kKm2pbi2SN24i28ipDi39zZqHF64ODqE9f/vU8qEjRlY3YYk8wyQY5Prk0zx3pI1GRc6e7YGSmnrcX4qCe//yes4FHuZ21WKf7FQs9dbaAg1sTPNJQRncSS1DJtEIcqCKXx5gVcmiIx34iRQVO/MMthWt3Uk57Tu4gAASXSRSNZa64kumbreFW3kzhNaKoTcqeW141zSrrMMwTUUp1Ja7//6Uba36ZulXphZPXH/iLLrD8MDRWvmFJHPGO7LPpvRw5htzaiHQIuPmSPvcyKKX7b/8QD5x2xnJs+dKBaGWgJb/YX6M1XUq0JrKzV0nUvuejKqINhytLFFwCt0WzK8XUn2sXwXEZZzOQITBYa2iHMox6uriYUJ78qQvzz2xGueAHTdWtKqaGKXpoSeanVtBZRy0Vxd0PN+UfxABCyAlsljo4OwZlf87Jb2pD84LHr1X7rC8eKDzs6V58bUBZebnlJIL06jHpKLF45bu6CY7HCYA6YkuGpJs7YQceYjgeqqub+PEEftgqMf/mjycAAA"
-              alt="whatsapp" />
-            +59168718363
+            <img src="./assets/whatsapp-00bee905.png" alt="whatsapp" />
           </a>
-        </div>
-        <div class="col-xs-6 col-md-6 mb-2">
-          <h6 class="text-center">SIGUENOS EN:</h6>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/CaemSucre">
-                <img
-                  src="data:image/webp;base64,UklGRjQEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSBwBAAABkHNb27FHT2y7tG0nXxvbtm0bPyKdbavNSm/bTmaqmbzV/X5vnjtoI2ICyO9eUosXEBUfy2lMXEJ4EE9Xnjuboqntv/8Y7j/+v+0vl/G40ZxmKF3lcRD7zNCbz1cyQ3U7H44M5T7s1mi7kGLjyVBfxkJkkL4tUcj8ir4PIyiJQegMVWDwg6oxxEO1GHKhRlRNGPKhZgwFqIqgJlSN31YTquYfWcu31fpttWAoRlWAqhhqw1AGtWIoguoxlEJNGIqhNlQtGIqgZgwlUD2GdKgSQyCUjsEDcrxHYA5JL9B3JAWRKPo6CEvRLdr+qLAhXrRlEfZNdHURfutp6hTgiwRt0HKbQriUDujd/bzj0UgNwrGATsn6J48YiJNfPVZQOCDyAgAAkBEAnQEqPAA8AD6RQJtKpaOiIaQYDJCwEglsALcBQX7B0xeJ+r/eHmiTMddM538X+iB0wPMB5O/6we4D0AP7N1G3oS9KL+5/7Ve0y0YpoKAD3WvZirUpf1IJQ9FXGoTKvz1h8hCFFlZ21EuNw+A0HkforoBhYQkVxUVU75tLH1mzhOuYk4l389c3eTjVaWRX1TbkVewA/v6HrGWEBwszT8L/aRyUSzYDDkOawRWTbbj4ETNCvNuiIZRPa4sI198IGWzmlhr/h8Sc2YUt4zPYXkPBwu48n9UiQyXqAeUKIwuWhQqPuVHx0QfSH5HvoVgHdHqJ65pJRr8aoTLP/m6ZALCKFXQGrges+iiDNnhbFb2Qq3Z//ST98v/xvr3INZVlqHdk07v/KX7fxPC8/hruCch/5jIj+B0bRtSk6ODJnuKVKIj1xXBiLyYhQzoj1XgtW5yJO+up+s22Z/jfZJRPx6yTLSgi3ghD2TF/bk8PIf7tQ3685oT+vgI/m8CcHB20UC2marmlbvv164y4HPo2aF4e7D6D5GBkkCFxq3gFEk43as3jldNklaqm1EepXMq+LnbxNBcU+SvJDWjsO+/PKPBKH3F7V0US29jOnAsVjTj0dbnmXFX846JGUUgkC1zobf5jyv+p+HQeu13vNsq6Lxr1gj+0V93rJgySzVxBd8VxwQc+eX6tK//LpFP4mTwDX+3jhz9GqreGMcvsUkD6UanSW8yY+wRV71T8apV3B/sLHUu00y2z0XQVyAm92iubSbhc9kOSrhztjLSRD5oqnTLcjHdF3QzPkIs20yMUuwDj+f5u8iSDCx1YzSOEDDAtHjwxW/V4jQltFi9+X+4i5HutVJ8avukfeVjtSag8HrPl8oRru3AsH3/gFY3+g68NkrrP3YoQpj8XxoIjceH0oGENUln+05ynyxRwR5N0ghjCTY2p91BFcL1gyXT/UdGI5SGwNc5CbaPjiIU2NFkrxU5beR9D//MZYb85adg1y4kAAA=="
-                  alt="facebook" />
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/">
-                <img
-                  src="data:image/webp;base64,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"
-                  alt="instagram" />
-                Instagram
-              </a>
-            </li>
-          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/gmail-7225fcb4.png" alt="gmail" />
+          </a>
+        </li>
+      </ul>
+      <div class="googlemaps pt-2">
+        <img src="./assets/map-e13f642f.png" alt="" srcset="" />
+        <div class="google_rutas">
+          <a
+            href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu">
+            Sucre - Aniceto Arce 289 Centro
+          </a>
+          <a href="#"> Tarija - General Trigo 942 (3er piso) </a>
         </div>
       </div>
     </div>
@@ -986,12 +971,12 @@
       const campoHora = document.querySelectorAll('input[name="hora"]');
 
       // Obtén la fecha y hora actual
-      campoHora.forEach(ele => {
+      campoHora.forEach((ele) => {
         const fechaActual = new Date();
         let horaFormateada = fechaActual + "";
         horaFormateada = horaFormateada.substr(3, 22);
         ele.value = horaFormateada;
-      })
+      });
     });
   </script>
 </body>
