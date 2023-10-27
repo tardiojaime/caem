@@ -3,25 +3,25 @@
   background: $color2;
 }
 .cer_titulo {
-  width: 100%;
   text-align: center;
-  img {
-    width: 50%;
-  }
+}
+.cer_estadisticas div img {
+  width: 50px;
+}
+.est_texto {
+  font-size: 0.8rem;
+}
+.cer_titulo > img {
+  width: 30%;
+  margin-bottom: 10px;
 }
 .cer_estadisticas > div {
   text-align: center;
-  padding: 30px;
+  padding: 15px;
 }
-.cer_descripcion > .cer_p {
-  text-align: center;
-}
-.fa-regular,
-.fa-star {
-  font-size: 3rem;
-}
+
 .cer_estadisticas > div > div {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .cer_estadisticas > div:nth-child(-n + 2) {
@@ -65,13 +65,13 @@
   }
 
   40% {
-    transform: translateY(5px);
+    transform: translateY(0px);
     opacity: 1;
   }
 
   60% {
     opacity: 1;
-    transform: translateY(5px);
+    transform: translateY(0px);
   }
 
   100% {

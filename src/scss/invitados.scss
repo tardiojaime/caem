@@ -14,19 +14,19 @@ section.seccion_inv {
   width: 100%;
   background: $detalles;
   color: white;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 1;
 }
-section.seccion_inv .container {
+section.seccion_inv .container-fluid {
   width: 100%;
   height: 100%;
 }
 article.formulario {
   z-index: 99;
   position: absolute;
-  width: 50%;
-  top: 120px;
-  left: 48%;
+  width: 55%;
+  top: 185px;
+  left: 40%;
   border-radius: 5px;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -34,18 +34,22 @@ article.formulario {
     padding: 25px;
     .contenedor_formulario {
       width: 95%;
+      margin: 0 auto;
+    }
+    h4 {
+      text-wrap: balance;
     }
   }
 }
 .sec_texto {
-  width: 45%;
+  width: 35%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   p:first-child {
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     text-wrap: balance;
     font-weight: 500;
@@ -70,6 +74,7 @@ article.formulario {
 .text_principal {
   font-weight: 500;
   font-style: italic;
+  text-align: left;
 }
 .accordion-body {
   font-weight: 300;
@@ -117,8 +122,32 @@ article.formulario {
 #btn_copy:hover {
   background: #0f3e9c;
 }
+
+/*icono de recomendaciones*/
+.referencia_ {
+  text-align: center;
+}
+.referencia_ > .ref_img {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.referencia_ > .ref_img > svg {
+  width: 70%;
+}
 // `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .referencia_ {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    .ref_img {
+      display: flex;
+      width: 100px;
+      svg {
+        width: 80%;
+      }
+    }
+  }
 }
 
 // `md` applies to small devices (landscape phones, less than 768px)
@@ -128,7 +157,7 @@ article.formulario {
   }
   section.seccion_inv {
     position: static;
-    min-height: min-content;
+    height: 50vh;
   }
   .sec_texto {
     width: 100%;

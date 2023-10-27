@@ -6,6 +6,11 @@
   border: none;
 }
 .navbar {
+  --bs-navbar-padding-y: 0;
+}
+.navbar-brand {
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
 }
 .alert-dismissible .btn-close {
   top: 10px;
@@ -34,9 +39,20 @@
   background: transparent;
   color: white;
 }
+.form-mobile > .form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .form-mobile {
   display: none;
 }
 .navbar > .container {
   justify-content: center;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h2 {
 }

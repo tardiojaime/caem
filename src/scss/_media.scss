@@ -1,33 +1,39 @@
 /* X-Large devices (large desktops, 1200px and up)*/
 @media (max-width: 1200px) {
+  /*texto cambiante*/
+  .fondo_camb {
+    width: 225px !important;
+    margin-bottom: -12px !important;
+  }
+  .word_ {
+    margin-left: -90px !important;
+  }
+  .cer_estadisticas div img {
+    width: 45px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .word_ {
+    margin-left: -100px !important;
+  }
 }
 /* Large devices (desktops, 992px and up)*/
 @media (max-width: 992px) {
-  .seccion1 {
-    height: 500px;
-  }
   .sec1_contenedor {
     display: block;
   }
-  .sec1_contenedor .text {
-    background: rgba(0, 0, 0, 0.5);
-  }
-  .sec1_contenedor .form {
-    display: none;
-  }
-  .form-mobile {
+  .sec1_contenedor > .text {
     display: block;
-    padding: 15px 0;
   }
   // detalles despues del formulario
   .detalles {
     position: static;
     display: block;
-    padding: 20px 20px;
+    padding: 0px 40px;
   }
   .detalles .d_uno {
     justify-content: start;
-    padding: 20px 10px;
+    padding: 10px 10px;
   }
   .d_uno:not(:last-child) {
     border-right: none;
@@ -47,9 +53,26 @@
   .c_uno:not(:last-child) {
     border-right: none;
   }
+  section.opiniones .container .carousel {
+    height: 270px;
+  }
+  /*texto cambiante*/
+  .fondo_camb {
+    width: 185px !important;
+    margin-bottom: -12px !important;
+  }
+  .cer_estadisticas div img {
+    width: 40px !important;
+  }
 }
 @media (max-width: 768px) {
   /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
+  .seccion1 {
+    background: url(../img/logo/CAEM_BANNER_base1.png) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+  }
   .viaje .v_uno {
     display: block;
   }
@@ -64,8 +87,9 @@
   .o_opinion {
     display: block;
   }
+
   section.opiniones .container .carousel {
-    min-height: 450px;
+    height: 385px;
   }
   .o_img {
     display: flex;
@@ -79,7 +103,7 @@
   }
   //certificado
   .certificacion .container-xl {
-    padding: 25px;
+    padding: 5px;
     display: block;
   }
   .ce_certificado {
@@ -116,9 +140,47 @@
     width: 30%;
     height: 30%;
   }
+  /*opiniones*/
+  .o_img img {
+    width: 140px;
+    height: 140px;
+  }
+  .sec1_contenedor .form {
+    display: none;
+  }
+  .form-mobile {
+    display: block;
+    padding: 15px 0;
+  }
+  /*margen arriba */
+  /*   .form-mobile {
+    margin-top: -670px;
+  } */
+  .cer_estadisticas div img {
+    width: 37px !important;
+  }
+  .cer_estadisticas > div > div {
+    font-size: 1.8rem !important;
+  }
 }
 /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
 @media (max-width: 576px) {
+  .seccion1 {
+    background: none !important;
+  }
+  .sec1_contenedor > .text {
+    background: url(../img/logo/CAEM_BANNER_base2.png) !important;
+    background-position: right !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+  }
+  .alert {
+    background: linear-gradient(45deg, #ffa121, #ff9a12a1) !important;
+  }
+  .sec1_contenedor > .text > .texto {
+    background: linear-gradient(93deg, #0d0d0e, transparent);
+    font-weight: 500;
+  }
   .navbar > .container {
     justify-content: center;
   }
@@ -128,13 +190,13 @@
     max-width: 80%;
   }
   section.opiniones .container .carousel {
-    min-height: 480px;
+    height: 420px;
   }
   .texto_movil {
     display: block;
   }
   .texto_escritorio {
-    display: none;
+    line-height: 50px;
   }
   .c_uno {
     padding: 5px;
@@ -145,6 +207,36 @@
   }
   .c_uno > .c_text {
     padding: 2px;
+  }
+  /*certificaciones*/
+  .ce_certificado {
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  /*opiniones*/
+  .o_img img {
+    width: 120px;
+    height: 120px;
+  }
+  /*texto cambiante*/
+  .fondo_camb {
+    width: 175px !important;
+    height: 40px !important;
+  }
+  .word_ {
+    margin-left: -75px !important;
+  }
+  /*imagen certmod*/
+  .cer_titulo img {
+    width: 80%;
+  }
+  .cer_estadisticas > div > div {
+    font-size: 1.7rem !important;
+  }
+  .cer_certmind_img img {
+    width: 95% !important;
   }
 }
 @media (max-width: 380px) {
@@ -160,6 +252,26 @@
     letter-spacing: 1px;
   }
   section.opiniones .container .carousel {
-    min-height: 500px;
+    height: 550px;
+  }
+  section.pprofesor .container .carousel {
+    height: 520px;
+  }
+  /*certificaciones*/
+  .ce_certificado {
+    img {
+      width: 90%;
+      height: 90%;
+    }
+  }
+  .cer_titulo img {
+    width: 80%;
+  }
+  /*docentes img*/
+  .p_imagen {
+    left: 25%;
+  }
+  .cer_certmind_img img {
+    width: 100% !important;
   }
 }

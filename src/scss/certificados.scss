@@ -7,10 +7,17 @@
   flex: 1;
 }
 .c_uno {
-  padding: 20px;
+  padding: 0 10px 0 10px;
 }
 .c_uno:not(:last-child) {
-  border-right: 2px solid $gris;
+  border-right: 2px solid transparent; /* Borde derecho transparente */
+  border-image: linear-gradient(
+    to top,
+    $gris,
+    transparent
+  ); /* Gradiente vertical */
+  border-image-slice: 1;
+  /* border-right: 2px solid $gris; */
 }
 .c_icon {
   text-align: center;

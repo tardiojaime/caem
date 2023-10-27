@@ -1,35 +1,38 @@
 @import "./colores.sass";
 .seccion1 {
-  background: url(../img/logo/fondo.png);
+  background: url(../img/logo/CAEM_BANNER_base.png);
   width: 100%;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .sec1_contenedor {
   width: 100%;
   height: 100%;
-  display: flex;
-}
-.sec1_contenedor > div {
-  width: 100%;
 }
 .sec1_contenedor .text {
   color: white;
   font-weight: bold;
 }
 //form
+.sec1_contenedor > .text {
+  background: rgba(0, 0, 0, 0.9);
+}
+.sec1_contenedor > .text > .texto {
+  width: 100%;
+  padding: 20px 30px;
+}
 
 .form {
+  width: 95%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 //card-form
 .card-body {
-  border-bottom-left-radius: 30px;
-  border-top-right-radius: 30px;
-  max-width: 450px;
+  max-width: 400px;
   min-width: 200px;
-  padding: 15px;
+  padding: 30px;
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.51);
 }
@@ -48,13 +51,13 @@
   font-size: 80%;
 }
 .form-control:not(:placeholder-shown) {
-  border: 1px solid rgb(169, 169, 228);
+  border: 1px solid rgb(98, 98, 109);
 }
 .form-control:not(:placeholder-shown) + label {
   transform: translateY(-15px);
   letter-spacing: 2px;
   font-size: 80%;
-  color: rgb(169, 169, 228);
+  color: rgb(98, 98, 109);
 }
 .terminos {
   color: rgb(87, 83, 83);
@@ -158,10 +161,13 @@ label.label_form {
 .group {
   position: relative;
 }
+.form-check-input {
+  border: var(--bs-border-width) solid #2d6eaf;
+}
 /* label.label_form:after {
   content: "";
   display: inline-block;
-  height: 2px;
+  height: 2px; 
   width: 100%;
   background: rgb(199, 29, 29);
   position: relative;

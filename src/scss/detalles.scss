@@ -3,7 +3,7 @@
 .detalles {
   position: sticky;
   top: 0;
-  padding: 25px 0;
+  padding: 15px 0;
   background: $detalles;
   display: flex;
   flex-direction: row;
@@ -11,6 +11,21 @@
 }
 .detalles > .d_uno {
   flex: 1;
+}
+.d_inicio {
+  flex: 1.1 !important;
+}
+.d_duracion {
+  flex: 0.8 !important;
+}
+.d_costo {
+  flex: 0.8 !important;
+}
+.d_equipo {
+  flex: 1.2 !important;
+}
+.d_ocultar {
+  flex: 0.8 !important;
 }
 .d_uno {
   display: flex;
@@ -34,7 +49,7 @@
 }
 .d_text p {
   margin-bottom: 0;
-  line-height: 15px;
+  line-height: 18px;
   font-weight: 300;
 }
 .d_uno:not(:last-child) {
@@ -48,6 +63,5 @@
 .detalles2 p {
   padding: 0 25px;
   font-size: 110%;
-  text-align: center;
   text-wrap: balance;
 }

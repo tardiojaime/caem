@@ -18,7 +18,7 @@
   grid-column: 2;
 }
 .enlace_invitar2 {
-  padding: 10px 3px;
+  padding: 6px 15px;
   text-decoration: none;
   font-weight: bold;
   color: $orange;
@@ -68,10 +68,10 @@
   width: 100%;
 }
 section.pprofesor .container .carousel {
-  min-height: 430px;
+  height: 430px;
 }
 section.opiniones .container .carousel {
-  min-height: 250px;
+  height: 220px;
 }
 .profesor {
   display: flex;
@@ -117,6 +117,8 @@ section.opiniones .container .carousel {
 }
 .o_img img {
   border-radius: 100%;
+  width: 200px;
+  height: 200px;
   border: 5px solid white;
   object-fit: cover;
 }
@@ -124,12 +126,15 @@ section.opiniones .container .carousel {
   padding: 0 20px;
 }
 //navegacion
-
-//certificacion ultima parte
-.certificacion {
+.carousel-indicators.cambiar [data-bs-target] {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border-top: none !important;
+  border-bottom: none !important;
 }
+//certificacion ultima parte
 .certificacion .container-xl {
-  padding: 25px;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -157,48 +162,31 @@ footer {
   padding: 20px auto;
 }
 footer .container {
-  text-align: center;
   color: white;
 }
-footer a {
-  font-style: italic;
-}
-footer .container .row {
-  display: flex;
-  justify-content: center;
-}
-footer .container .row a {
-  text-decoration: none;
-  color: white;
-  display: block;
-}
-footer .container .row a:hover {
-  font-weight: 500;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-footer .container .row a:hover img {
+
+footer .container a:hover img {
   scale: 120%;
 }
-footer .container .row img {
+footer .container img {
   width: 25px;
   height: 25px;
 }
-footer .container .row ul {
+footer .container ul {
   margin: 0;
   padding: 0;
 }
-footer .container .row ul li {
+footer .container ul li {
   list-style: none;
+  display: inline-block;
+  margin-right: 10px;
 }
-footer .container .row ul li a {
+footer .container ul li a {
   text-decoration: none;
   color: white;
 }
-footer .container .row ul li a:hover {
-  font-weight: 500;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-footer .container .row ul li a:hover img {
+
+footer .container ul li a:hover img {
   scale: 120%;
 }
 .conocemas {
@@ -207,12 +195,15 @@ footer .container .row ul li a:hover img {
 }
 .googlemaps {
   display: flex;
-  justify-content: center;
 }
 .googlemaps img {
   margin-top: 10px;
   margin-right: 5px;
 }
 .google_rutas {
-  text-align: left;
+  display: inline-grid;
+}
+.google_rutas a {
+  text-decoration: none;
+  color: white;
 }
