@@ -67,12 +67,12 @@
 }
 @media (max-width: 768px) {
   /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
-  .seccion1 {
+  /*   .seccion1 {
     background: url(../img/logo/CAEM_BANNER_base1.webp) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
-  }
+  } */
   .viaje .v_uno {
     display: block;
   }
@@ -141,13 +141,6 @@
     width: 140px;
     height: 140px;
   }
-  .sec1_contenedor .form {
-    display: none;
-  }
-  .form-mobile {
-    display: block;
-    padding: 15px 0;
-  }
   /*margen arriba */
   /*   .form-mobile {
     margin-top: -670px;
@@ -164,15 +157,15 @@
   .seccion1 {
     background: none !important;
   }
-  .sec1_contenedor > .text {
+  /*   .sec1_contenedor > .text {
     background: url(../img/logo/CAEM_BANNER_base2.webp) !important;
     background-position: right !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
-  }
+  } */
 
   .sec1_contenedor > .text > .texto {
-    background: linear-gradient(93deg, #0d0d0e, transparent);
+    background: black;
     font-weight: 500;
   }
   .navbar > .container {
@@ -183,8 +176,23 @@
     border-top-right-radius: 0;
     max-width: 80%;
   }
+  .contenedor_banner {
+    background: url(../img/logo/CAEM_BANNER_788x415.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+  }
   section.opiniones .container .carousel {
     height: 420px;
+  }
+  .sec1_contenedor .form {
+    display: none;
+  }
+  .form-mobile {
+    display: block;
+    padding: 15px 0;
   }
   .texto_movil {
     display: block;
@@ -246,6 +254,9 @@
 @media (max-width: 380px) {
   .navbar > .container {
     justify-content: center;
+  }
+  .contenedor_banner {
+    height: 200px !important;
   }
   .form-mobile > .form > .card-body {
     border-bottom-left-radius: 0;

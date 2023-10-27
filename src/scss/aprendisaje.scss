@@ -2,6 +2,13 @@
 .aprendisaje {
   background: $color2;
 }
+.aprendisaje > .container {
+  display: flex;
+  justify-content: center;
+}
+.ap_centrador {
+  width: fit-content;
+}
 .sticky_bottom {
   background: $detalles;
   width: 100%;

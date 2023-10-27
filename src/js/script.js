@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var departamento_m = document.getElementById("departamento_m");
   var select_departamento = document.getElementById("select_departamento");
   var select_departamento_m = document.getElementById("select_departamento_m");
+  var area_experiencia_1 = document.getElementById("area_experiencia_1");
+  var area_experiencia_2 = document.getElementById("area_experiencia_2");
   var btn_enlace = document.getElementById("btn_ocultar");
   var bottom_sticky = document.getElementById("sticky_bottom");
   const radioButtons = document.querySelectorAll('input[name="tipo"]');
@@ -66,18 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var btn_submit = document.getElementById("btn_submit");
   var form = document.getElementById("registration-form");
   var espera = document.getElementById("espera");
-
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     btn_submit.disabled = true;
+    let expe = area_experiencia_1.value == ".";
     let estado =
-      region.value === "Bolivia" &&
-      select_departamento.value === "Seleccione...";
+      region.value === "Bolivia" && select_departamento.value === ".";
     if (estado) {
+      btn_submit.disabled = false;
       select_departamento.focus();
       select_departamento.click();
-      console.log(estado ? "si" : "no");
+    } else if (expe) {
+      btn_submit.disabled = false;
+      area_experiencia_1.focus();
     } else {
+      btn_submit.disabled = true;
       btn_submit.textContent = "Enviando";
       espera.classList.remove("d-none");
       const formData = new FormData(this);
@@ -107,13 +112,17 @@ document.addEventListener("DOMContentLoaded", function () {
   form_m.addEventListener("submit", function (event) {
     event.preventDefault();
     btn_submit_n.disabled = true;
+    let exper = area_experiencia_2.value == ".";
     let estado =
-      region_m.value === "Bolivia" &&
-      select_departamento_m.value === "Seleccione...";
+      region_m.value === "Bolivia" && select_departamento_m.value === ".";
     if (estado) {
+      btn_submit_n.disabled = false;
       select_departamento_m.focus();
       select_departamento_m.click();
       console.log(estado ? "si" : "no");
+    } else if (exper) {
+      area_experiencia_2.focus();
+      btn_submit_n.disabled = false;
     } else {
       btn_submit_n.textContent = "Enviando";
       espera_m.classList.remove("d-none");

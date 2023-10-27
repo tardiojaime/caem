@@ -45,6 +45,7 @@
           </h3>
         </div>
       </div>
+      <div class="contenedor_banner"></div>
       <div class="form">
         <div class="card-body">
           <div class="text-center mb-3">
@@ -102,7 +103,8 @@
               </div>
             </div>
             <div class="group mb-4">
-              <select class="form-control form-control-md" id="area_experiencia" name="area_experiencia" required>
+              <select class="form-control form-control-md" id="area_experiencia_1" name="area_experiencia" required>
+                <option value=".">Selecione...</option>
                 <option value="Hotelería">Hotelería</option>
                 <option value="Minería">Minería</option>
                 <option value="Educación">Educación</option>
@@ -253,7 +255,8 @@
               </div>
             </div>
             <div class="group mb-4">
-              <select class="form-control form-control-md" id="area_experiencia1" name="area_experiencia" required>
+              <select class="form-control form-control-md" id="area_experiencia_2" name="area_experiencia" required>
+                <option value=".">Selecione...</option>
                 <option value="Hotelería">Hotelería</option>
                 <option value="Minería">Minería</option>
                 <option value="Educación">Educación</option>
@@ -580,23 +583,25 @@
   <section class="p-4 aprendisaje">
     <h2 class="text-center fw-bolder py-2">Aprendizajes clave:</h2>
     <div class="container">
-      <ul>
-        <li class="mb-1">
-          Aplicar los 4 valores de la agilidad en sus equipos de trabajo.
-        </li>
-        <li class="mb-1">Generar foco en la entrega y flujo de valor.</li>
-        <li class="mb-1">
-          Generar espacios de innovación y experimentación.
-        </li>
-        <li class="mb-1">Entender los principios y valores de SCRUM.</li>
-        <li class="mb-1">
-          Comprender los Roles, Eventos y Artefactos de SCRUM.
-        </li>
-        <li class="mb-1">
-          Aprender SCRUM a través de dinámicas que permitan anclar los
-          conceptos.
-        </li>
-      </ul>
+      <div class="ap_centrador">
+        <ul>
+          <li class="mb-1">
+            Aplicar los 4 valores de la agilidad en sus equipos de trabajo.
+          </li>
+          <li class="mb-1">Generar foco en la entrega y flujo de valor.</li>
+          <li class="mb-1">
+            Generar espacios de innovación y experimentación.
+          </li>
+          <li class="mb-1">Entender los principios y valores de SCRUM.</li>
+          <li class="mb-1">
+            Comprender los Roles, Eventos y Artefactos de SCRUM.
+          </li>
+          <li class="mb-1">
+            Aprender SCRUM a través de dinámicas que permitan anclar los
+            conceptos.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
   <section class="p-4 plan" data-aos="fade-left">
@@ -678,7 +683,7 @@
   </section>
   <section class="pprofesor">
     <h2 class="text-center fw-bolder" style="padding-top: 1.5rem">
-      Docentes
+      Expertos
     </h2>
     <div class="container">
       <div id="carouseldocentes" class="carousel slide" data-bs-ride="carousel">
@@ -743,7 +748,7 @@
           <div class="carousel-item active">
             <div class="o_opinion">
               <div class="o_img">
-                <img src="./img/maria.jpg" alt="" width="200px" height="200px" />
+                <img src="./img/logo/CAEM_Maria Rena.png" alt="" width="200px" height="200px" />
               </div>
               <div class="o_texto">
                 <p>
@@ -762,7 +767,7 @@
           <div class="carousel-item">
             <div class="o_opinion">
               <div class="o_img">
-                <img src="./img/filomon.jpg" alt="" width="170px" height="170px" />
+                <img src="./img/logo/CAEM_Filomón.png" alt="" width="170px" height="170px" />
               </div>
               <div class="o_texto">
                 <p style="margin: 0;">
@@ -843,19 +848,11 @@
   </article>
   <article class="container text_slide p-4">
     <div class="section cer_slide">
-      <h2 class="text-center texto_escritorio">
+      <h2 class="text-center texto_escritorio mb-4">
         Nosotros
         <span class="fondo_camb">
           <span class="word_">garantizamos</span>
         </span>
-        tus habilidades
-      </h2>
-      <h2 class="text-center texto_movil">
-        Nosotros <br />
-        <span class="fondo_camb">
-          <span class="word_">garantizamos</span>
-        </span>
-        <br />
         tus habilidades
       </h2>
     </div>
@@ -877,17 +874,17 @@
       <h6>CONTACTOS</h6>
       <ul>
         <li>
-          <a href="https://www.facebook.com/CaemSucre">
+          <a href="https://www.facebook.com/CaemSucre" target="_blank">
             <img src="./img/footer/facebook.webp" alt="facebook" />
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/">
+          <a href="https://www.instagram.com/" target="_blank">
             <img src="./img/footer/instagram.webp" alt="instagram" />
           </a>
         </li>
         <li>
-          <a href="https://wa.link/2ohy4i">
+          <a href="https://wa.link/2ohy4i" target="_blank">
             <img src="./img/footer/whatsapp.png" alt="whatsapp" />
           </a>
         </li>
@@ -900,8 +897,8 @@
       <div class="googlemaps py-2">
         <img src="./img/footer/map.png" alt="" srcset="" />
         <div class="google_rutas">
-          <a
-            href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu">
+          <a href="https://www.google.com/maps/place/INSTITUTO+TECNICO+%22ITEC%22/@-19.0446132,-65.2599856,17z/data=!3m1!4b1!4m6!3m5!1s0x93fbcf3467cb1ad7:0x6ef4b7b199ed8ce4!8m2!3d-19.0446183!4d-65.2574107!16s%2Fg%2F11hc_3lxvp?entry=ttu"
+            target="_blank">
             Sucre - Aniceto Arce 289 Centro
           </a>
           <a href="#"> Tarija - General Trigo 942 (3er piso) </a>
