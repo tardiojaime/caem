@@ -11678,7 +11678,6 @@ h3,
 .d_text p {
   margin-bottom: 0;
   line-height: 18px;
-  font-weight: 300;
 }
 .d_uno:not(:last-child) {
   border-right: 2px solid white;
