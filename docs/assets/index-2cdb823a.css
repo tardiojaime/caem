@@ -11426,7 +11426,7 @@ fieldset:disabled .btn {
   }
 }
 .seccion1 {
-  background: url(./CAEM_BANNER_base-f2bcd3f6.png);
+  background: url(./CAEM_BANNER_base.webp);
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -12005,7 +12005,7 @@ footer .container ul li a:hover img {
 }
 @media (max-width: 768px) {
   .seccion1 {
-    background: url(./CAEM_BANNER_base1-db479155.png) !important;
+    background: url(./CAEM_BANNER_base1.webp) !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
@@ -12091,7 +12091,7 @@ footer .container ul li a:hover img {
     background: none !important;
   }
   .sec1_contenedor > .text {
-    background: url(./CAEM_BANNER_base2-b8bb723e.png) !important;
+    background: url(./CAEM_BANNER_base2.webp) !important;
     background-position: right !important;
     background-repeat: no-repeat !important;
     background-size: contain !important;
