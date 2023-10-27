@@ -95,9 +95,6 @@
     display: flex;
     justify-content: center;
   }
-  .o_texto {
-    text-align: center;
-  }
   .o_texto p {
     margin-top: 10px;
   }
@@ -109,9 +106,7 @@
   .ce_certificado {
     text-align: center;
   }
-  .ce_texto {
-    text-align: center;
-  }
+
   .texto1 {
     display: block;
   }
@@ -128,6 +123,7 @@
   .enlace_invitar_inicio {
     padding: 10px;
     margin-right: 10px;
+    font-size: 0.8rem;
   }
   .alerta div {
     width: 50%;
@@ -174,9 +170,7 @@
     background-repeat: no-repeat !important;
     background-size: contain !important;
   }
-  .alert {
-    background: linear-gradient(45deg, #ffa121, #ff9a12a1) !important;
-  }
+
   .sec1_contenedor > .text > .texto {
     background: linear-gradient(93deg, #0d0d0e, transparent);
     font-weight: 500;
@@ -196,7 +190,7 @@
     display: block;
   }
   .texto_escritorio {
-    line-height: 50px;
+    line-height: 40px;
   }
   .c_uno {
     padding: 5px;
@@ -230,13 +224,23 @@
   }
   /*imagen certmod*/
   .cer_titulo img {
-    width: 80%;
+    width: 65% !important;
   }
   .cer_estadisticas > div > div {
     font-size: 1.7rem !important;
   }
   .cer_certmind_img img {
     width: 95% !important;
+  }
+  /*texto laber area de trabajo*/
+  .form-control:not(:placeholder-shown) + .label_n_par {
+    letter-spacing: 0.8px;
+  }
+  .form-control:not(:placeholder-shown) + label.mobile {
+    letter-spacing: 1px;
+  }
+  .ocultar_grupo {
+    display: none;
   }
 }
 @media (max-width: 380px) {
@@ -249,13 +253,13 @@
     max-width: 95%;
   }
   .form-control:not(:placeholder-shown) + label.mobile {
-    letter-spacing: 1px;
+    letter-spacing: 0.7px;
   }
   section.opiniones .container .carousel {
     height: 550px;
   }
   section.pprofesor .container .carousel {
-    height: 520px;
+    height: 502px;
   }
   /*certificaciones*/
   .ce_certificado {
@@ -273,5 +277,26 @@
   }
   .cer_certmind_img img {
     width: 100% !important;
+  }
+}
+@media (max-width: 300px) {
+  section.opiniones .container .carousel {
+    height: 618px;
+  }
+  section.pprofesor .container .carousel {
+    height: 560px;
+  }
+  .form-control:not(:placeholder-shown) + label.mobile {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 280px) {
+  section.opiniones .container .carousel {
+    height: inherit;
+  }
+  section.pprofesor .container .carousel {
+    height: inherit;
   }
 }

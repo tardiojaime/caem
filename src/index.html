@@ -225,7 +225,7 @@
               <label class="label_form" for="telefono1">Número de celular:</label>
             </div>
             <div class="row">
-              <div class="col">
+              <div class="col pr-0">
                 <label>Preguntando por:</label>
                 <div class="mb-1">
                   <input class="form-check-input" type="radio" name="tipo" id="radio_3" checked value="Mí mismo" />
@@ -236,7 +236,7 @@
                 <div class="mb-3">
                   <input class="form-check-input" type="radio" name="tipo" id="radio_4" value="Equipo/Grupo" />
                   <label class="form-check-label" for="radio_4">
-                    Equipo/Grupo
+                    Equipo <span class="ocultar_grupo">/Grupo</span>
                   </label>
                 </div>
               </div>
@@ -248,7 +248,7 @@
                     <option value="3-5">3-5</option>
                     <option value="6+">6+</option>
                   </select>
-                  <label class="label_form" for="participante_m">Participantes</label>
+                  <label class="label_form label_n_par" for="participante_m">Participantes</label>
                 </div>
               </div>
             </div>
@@ -693,7 +693,7 @@
               <div class="p_contenedor">
                 <img class="p_imagen" src="./img/ICONO2_Orlando.png" alt="" width="130px" height="130px" />
                 <p class="p_titulo"><b>Orlando Mendieta Enríquez</b></p>
-                <p class="p_descripcion mb-3">
+                <p class="p_descripcion" style="margin: 0;">
                   Licenciado en Ingeniería de Sistemas Informáticos,
                   especializado en Redes y Telecomunicación, Management 3.0,
                   docente de postgrado y Director ejecutivo de Totem
@@ -765,7 +765,7 @@
                 <img src="./img/filomon.jpg" alt="" width="170px" height="170px" />
               </div>
               <div class="o_texto">
-                <p>
+                <p style="margin: 0;">
                   “Para la certificación es importante el espacio y el tiempo
                   necesarios y exclusivos para concentrarse en la preparación.
                   Por eso han sido de mucho valor los test del simulador que
@@ -897,7 +897,7 @@
           </a>
         </li>
       </ul>
-      <div class="googlemaps pt-2">
+      <div class="googlemaps py-2">
         <img src="./img/footer/map.png" alt="" srcset="" />
         <div class="google_rutas">
           <a
@@ -908,9 +908,6 @@
         </div>
       </div>
     </div>
-    <p class="text-center" style="margin-bottom: 0; color: white">
-      © 2023 Itec - Instituto Tecnico
-    </p>
   </footer>
   <section id="sticky_bottom" class="sticky_bottom d-none">
     <div class="container">
