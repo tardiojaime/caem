@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       espera.classList.remove("d-none");
       const formData = new FormData(this);
       const url =
-        "https://script.google.com/macros/s/AKfycbx0hIiQn0v1OfauGFb4jcbQHmI80dwd7mYtUncE-pSvpX7K7-RAYJWN_QCbfrhCC1bY/exec";
+        "https://script.google.com/macros/s/AKfycbzJbm5Xz-xfvevCNAyN_OTVqS48SdKmToeYjFW-8Ofk3xZMGJhTtaSwFLrlmKi0xA/exec";
       fetch(url, { method: "POST", body: formData })
         .then((response) => {
           if (!response.ok) {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       espera_m.classList.remove("d-none");
       const formData = new FormData(this);
       const url =
-        "https://script.google.com/macros/s/AKfycbx0hIiQn0v1OfauGFb4jcbQHmI80dwd7mYtUncE-pSvpX7K7-RAYJWN_QCbfrhCC1bY/exec";
+        "https://script.google.com/macros/s/AKfycbzJbm5Xz-xfvevCNAyN_OTVqS48SdKmToeYjFW-8Ofk3xZMGJhTtaSwFLrlmKi0xA/exec";
       fetch(url, { method: "POST", body: formData })
         .then((response) => {
           if (!response.ok) {

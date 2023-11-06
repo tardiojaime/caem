@@ -15,7 +15,7 @@
   <main class="main">
     <nav class="navbar bg-white seccion_nav1 mb-4">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           <img src="./img/logo/caemlogo.png" alt="caem" width="140" height="94">
         </a>
       </div>
@@ -93,7 +93,7 @@
           </div>
           <hr>
           <form id="formemail" method="post" action="" class="mb-2">
-            <input type="hidden" name="formId" value="email">
+            <input type="hidden" name="hoja" value="Solicitud_de_código_de_descuento_para_grupo">
             <input type="hidden" name="hora" value="hora">
             <label for="email" class="mb-2">
               Ingrese su correo electrónico para recibir el código de descuento
@@ -190,7 +190,8 @@
                 <div class="accordion-body">
                   <ol>
                     <li>Envíanos tu email como indica en la sección anterior.</li>
-                    <li><span id="ruta_copy" class="visually-hidden">www.itec.com.bo/caem/agilidadyscrum</span> Copia
+                    <li><span id="ruta_copy" class="visually-hidden">https://www.itec.com.bo/caem/designthinking</span>
+                      Copia
                       &nbsp;&nbsp;<a type="button" class="" id="btn_copy" title="copiar">aquí &nbsp;<i
                           class="fa-solid fa-copy" style="color: #ffffff;"></i></a>
                       y envía por mensaje a tus colegas este link.</li>
@@ -235,7 +236,7 @@
     <section class="seccion_inv">
       <nav class="navbar bg-white seccion_nav ">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="./img/logo/caemlogo.png" alt="caem" width="140" height="94">
           </a>
         </div>
@@ -297,7 +298,7 @@
         espera.classList.remove("d-none");
         const formData = new FormData(this);
         const url =
-          "https://script.google.com/macros/s/AKfycbz9E4lk5GOKqYAd2FyXBBPW39Gon0kryJ-o2BCovN8XBKRqByKKDaXdegpyE8I5MU3bQw/exec";
+          "https://script.google.com/macros/s/AKfycbzJbm5Xz-xfvevCNAyN_OTVqS48SdKmToeYjFW-8Ofk3xZMGJhTtaSwFLrlmKi0xA/exec";
         fetch(url, { method: "POST", body: formData })
           .then((response) => {
             if (!response.ok) {

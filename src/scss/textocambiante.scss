@@ -36,7 +36,7 @@
 }
 
 .fondo_camb {
-  background: #001f5b;
+  background: $detalles;
   width: 240px;
   height: 50px;
   display: inline-block;
@@ -58,7 +58,7 @@
   width: 100%;
 }
 .cer_certmind_img img {
-  width: 40%;
+  width: 25%;
 }
 
 @keyframes rotarletras {
