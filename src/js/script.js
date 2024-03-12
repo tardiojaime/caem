@@ -1,18 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const contenedor = document.getElementById("detalles");
   var region = document.getElementById("region");
   var region_m = document.getElementById("region_m");
-  var elemento = document.getElementById("detalles");
-  var height = window.innerWidth;
-  var media = 992;
   var departamento = document.getElementById("departamento");
   var departamento_m = document.getElementById("departamento_m");
   var select_departamento = document.getElementById("select_departamento");
   var select_departamento_m = document.getElementById("select_departamento_m");
   var area_experiencia_1 = document.getElementById("area_experiencia_1");
   var area_experiencia_2 = document.getElementById("area_experiencia_2");
-  var btn_enlace = document.getElementById("btn_ocultar");
-  var bottom_sticky = document.getElementById("sticky_bottom");
   const radioButtons = document.querySelectorAll('input[name="tipo"]');
 
   radioButtons.forEach(function (boton) {
@@ -47,22 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ? departamento_m.classList.add("d-none")
       : (departamento_m.classList.remove("d-none"),
         (departamento_m.selectedIndex = 0));
-  });
-  window.addEventListener("scroll", function () {
-    const posicion = elemento.getBoundingClientRect();
-    height = window.innerWidth;
-    const existeclase = bottom_sticky.classList.contains("d-none");
-    //console.log(existeclase ? "si existe la clase d-none" : "no existe");
-    const enlacevisible = posicion.top === 0;
-    btn_enlace.classList.toggle("d-none", !enlacevisible);
-    const sticky = height < media && posicion.top < 0;
-    bottom_sticky.style.display =
-      sticky && existeclase
-        ? bottom_sticky.classList.remove("d-none")
-        : !sticky
-        ? bottom_sticky.classList.add("d-none")
-        : null;
-    //bottom_sticky.style.display = sticky ? "block" : "none";
   });
 
   var btn_submit = document.getElementById("btn_submit");
