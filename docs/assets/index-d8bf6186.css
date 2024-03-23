@@ -13904,26 +13904,15 @@ h3,
   flex: 1
 }
 
-.d_inicio {
-  flex: 1.1 !important
-}
-
+.d_inicio,
 .d_duracion,
-.d_costo {
-  flex: .8 !important
-}
-
+.d_costo,
 .d_equipo {
-  flex: 1.2 !important
-}
-
-.d_ocultar {
-  flex: .8 !important
+  flex: 1 !important
 }
 
 .d_uno {
   display: flex;
-  justify-content: center;
   align-items: center
 }
 
@@ -14376,6 +14365,12 @@ footer .container ul li a:hover img {
 
   .cer_estadisticas div img {
     width: 40px !important
+  }
+}
+
+@media (min-width: 992px) {
+  .d_uno {
+    margin-left: 20px
   }
 }
 

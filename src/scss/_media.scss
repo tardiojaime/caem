@@ -75,6 +75,11 @@
     width: 40px !important;
   }
 }
+@media (min-width: 992px){
+  .d_uno{
+    margin-left: 20px;
+  }
+}
 @media (max-width: 768px) {
   /* Estilos que se aplican cuando la ventana es de 768px de ancho o menos */
   /*   .seccion1 {
