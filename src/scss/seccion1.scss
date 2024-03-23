@@ -1,6 +1,6 @@
 @import "./colores.sass";
 .seccion1 {
-  background: url(../img/logo/CAEM_BANNER_2732x1440.webp);
+  background: url(../img/agilidad/Agilidad_2732x1440.webp);
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@
   padding-left: 10px;
 }
 .form-control:focus {
-  box-shadow: 3px 3px 5px rgb(248, 173, 61);
+  box-shadow: 3px 3px 5px $a_celeste;
 }
 .form-control:focus + label {
   transition: 0.5s;
@@ -124,26 +124,48 @@ label.label_form {
 .btn_enviar {
   width: 100%;
   padding: 4px 0;
-  background: $orange;
+  background: $a_celeste;
   color: white;
   border-top-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  border: 2px solid $orange;
+  border: 2px solid $a_celeste;
   font-weight: bold;
   transition: 1s;
 }
 .btn_enviar:hover {
-  color: $orange;
+  color: $a_celeste;
   background: $background;
 }
 
 .btn_enviar:hover ~ div#espera {
-  color: $orange;
+  color: $a_celeste;
 }
 .btn_enviar:hover ~ div#espera_m {
-  color: $orange;
+  color: $a_celeste;
+}
+// btn enviar en invitacion
+.btn_enviar_i {
+  width: 100%;
+  padding: 4px 0;
+  background: $a_cuadro_r;
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid $a_cuadro_r;
+  font-weight: bold;
+  transition: 1s;
+}
+.btn_enviar_i:hover {
+  color: $a_cuadro_r;
+  background: $background;
 }
 
+.btn_enviar_i:hover ~ div#espera {
+  color: $a_cuadro_r;
+}
+.btn_enviar_i:hover ~ div#espera_m {
+  color: $a_cuadro_r;
+}
 .btn_enviar_correcto {
   width: 100%;
   padding: 4px 0;

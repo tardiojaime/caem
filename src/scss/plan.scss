@@ -21,15 +21,15 @@
   padding: 6px 15px;
   text-decoration: none;
   font-weight: bold;
-  color: $orange;
+  color: $a_celeste;
   background: white;
-  outline: 2px solid $orange;
+  outline: 2px solid $a_celeste;
 }
 .inv {
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .enlace_invitar2:hover {
-  background: $orange;
+  background: $a_celeste;
   color: white;
 }
 //plan de actividades
@@ -98,7 +98,7 @@ section.opiniones .container .carousel {
 }
 .p_enlace {
   font-weight: 600;
-  color: $orange;
+  color: $a_celeste;
 }
 .p_enlace:hover {
   text-decoration: none;
@@ -155,7 +155,7 @@ section.opiniones .container .carousel {
   object-position: center;
 }
 .carousel-indicators [data-bs-target] {
-  background-color: #ed9514 !important;
+  background-color: $a_celeste !important;
 }
 //footer
 footer {

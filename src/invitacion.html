@@ -3,12 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#f2920e">
+  <meta name="theme-color" content="#2a90c7">
   <link rel="shortcut icon" href="./img/logo/icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invita a</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script type="module" src="./js/main.js"></script>
+  <style>
+    .form-control:focus {
+      box-shadow: 3px 3px 5px #c72a35 !important;
+      border-color: #c72a35 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -97,12 +103,10 @@
             <input type="hidden" name="hora" value="hora">
             <label for="email" class="mb-2">
               Ingrese su correo electrónico para recibir el código de descuento
-              <br>
-              Tu correo electrónico
             </label>
             <input type="email" name="email" id="" placeholder="email" class="form-control mb-2">
             <div class="text-cente contenedor_enviar">
-              <button id="btn_submit_1" type="submit" class="btn_enviar email_boton">Enviar
+              <button id="btn_submit_1" type="submit" class="btn_enviar_i email_boton">Enviar
               </button>
               <div id="espera_1" class="d-none" style="position: absolute;left: 40%;">
                 <div class="spinner-grow" role="status">
@@ -190,7 +194,8 @@
                 <div class="accordion-body">
                   <ol>
                     <li>Envíanos tu email como indica en la sección anterior.</li>
-                    <li><span id="ruta_copy" class="visually-hidden">www.itec.com.bo/caem/agilidadyscrum</span> Copia
+                    <li><span id="ruta_copy"
+                        class="visually-hidden">https://www.itec.com.bo/caem/desarrolloagildesoftware/</span> Copia
                       &nbsp;&nbsp;<a type="button" class="" id="btn_copy" title="copiar">aquí &nbsp;<i
                           class="fa-solid fa-copy" style="color: #ffffff;"></i></a>
                       y envía por mensaje a tus colegas este link.</li>
@@ -226,7 +231,7 @@
           </div>
           <div class="p-2">
             <b>
-              ¿Qué pasa si aún no estoy seguro de tomar el programa? <a href="https://wa.link/89wsi2">Contáctanos.</a>
+              ¿Qué pasa si aún no estoy seguro de tomar el programa? <a href="https://wa.link/lfjnmb">Contáctanos.</a>
             </b>
           </div>
         </div>
@@ -246,7 +251,8 @@
             Con mi hermano nos <br>
             animamos a capacitarnos <br>
             juntos para empezar a <br>
-            trabajar de manera remota <br> para empresas extranjeras.<i class="fa-solid fa-quote-left fa-rotate-180"></i>
+            trabajar de manera remota <br> para empresas extranjeras.<i
+              class="fa-solid fa-quote-left fa-rotate-180"></i>
           </p>
           <p>Juan Pablo <br>
             Agile Developer <br>

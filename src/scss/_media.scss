@@ -1,6 +1,6 @@
 @media (min-width: 1280px) {
   .seccion1 {
-    background: url(../img/logo/CAEM_BANNER_0.webp) !important;
+    background: url(../img/agilidad/Agilidad_5101x2689.webp) !important;
     width: 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -73,6 +73,11 @@
   }
   .cer_estadisticas div img {
     width: 40px !important;
+  }
+}
+@media (min-width: 992px){
+  .d_uno{
+    margin-left: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -187,7 +192,7 @@
     max-width: 80%;
   }
   .contenedor_banner {
-    background: url(../img/logo/CAEM_BANNER_788x415.webp);
+    background: url(../img/agilidad/Agilidad_883x465.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -249,7 +254,7 @@
     font-size: 1.7rem !important;
   }
   .cer_certmind_img img {
-    width: 55% !important;
+    width: 50% !important;
   }
   /*texto laber area de trabajo*/
   .form-control:not(:placeholder-shown) + .label_n_par {
