@@ -12,7 +12,7 @@ section.seccion_inv {
   top: 0;
   left: 0;
   width: 100%;
-  background: $detalles;
+  background: $invitados_f;
   color: white;
   height: 100vh;
   z-index: 1;
@@ -100,10 +100,10 @@ article.formulario {
   width: 200px;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #f2920e4a !important;
+  background-color: $invitados_a !important;
 }
 .accordion-button:focus {
-  border-color: #f2920e4a !important;
+  border-color: $invitados_a!important;
   box-shadow: none !important;
 }
 #btn_copy {
