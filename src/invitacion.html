@@ -93,12 +93,12 @@
           </div>
           <hr>
           <form id="formemail" method="post" action="" class="mb-2">
-            <input type="hidden" name="formId" value="email">
+            <input type="hidden" name="hoja" value="solicitud_de_codigo_de_descuento_para_grupo">
             <input type="hidden" name="hora" value="hora">
             <label for="email" class="mb-2">
               Ingrese su correo electrónico para recibir el código de descuento
             </label>
-            <input type="email" name="email" id="" placeholder="email" class="form-control mb-2">
+            <input required type="email" name="email" id="" placeholder="email" class="form-control mb-2">
             <div class="text-cente contenedor_enviar">
               <button id="btn_submit_1" type="submit" class="btn_enviar email_boton">Enviar
               </button>
@@ -295,7 +295,7 @@
         espera.classList.remove("d-none");
         const formData = new FormData(this);
         const url =
-          "https://script.google.com/macros/s/AKfycbz9E4lk5GOKqYAd2FyXBBPW39Gon0kryJ-o2BCovN8XBKRqByKKDaXdegpyE8I5MU3bQw/exec";
+          "https://script.google.com/macros/s/AKfycbz_HUSHtKOXfErE4_uhy6o-CoTZbi3vmWZpjm-rWwIrH2nKpyNyzqNDRJxHsrv6V0-p/exec";
         fetch(url, { method: "POST", body: formData })
           .then((response) => {
             if (!response.ok) {
