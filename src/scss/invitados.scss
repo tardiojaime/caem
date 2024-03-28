@@ -96,14 +96,15 @@ article.formulario {
     width: 70%;
   }
 }
+
 .email_boton {
   width: 200px;
 }
 .accordion-button:not(.collapsed) {
-  background-color: #f2920e4a !important;
+  background-color: $invitados_a !important;
 }
 .accordion-button:focus {
-  border-color: #f2920e4a !important;
+  border-color: $invitados_a !important;
   box-shadow: none !important;
 }
 #btn_copy {
