@@ -93,12 +93,12 @@
           </div>
           <hr>
           <form id="formemail" method="post" action="" class="mb-2">
-            <input type="hidden" name="formId" value="email">
+            <input type="hidden" name="hoja" value="solicitud_de_codigo_de_descuento_para_grupo">
             <input type="hidden" name="hora" value="hora">
             <label for="email" class="mb-2">
               Ingrese su correo electrónico para recibir el código de descuento
             </label>
-            <input type="email" name="email" id="" placeholder="email" class="form-control mb-2">
+            <input required type="email" name="email" id="" placeholder="email" class="form-control mb-2">
             <div class="text-cente contenedor_enviar">
               <button id="btn_submit_1" type="submit" class="btn_enviar_i email_boton">Enviar
               </button>
@@ -189,7 +189,7 @@
                   <ol>
                     <li>Envíanos tu email como indica en la sección anterior.</li>
                     <li><span id="ruta_copy"
-                        class="visually-hidden">https://www.itec.com.bo/caem/desarrolloagildesoftware/</span> Copia
+                        class="visually-hidden">https://www.itec.com.bo/caem/innovationmanagment</span> Copia
                       &nbsp;&nbsp;<a type="button" class="" id="btn_copy" title="copiar">aquí &nbsp;<i
                           class="fa-solid fa-copy" style="color: #ffffff;"></i></a>
                       y envía por mensaje a tus colegas este link.</li>
@@ -297,7 +297,7 @@
         espera.classList.remove("d-none");
         const formData = new FormData(this);
         const url =
-          "https://script.google.com/macros/s/AKfycbz9E4lk5GOKqYAd2FyXBBPW39Gon0kryJ-o2BCovN8XBKRqByKKDaXdegpyE8I5MU3bQw/exec";
+          "https://script.google.com/macros/s/AKfycbw7CRDnBQxW1QjNPfBh1oA3u7jGt8xwXHSKejL012b5-0k7r8MYzy4daUmjoNNxp24r/exec";
         fetch(url, { method: "POST", body: formData })
           .then((response) => {
             if (!response.ok) {
