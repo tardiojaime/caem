@@ -75,8 +75,8 @@
     width: 40px !important;
   }
 }
-@media (min-width: 992px){
-  .d_uno{
+@media (min-width: 992px) {
+  .d_uno {
     margin-left: 20px;
   }
 }
@@ -312,6 +312,29 @@
   }
   .cer_certmind_img img {
     width: 70% !important;
+  }
+}
+@media (max-width: 508px) {
+  .span_l {
+    display: block;
+    visibility: collapse;
+    font-size: 0;
+  }
+  li.li_maps {
+    margin-top: 5px;
+  }
+  .ruta_sucre {
+    line-height: 3px;
+  }
+  p.text-wrap.m-0{
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 380px) and (min-width: 300px) {
+  /*docentes img*/
+  .p_imagen {
+    left: 31%;
   }
 }
 @media (max-width: 300px) {
